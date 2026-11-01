@@ -1,0 +1,19 @@
+Pizza Fuzta - Bu Elok
+27 Oktober 2026
+
+1. Ada kendala excel di makro bagian, tapi sudah dibantu sama Yoga.
+2. Untuk dashboard, ada 1 gudang dan 2 outlet, yaitu di daerah Medokan dan Karah.
+3. Fitur kita ini hanya memungkinkan untuk menggunakan 2 laptop bagi mitra Pizza Fruzta, masing masing untuk setiap outlet.
+4. Masing masing outlet harus ada file Excel sendiri.
+5. Untuk sekarang kendala Bu Elok ada di tahap menginput data.
+6. Untuk pencatatan di Karah sudah menggunakan POS pakai Majo, sedangkan yang di Medokan masih manual.
+7. Untuk pegawai, di Karah ada 2 orang dan di Medokan ada 1 orang.
+8. Untuk Medokan yang dicatat adalah penjualan pizza berdasarkan ukuran, misalnya Super Supreme ukuran L, M, dan S. Selain itu dicatat juga minuman yang terjual serta metode pembayarannya, seperti QRIS, transfer, GoPay, dan lain lain. Kalo ada pembelian air mineral Santri, nanti juga dicatat karena memengaruhi cash.
+9. Untuk stok masing masing outlet, pegawai langsung menyampaikan barang yang dibutuhkan. Misalnya, membutuhkan barang ABCD, nanti barangnya diantar oleh Bu Elok.
+10. Untuk Karah beda lagi, karena pembelian roti dan bahan lainnya dilakukan dengan cara yang berbeda.
+11. Ada rencana untuk membuat production house, sehingga nantinya produk akan dikirim dari gudang ke masing masing outlet.
+12. Excel yang dibuat saat ini hanya berlaku untuk 1 outlet, sedangkan untuk gudang dibuat terpisah.
+13. Karena ada 1 gudang untuk 2 outlet, nantinya akan dibuatkan file Excel khusus untuk gudang juga.
+14. Untuk Medokan, Excel akan disesuaikan lagi dengan data input yang ada dan pemrograman sebelumnya.  Untuk gudang akan dibuatkan fitur input data dan dashboard tersendiri.
+15. Jam operasional outlet mulai pukul 09.00 pagi sampai 21.00 malam.
+16. ⁠Nextnya, mitra menyiapkan data bahan bahan yang akan distok di rumah. Setelah itu, hasil Excel akan diberikan ke mitra untuk dicek apakah ada yang kurang. Nantinya, Excel akan disesuaikan lagi dengan kebutuhan Bu Elok dan masukannya bisa disampaikan melalui chat

@@ -1,0 +1,4625 @@
+{
+  "business": "Pizza Fuzta",
+  "owner": "Bu Elok",
+  "mom_date": "2026-10-27",
+  "hours": "09.00–21.00",
+  "medokan_address": "Jl. Medokan Asri No. 86 Medokan Ayu rungkut Surabaya",
+  "menus": [
+    {
+      "sku": "PF001",
+      "name": "Super Supreme L",
+      "size": "L",
+      "category": "Pizza",
+      "price": 45000,
+      "source_row": 12,
+      "price_note": "Harga pengguna"
+    },
+    {
+      "sku": "PF002",
+      "name": "Super Supreme M",
+      "size": "M",
+      "category": "Pizza",
+      "price": 35000,
+      "source_row": 13,
+      "price_note": "Harga pengguna"
+    },
+    {
+      "sku": "PF003",
+      "name": "Super Supreme S",
+      "size": "S",
+      "category": "Pizza",
+      "price": 25000,
+      "source_row": 14,
+      "price_note": "Harga pengguna"
+    },
+    {
+      "sku": "PF004",
+      "name": "Meat Lovers L",
+      "size": "L",
+      "category": "Pizza",
+      "price": 45000,
+      "source_row": 15,
+      "price_note": "Asumsi harga mengikuti sate ayam; konfirmasi"
+    },
+    {
+      "sku": "PF005",
+      "name": "Meat lovers M",
+      "size": "M",
+      "category": "Pizza",
+      "price": 35000,
+      "source_row": 16,
+      "price_note": "Asumsi harga mengikuti sate ayam; konfirmasi"
+    },
+    {
+      "sku": "PF006",
+      "name": "Meat Lovers S",
+      "size": "S",
+      "category": "Pizza",
+      "price": 25000,
+      "source_row": 17,
+      "price_note": "Asumsi harga mengikuti sate ayam; konfirmasi"
+    },
+    {
+      "sku": "PF007",
+      "name": "Cheese Lovers L",
+      "size": "L",
+      "category": "Pizza",
+      "price": 45000,
+      "source_row": 18,
+      "price_note": "Asumsi harga mengikuti sate ayam; konfirmasi"
+    },
+    {
+      "sku": "PF008",
+      "name": "Cheese Lovers M",
+      "size": "M",
+      "category": "Pizza",
+      "price": 35000,
+      "source_row": 19,
+      "price_note": "Asumsi harga mengikuti sate ayam; konfirmasi"
+    },
+    {
+      "sku": "PF009",
+      "name": "Cheese Lovers S",
+      "size": "S",
+      "category": "Pizza",
+      "price": 45000,
+      "source_row": 20,
+      "price_note": "Harga pengguna"
+    },
+    {
+      "sku": "PF010",
+      "name": "Deluxe Cheese L",
+      "size": "L",
+      "category": "Pizza",
+      "price": 45000,
+      "source_row": 21,
+      "price_note": "Harga pengguna"
+    },
+    {
+      "sku": "PF011",
+      "name": "Deluxe Cheese M",
+      "size": "M",
+      "category": "Pizza",
+      "price": 35000,
+      "source_row": 22,
+      "price_note": "Harga pengguna"
+    },
+    {
+      "sku": "PF012",
+      "name": "Deluxe Cheese S",
+      "size": "S",
+      "category": "Pizza",
+      "price": 25000,
+      "source_row": 23,
+      "price_note": "Harga pengguna"
+    },
+    {
+      "sku": "PF013",
+      "name": "Beef Mushroom L",
+      "size": "L",
+      "category": "Pizza",
+      "price": 45000,
+      "source_row": 24,
+      "price_note": "Harga pengguna"
+    },
+    {
+      "sku": "PF014",
+      "name": "Beef Mushroom M",
+      "size": "M",
+      "category": "Pizza",
+      "price": 35000,
+      "source_row": 25,
+      "price_note": "Harga pengguna"
+    },
+    {
+      "sku": "PF015",
+      "name": "Beef Mushroom S",
+      "size": "S",
+      "category": "Pizza",
+      "price": 25000,
+      "source_row": 26,
+      "price_note": "Harga pengguna"
+    },
+    {
+      "sku": "PF016",
+      "name": "Pepperoni L",
+      "size": "L",
+      "category": "Pizza",
+      "price": 45000,
+      "source_row": 27,
+      "price_note": "Harga pengguna"
+    },
+    {
+      "sku": "PF017",
+      "name": "Pepperoni M",
+      "size": "M",
+      "category": "Pizza",
+      "price": 35000,
+      "source_row": 28,
+      "price_note": "Harga pengguna"
+    },
+    {
+      "sku": "PF018",
+      "name": "Pepperoni S",
+      "size": "S",
+      "category": "Pizza",
+      "price": 25000,
+      "source_row": 29,
+      "price_note": "Harga pengguna"
+    },
+    {
+      "sku": "PF019",
+      "name": "Beef Corn L",
+      "size": "L",
+      "category": "Pizza",
+      "price": 45000,
+      "source_row": 30,
+      "price_note": ""
+    },
+    {
+      "sku": "PF020",
+      "name": "Beef Corn M",
+      "size": "M",
+      "category": "Pizza",
+      "price": 35000,
+      "source_row": 31,
+      "price_note": ""
+    },
+    {
+      "sku": "PF021",
+      "name": "Beef Corn S",
+      "size": "S",
+      "category": "Pizza",
+      "price": 25000,
+      "source_row": 32,
+      "price_note": ""
+    },
+    {
+      "sku": "PF022",
+      "name": "Smoked beef L",
+      "size": "L",
+      "category": "Pizza",
+      "price": 45000,
+      "source_row": 33,
+      "price_note": ""
+    },
+    {
+      "sku": "PF023",
+      "name": "Smoked Beef M",
+      "size": "M",
+      "category": "Pizza",
+      "price": 45000,
+      "source_row": 34,
+      "price_note": ""
+    },
+    {
+      "sku": "PF024",
+      "name": "Smoked Beef S",
+      "size": "S",
+      "category": "Pizza",
+      "price": 35000,
+      "source_row": 35,
+      "price_note": ""
+    },
+    {
+      "sku": "PF025",
+      "name": "Sausage L",
+      "size": "L",
+      "category": "Pizza",
+      "price": 45000,
+      "source_row": 36,
+      "price_note": ""
+    },
+    {
+      "sku": "PF026",
+      "name": "Sausage M",
+      "size": "M",
+      "category": "Pizza",
+      "price": 35000,
+      "source_row": 37,
+      "price_note": ""
+    },
+    {
+      "sku": "PF027",
+      "name": "Sausage S",
+      "size": "S",
+      "category": "Pizza",
+      "price": 25000,
+      "source_row": 38,
+      "price_note": ""
+    },
+    {
+      "sku": "PF028",
+      "name": "Mix Pizza L",
+      "size": "L",
+      "category": "Pizza",
+      "price": 45000,
+      "source_row": 39,
+      "price_note": ""
+    },
+    {
+      "sku": "PF029",
+      "name": "Mix Pizza M",
+      "size": "M",
+      "category": "Pizza",
+      "price": 35000,
+      "source_row": 40,
+      "price_note": ""
+    },
+    {
+      "sku": "PF030",
+      "name": "Mix Pizza S",
+      "size": "S",
+      "category": "Pizza",
+      "price": 25000,
+      "source_row": 41,
+      "price_note": ""
+    },
+    {
+      "sku": "PF031",
+      "name": "Veggie L",
+      "size": "L",
+      "category": "Pizza",
+      "price": 45000,
+      "source_row": 42,
+      "price_note": ""
+    },
+    {
+      "sku": "PF032",
+      "name": "Veggie M",
+      "size": "M",
+      "category": "Pizza",
+      "price": 35000,
+      "source_row": 43,
+      "price_note": ""
+    },
+    {
+      "sku": "PF033",
+      "name": "Veggie S",
+      "size": "S",
+      "category": "Pizza",
+      "price": 25000,
+      "source_row": 44,
+      "price_note": ""
+    },
+    {
+      "sku": "PF034",
+      "name": "Seafood L",
+      "size": "L",
+      "category": "Pizza",
+      "price": 45000,
+      "source_row": 45,
+      "price_note": ""
+    },
+    {
+      "sku": "PF035",
+      "name": "Seafood M",
+      "size": "M",
+      "category": "Pizza",
+      "price": 35000,
+      "source_row": 46,
+      "price_note": ""
+    },
+    {
+      "sku": "PF036",
+      "name": "Seafood S",
+      "size": "S",
+      "category": "Pizza",
+      "price": 25000,
+      "source_row": 47,
+      "price_note": ""
+    },
+    {
+      "sku": "PF037",
+      "name": "Beef Burger Ori",
+      "size": "",
+      "category": "Burger",
+      "price": 15000,
+      "source_row": 48,
+      "price_note": ""
+    },
+    {
+      "sku": "PF038",
+      "name": "Beef Burger Cheese",
+      "size": "",
+      "category": "Burger",
+      "price": 17000,
+      "source_row": 49,
+      "price_note": ""
+    },
+    {
+      "sku": "PF039",
+      "name": "Smoked Beef Burger Ori",
+      "size": "",
+      "category": "Burger",
+      "price": 15000,
+      "source_row": 50,
+      "price_note": ""
+    },
+    {
+      "sku": "PF040",
+      "name": "Smoked Beef Burger Cheese",
+      "size": "",
+      "category": "Burger",
+      "price": 17000,
+      "source_row": 51,
+      "price_note": ""
+    },
+    {
+      "sku": "PF041",
+      "name": "Chicken Burger Ori",
+      "size": "",
+      "category": "Burger",
+      "price": 15000,
+      "source_row": 52,
+      "price_note": ""
+    },
+    {
+      "sku": "PF042",
+      "name": "Chicken Burger Cheese",
+      "size": "",
+      "category": "Burger",
+      "price": 17000,
+      "source_row": 53,
+      "price_note": ""
+    },
+    {
+      "sku": "PF043",
+      "name": "Burger Telur",
+      "size": "",
+      "category": "Burger",
+      "price": 15000,
+      "source_row": 54,
+      "price_note": ""
+    },
+    {
+      "sku": "PF044",
+      "name": "Burger Telur Cheese",
+      "size": "",
+      "category": "Burger",
+      "price": 17000,
+      "source_row": 55,
+      "price_note": ""
+    },
+    {
+      "sku": "PF045",
+      "name": "Air Mineral Santri 600 ml",
+      "size": "",
+      "category": "Minuman",
+      "price": 5000,
+      "source_row": 56,
+      "price_note": ""
+    },
+    {
+      "sku": "PF046",
+      "name": "Fruittea Blackcurrant",
+      "size": "",
+      "category": "Minuman",
+      "price": 5000,
+      "source_row": 57,
+      "price_note": ""
+    },
+    {
+      "sku": "PF047",
+      "name": "The Pucuk",
+      "size": "",
+      "category": "Minuman",
+      "price": 5000,
+      "source_row": 58,
+      "price_note": ""
+    },
+    {
+      "sku": "PF048",
+      "name": "Tebs Lemon Lime",
+      "size": "",
+      "category": "Minuman",
+      "price": 5000,
+      "source_row": 59,
+      "price_note": ""
+    },
+    {
+      "sku": "PF049",
+      "name": "Lemon Tea",
+      "size": "",
+      "category": "Minuman",
+      "price": 5000,
+      "source_row": 60,
+      "price_note": ""
+    }
+  ],
+  "materials": [
+    {
+      "code": "B001",
+      "name": "Saos tomat Delmonte",
+      "unit": "gram",
+      "source": "BOM sumber; harga/stok belum tersedia"
+    },
+    {
+      "code": "B002",
+      "name": "Mayones",
+      "unit": "gram",
+      "source": "BOM sumber; harga/stok belum tersedia"
+    },
+    {
+      "code": "B003",
+      "name": "Beef Patties",
+      "unit": "gram",
+      "source": "BOM sumber; harga/stok belum tersedia"
+    },
+    {
+      "code": "B004",
+      "name": "Keju Slice",
+      "unit": "gram",
+      "source": "BOM sumber; harga/stok belum tersedia"
+    },
+    {
+      "code": "B005",
+      "name": "Tomat Segar",
+      "unit": "gram",
+      "source": "BOM sumber; harga/stok belum tersedia"
+    },
+    {
+      "code": "B006",
+      "name": "Slada Segar",
+      "unit": "gram",
+      "source": "BOM sumber; harga/stok belum tersedia"
+    },
+    {
+      "code": "B007",
+      "name": "Bun Burger",
+      "unit": "pcs",
+      "source": "BOM sumber; harga/stok belum tersedia"
+    },
+    {
+      "code": "B008",
+      "name": "Beef Burger",
+      "unit": "gram",
+      "source": "BOM sumber; harga/stok belum tersedia"
+    },
+    {
+      "code": "B009",
+      "name": "CHICKEN PATTIES",
+      "unit": "gram",
+      "source": "BOM sumber; harga/stok belum tersedia"
+    },
+    {
+      "code": "B010",
+      "name": "Mozarela",
+      "unit": "gram",
+      "source": "BOM sumber; harga/stok belum tersedia"
+    },
+    {
+      "code": "B011",
+      "name": "origano",
+      "unit": "gram",
+      "source": "BOM sumber; harga/stok belum tersedia"
+    },
+    {
+      "code": "B012",
+      "name": "Jagung",
+      "unit": "gram",
+      "source": "BOM sumber; harga/stok belum tersedia"
+    },
+    {
+      "code": "B013",
+      "name": "Base Pizza M",
+      "unit": "pcs",
+      "source": "BOM sumber; harga/stok belum tersedia"
+    },
+    {
+      "code": "B014",
+      "name": "smoked beef",
+      "unit": "gram",
+      "source": "BOM sumber; harga/stok belum tersedia"
+    },
+    {
+      "code": "B015",
+      "name": "Saos Tomat Pouch Del Monte",
+      "unit": "gram",
+      "source": "BOM sumber; harga/stok belum tersedia"
+    },
+    {
+      "code": "B016",
+      "name": "Beef Burger Vitalia",
+      "unit": "gram",
+      "source": "BOM sumber; harga/stok belum tersedia"
+    },
+    {
+      "code": "B017",
+      "name": "bombai",
+      "unit": "gram",
+      "source": "BOM sumber; harga/stok belum tersedia"
+    },
+    {
+      "code": "B018",
+      "name": "Base Pizza L",
+      "unit": "pcs",
+      "source": "BOM sumber; harga/stok belum tersedia"
+    },
+    {
+      "code": "B019",
+      "name": "Tuna Kaleng",
+      "unit": "gram",
+      "source": "BOM sumber; harga/stok belum tersedia"
+    },
+    {
+      "code": "B020",
+      "name": "Peperoni",
+      "unit": "gram",
+      "source": "BOM sumber; harga/stok belum tersedia"
+    },
+    {
+      "code": "B021",
+      "name": "Jamur",
+      "unit": "gram",
+      "source": "BOM sumber; harga/stok belum tersedia"
+    },
+    {
+      "code": "B022",
+      "name": "Keju Chedar",
+      "unit": "gram",
+      "source": "BOM sumber; harga/stok belum tersedia"
+    },
+    {
+      "code": "B023",
+      "name": "Sosis Ayam",
+      "unit": "gram",
+      "source": "BOM sumber; harga/stok belum tersedia"
+    },
+    {
+      "code": "B024",
+      "name": "Sosis Sapi",
+      "unit": "gram",
+      "source": "BOM sumber; harga/stok belum tersedia"
+    },
+    {
+      "code": "B025",
+      "name": "Paprika Hijau",
+      "unit": "gram",
+      "source": "BOM sumber; harga/stok belum tersedia"
+    },
+    {
+      "code": "B026",
+      "name": "Wortel",
+      "unit": "gram",
+      "source": "BOM sumber; harga/stok belum tersedia"
+    },
+    {
+      "code": "B027",
+      "name": "Bakso Ikan Cedea",
+      "unit": "gram",
+      "source": "BOM sumber; harga/stok belum tersedia"
+    },
+    {
+      "code": "B028",
+      "name": "Chikuwa",
+      "unit": "gram",
+      "source": "BOM sumber; harga/stok belum tersedia"
+    },
+    {
+      "code": "B029",
+      "name": "Crabstick",
+      "unit": "gram",
+      "source": "BOM sumber; harga/stok belum tersedia"
+    },
+    {
+      "code": "B030",
+      "name": "Base Pizza S",
+      "unit": "pcs",
+      "source": "BOM sumber; harga/stok belum tersedia"
+    },
+    {
+      "code": "B031",
+      "name": "Base Pizza Slice",
+      "unit": "pcs",
+      "source": "BOM sumber; harga/stok belum tersedia"
+    },
+    {
+      "code": "D032",
+      "name": "Air Mineral Santri 600 ml",
+      "unit": "botol",
+      "source": "Unit jual dari katalog; konfirmasi jenis kemasan/porsi"
+    },
+    {
+      "code": "D033",
+      "name": "Fruittea Blackcurrant",
+      "unit": "botol",
+      "source": "Unit jual dari katalog; konfirmasi jenis kemasan/porsi"
+    },
+    {
+      "code": "D034",
+      "name": "The Pucuk",
+      "unit": "botol",
+      "source": "Unit jual dari katalog; konfirmasi jenis kemasan/porsi"
+    },
+    {
+      "code": "D035",
+      "name": "Tebs Lemon Lime",
+      "unit": "botol",
+      "source": "Unit jual dari katalog; konfirmasi jenis kemasan/porsi"
+    },
+    {
+      "code": "D036",
+      "name": "Lemon Tea",
+      "unit": "porsi",
+      "source": "Unit jual dari katalog; konfirmasi jenis kemasan/porsi"
+    }
+  ],
+  "bom": [
+    {
+      "sku": "PF038",
+      "source_menu": "BURGER BEEF CHEESE",
+      "material": "B001",
+      "qty": 15,
+      "unit": "gram",
+      "row": 65
+    },
+    {
+      "sku": "PF038",
+      "source_menu": "BURGER BEEF CHEESE",
+      "material": "B002",
+      "qty": 15,
+      "unit": "gram",
+      "row": 66
+    },
+    {
+      "sku": "PF038",
+      "source_menu": "BURGER BEEF CHEESE",
+      "material": "B003",
+      "qty": 50,
+      "unit": "gram",
+      "row": 67
+    },
+    {
+      "sku": "PF038",
+      "source_menu": "BURGER BEEF CHEESE",
+      "material": "B004",
+      "qty": 12,
+      "unit": "gram",
+      "row": 68
+    },
+    {
+      "sku": "PF038",
+      "source_menu": "BURGER BEEF CHEESE",
+      "material": "B005",
+      "qty": 15,
+      "unit": "gram",
+      "row": 69
+    },
+    {
+      "sku": "PF038",
+      "source_menu": "BURGER BEEF CHEESE",
+      "material": "B006",
+      "qty": 19,
+      "unit": "gram",
+      "row": 70
+    },
+    {
+      "sku": "PF038",
+      "source_menu": "BURGER BEEF CHEESE",
+      "material": "B007",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 71
+    },
+    {
+      "sku": "PF037",
+      "source_menu": "BURGER BEEF ORY",
+      "material": "B001",
+      "qty": 15,
+      "unit": "gram",
+      "row": 72
+    },
+    {
+      "sku": "PF037",
+      "source_menu": "BURGER BEEF ORY",
+      "material": "B002",
+      "qty": 15,
+      "unit": "gram",
+      "row": 73
+    },
+    {
+      "sku": "PF037",
+      "source_menu": "BURGER BEEF ORY",
+      "material": "B003",
+      "qty": 50,
+      "unit": "gram",
+      "row": 74
+    },
+    {
+      "sku": "PF037",
+      "source_menu": "BURGER BEEF ORY",
+      "material": "B005",
+      "qty": 15,
+      "unit": "gram",
+      "row": 75
+    },
+    {
+      "sku": "PF037",
+      "source_menu": "BURGER BEEF ORY",
+      "material": "B006",
+      "qty": 19,
+      "unit": "gram",
+      "row": 76
+    },
+    {
+      "sku": "PF037",
+      "source_menu": "BURGER BEEF ORY",
+      "material": "B007",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 77
+    },
+    {
+      "sku": "PF042",
+      "source_menu": "BURGER CHICKEN CHEESE",
+      "material": "B001",
+      "qty": 15,
+      "unit": "gram",
+      "row": 78
+    },
+    {
+      "sku": "PF042",
+      "source_menu": "BURGER CHICKEN CHEESE",
+      "material": "B002",
+      "qty": 15,
+      "unit": "gram",
+      "row": 79
+    },
+    {
+      "sku": "PF042",
+      "source_menu": "BURGER CHICKEN CHEESE",
+      "material": "B008",
+      "qty": 1,
+      "unit": "gram",
+      "row": 80
+    },
+    {
+      "sku": "PF042",
+      "source_menu": "BURGER CHICKEN CHEESE",
+      "material": "B004",
+      "qty": 12,
+      "unit": "gram",
+      "row": 81
+    },
+    {
+      "sku": "PF042",
+      "source_menu": "BURGER CHICKEN CHEESE",
+      "material": "B005",
+      "qty": 15,
+      "unit": "gram",
+      "row": 82
+    },
+    {
+      "sku": "PF042",
+      "source_menu": "BURGER CHICKEN CHEESE",
+      "material": "B006",
+      "qty": 19,
+      "unit": "gram",
+      "row": 83
+    },
+    {
+      "sku": "PF042",
+      "source_menu": "BURGER CHICKEN CHEESE",
+      "material": "B009",
+      "qty": 53,
+      "unit": "gram",
+      "row": 84
+    },
+    {
+      "sku": "PF042",
+      "source_menu": "BURGER CHICKEN CHEESE",
+      "material": "B007",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 85
+    },
+    {
+      "sku": "PF020",
+      "source_menu": "BEEF CORN M",
+      "material": "B001",
+      "qty": 25,
+      "unit": "gram",
+      "row": 86
+    },
+    {
+      "sku": "PF020",
+      "source_menu": "BEEF CORN M",
+      "material": "B010",
+      "qty": 80,
+      "unit": "gram",
+      "row": 87
+    },
+    {
+      "sku": "PF020",
+      "source_menu": "BEEF CORN M",
+      "material": "B002",
+      "qty": 25,
+      "unit": "gram",
+      "row": 88
+    },
+    {
+      "sku": "PF020",
+      "source_menu": "BEEF CORN M",
+      "material": "B011",
+      "qty": 10,
+      "unit": "gram",
+      "row": 89
+    },
+    {
+      "sku": "PF020",
+      "source_menu": "BEEF CORN M",
+      "material": "B008",
+      "qty": 1.5,
+      "unit": "gram",
+      "row": 90
+    },
+    {
+      "sku": "PF020",
+      "source_menu": "BEEF CORN M",
+      "material": "B012",
+      "qty": 50,
+      "unit": "gram",
+      "row": 91
+    },
+    {
+      "sku": "PF020",
+      "source_menu": "BEEF CORN M",
+      "material": "B013",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 92
+    },
+    {
+      "sku": "PF041",
+      "source_menu": "BURGER CHICKEN ORY",
+      "material": "B001",
+      "qty": 15,
+      "unit": "gram",
+      "row": 93
+    },
+    {
+      "sku": "PF041",
+      "source_menu": "BURGER CHICKEN ORY",
+      "material": "B002",
+      "qty": 15,
+      "unit": "gram",
+      "row": 94
+    },
+    {
+      "sku": "PF041",
+      "source_menu": "BURGER CHICKEN ORY",
+      "material": "B005",
+      "qty": 15,
+      "unit": "gram",
+      "row": 95
+    },
+    {
+      "sku": "PF041",
+      "source_menu": "BURGER CHICKEN ORY",
+      "material": "B006",
+      "qty": 19,
+      "unit": "gram",
+      "row": 96
+    },
+    {
+      "sku": "PF041",
+      "source_menu": "BURGER CHICKEN ORY",
+      "material": "B009",
+      "qty": 53,
+      "unit": "gram",
+      "row": 97
+    },
+    {
+      "sku": "PF041",
+      "source_menu": "BURGER CHICKEN ORY",
+      "material": "B007",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 98
+    },
+    {
+      "sku": "PF040",
+      "source_menu": "BURGER SMOKED BEEF CHEESE",
+      "material": "B001",
+      "qty": 15,
+      "unit": "gram",
+      "row": 99
+    },
+    {
+      "sku": "PF040",
+      "source_menu": "BURGER SMOKED BEEF CHEESE",
+      "material": "B002",
+      "qty": 15,
+      "unit": "gram",
+      "row": 100
+    },
+    {
+      "sku": "PF040",
+      "source_menu": "BURGER SMOKED BEEF CHEESE",
+      "material": "B014",
+      "qty": 21,
+      "unit": "gram",
+      "row": 101
+    },
+    {
+      "sku": "PF040",
+      "source_menu": "BURGER SMOKED BEEF CHEESE",
+      "material": "B004",
+      "qty": 12,
+      "unit": "gram",
+      "row": 102
+    },
+    {
+      "sku": "PF040",
+      "source_menu": "BURGER SMOKED BEEF CHEESE",
+      "material": "B005",
+      "qty": 15,
+      "unit": "gram",
+      "row": 103
+    },
+    {
+      "sku": "PF040",
+      "source_menu": "BURGER SMOKED BEEF CHEESE",
+      "material": "B006",
+      "qty": 19,
+      "unit": "gram",
+      "row": 104
+    },
+    {
+      "sku": "PF040",
+      "source_menu": "BURGER SMOKED BEEF CHEESE",
+      "material": "B007",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 105
+    },
+    {
+      "sku": "PF039",
+      "source_menu": "BURGER SMOKED BEEF ORY",
+      "material": "B002",
+      "qty": 15,
+      "unit": "gram",
+      "row": 106
+    },
+    {
+      "sku": "PF039",
+      "source_menu": "BURGER SMOKED BEEF ORY",
+      "material": "B014",
+      "qty": 21,
+      "unit": "gram",
+      "row": 107
+    },
+    {
+      "sku": "PF039",
+      "source_menu": "BURGER SMOKED BEEF ORY",
+      "material": "B015",
+      "qty": 15,
+      "unit": "gram",
+      "row": 108
+    },
+    {
+      "sku": "PF039",
+      "source_menu": "BURGER SMOKED BEEF ORY",
+      "material": "B005",
+      "qty": 15,
+      "unit": "gram",
+      "row": 109
+    },
+    {
+      "sku": "PF039",
+      "source_menu": "BURGER SMOKED BEEF ORY",
+      "material": "B006",
+      "qty": 19,
+      "unit": "gram",
+      "row": 110
+    },
+    {
+      "sku": "PF039",
+      "source_menu": "BURGER SMOKED BEEF ORY",
+      "material": "B007",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 111
+    },
+    {
+      "sku": "PF019",
+      "source_menu": "BEEF CORN L",
+      "material": "B001",
+      "qty": 35,
+      "unit": "gram",
+      "row": 120
+    },
+    {
+      "sku": "PF019",
+      "source_menu": "BEEF CORN L",
+      "material": "B010",
+      "qty": 100,
+      "unit": "gram",
+      "row": 121
+    },
+    {
+      "sku": "PF019",
+      "source_menu": "BEEF CORN L",
+      "material": "B002",
+      "qty": 35,
+      "unit": "gram",
+      "row": 122
+    },
+    {
+      "sku": "PF019",
+      "source_menu": "BEEF CORN L",
+      "material": "B011",
+      "qty": 15,
+      "unit": "gram",
+      "row": 123
+    },
+    {
+      "sku": "PF019",
+      "source_menu": "BEEF CORN L",
+      "material": "B008",
+      "qty": 2,
+      "unit": "gram",
+      "row": 124
+    },
+    {
+      "sku": "PF019",
+      "source_menu": "BEEF CORN L",
+      "material": "B012",
+      "qty": 75,
+      "unit": "gram",
+      "row": 125
+    },
+    {
+      "sku": "PF019",
+      "source_menu": "BEEF CORN L",
+      "material": "B018",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 126
+    },
+    {
+      "sku": "PF013",
+      "source_menu": "BEEF MUSHROOM L",
+      "material": "B001",
+      "qty": 35,
+      "unit": "gram",
+      "row": 127
+    },
+    {
+      "sku": "PF013",
+      "source_menu": "BEEF MUSHROOM L",
+      "material": "B010",
+      "qty": 100,
+      "unit": "gram",
+      "row": 128
+    },
+    {
+      "sku": "PF013",
+      "source_menu": "BEEF MUSHROOM L",
+      "material": "B002",
+      "qty": 35,
+      "unit": "gram",
+      "row": 129
+    },
+    {
+      "sku": "PF013",
+      "source_menu": "BEEF MUSHROOM L",
+      "material": "B011",
+      "qty": 15,
+      "unit": "gram",
+      "row": 130
+    },
+    {
+      "sku": "PF013",
+      "source_menu": "BEEF MUSHROOM L",
+      "material": "B003",
+      "qty": 25,
+      "unit": "gram",
+      "row": 131
+    },
+    {
+      "sku": "PF013",
+      "source_menu": "BEEF MUSHROOM L",
+      "material": "B020",
+      "qty": 17,
+      "unit": "gram",
+      "row": 132
+    },
+    {
+      "sku": "PF013",
+      "source_menu": "BEEF MUSHROOM L",
+      "material": "B021",
+      "qty": 50,
+      "unit": "gram",
+      "row": 133
+    },
+    {
+      "sku": "PF013",
+      "source_menu": "BEEF MUSHROOM L",
+      "material": "B018",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 134
+    },
+    {
+      "sku": "PF007",
+      "source_menu": "CHEESE LOVER L",
+      "material": "B001",
+      "qty": 35,
+      "unit": "gram",
+      "row": 135
+    },
+    {
+      "sku": "PF007",
+      "source_menu": "CHEESE LOVER L",
+      "material": "B010",
+      "qty": 45,
+      "unit": "gram",
+      "row": 136
+    },
+    {
+      "sku": "PF007",
+      "source_menu": "CHEESE LOVER L",
+      "material": "B002",
+      "qty": 25,
+      "unit": "gram",
+      "row": 137
+    },
+    {
+      "sku": "PF007",
+      "source_menu": "CHEESE LOVER L",
+      "material": "B011",
+      "qty": 20,
+      "unit": "gram",
+      "row": 138
+    },
+    {
+      "sku": "PF007",
+      "source_menu": "CHEESE LOVER L",
+      "material": "B022",
+      "qty": 45,
+      "unit": "gram",
+      "row": 139
+    },
+    {
+      "sku": "PF007",
+      "source_menu": "CHEESE LOVER L",
+      "material": "B004",
+      "qty": 24,
+      "unit": "gram",
+      "row": 140
+    },
+    {
+      "sku": "PF007",
+      "source_menu": "CHEESE LOVER L",
+      "material": "B018",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 141
+    },
+    {
+      "sku": "PF010",
+      "source_menu": "DELUXE CHEESE L",
+      "material": "B001",
+      "qty": 35,
+      "unit": "gram",
+      "row": 142
+    },
+    {
+      "sku": "PF010",
+      "source_menu": "DELUXE CHEESE L",
+      "material": "B010",
+      "qty": 120,
+      "unit": "gram",
+      "row": 143
+    },
+    {
+      "sku": "PF010",
+      "source_menu": "DELUXE CHEESE L",
+      "material": "B002",
+      "qty": 35,
+      "unit": "gram",
+      "row": 144
+    },
+    {
+      "sku": "PF010",
+      "source_menu": "DELUXE CHEESE L",
+      "material": "B011",
+      "qty": 15,
+      "unit": "gram",
+      "row": 145
+    },
+    {
+      "sku": "PF010",
+      "source_menu": "DELUXE CHEESE L",
+      "material": "B018",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 146
+    },
+    {
+      "sku": "PF004",
+      "source_menu": "MEAT LOVER L",
+      "material": "B001",
+      "qty": 35,
+      "unit": "gram",
+      "row": 147
+    },
+    {
+      "sku": "PF004",
+      "source_menu": "MEAT LOVER L",
+      "material": "B010",
+      "qty": 100,
+      "unit": "gram",
+      "row": 148
+    },
+    {
+      "sku": "PF004",
+      "source_menu": "MEAT LOVER L",
+      "material": "B002",
+      "qty": 35,
+      "unit": "gram",
+      "row": 149
+    },
+    {
+      "sku": "PF004",
+      "source_menu": "MEAT LOVER L",
+      "material": "B011",
+      "qty": 20,
+      "unit": "gram",
+      "row": 150
+    },
+    {
+      "sku": "PF004",
+      "source_menu": "MEAT LOVER L",
+      "material": "B008",
+      "qty": 2,
+      "unit": "gram",
+      "row": 151
+    },
+    {
+      "sku": "PF004",
+      "source_menu": "MEAT LOVER L",
+      "material": "B003",
+      "qty": 50,
+      "unit": "gram",
+      "row": 152
+    },
+    {
+      "sku": "PF004",
+      "source_menu": "MEAT LOVER L",
+      "material": "B023",
+      "qty": 24,
+      "unit": "gram",
+      "row": 153
+    },
+    {
+      "sku": "PF004",
+      "source_menu": "MEAT LOVER L",
+      "material": "B024",
+      "qty": 24,
+      "unit": "gram",
+      "row": 154
+    },
+    {
+      "sku": "PF004",
+      "source_menu": "MEAT LOVER L",
+      "material": "B018",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 155
+    },
+    {
+      "sku": "PF028",
+      "source_menu": "MIX L",
+      "material": "B001",
+      "qty": 35,
+      "unit": "gram",
+      "row": 156
+    },
+    {
+      "sku": "PF028",
+      "source_menu": "MIX L",
+      "material": "B010",
+      "qty": 45,
+      "unit": "gram",
+      "row": 157
+    },
+    {
+      "sku": "PF028",
+      "source_menu": "MIX L",
+      "material": "B002",
+      "qty": 35,
+      "unit": "gram",
+      "row": 158
+    },
+    {
+      "sku": "PF028",
+      "source_menu": "MIX L",
+      "material": "B011",
+      "qty": 15,
+      "unit": "gram",
+      "row": 159
+    },
+    {
+      "sku": "PF028",
+      "source_menu": "MIX L",
+      "material": "B008",
+      "qty": 28,
+      "unit": "gram",
+      "row": 160
+    },
+    {
+      "sku": "PF028",
+      "source_menu": "MIX L",
+      "material": "B022",
+      "qty": 45,
+      "unit": "gram",
+      "row": 161
+    },
+    {
+      "sku": "PF028",
+      "source_menu": "MIX L",
+      "material": "B023",
+      "qty": 12,
+      "unit": "gram",
+      "row": 162
+    },
+    {
+      "sku": "PF028",
+      "source_menu": "MIX L",
+      "material": "B012",
+      "qty": 38,
+      "unit": "gram",
+      "row": 163
+    },
+    {
+      "sku": "PF028",
+      "source_menu": "MIX L",
+      "material": "B025",
+      "qty": 19,
+      "unit": "gram",
+      "row": 164
+    },
+    {
+      "sku": "PF028",
+      "source_menu": "MIX L",
+      "material": "B026",
+      "qty": 38,
+      "unit": "gram",
+      "row": 165
+    },
+    {
+      "sku": "PF028",
+      "source_menu": "MIX L",
+      "material": "B018",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 166
+    },
+    {
+      "sku": "PF016",
+      "source_menu": "PEPPERONI L",
+      "material": "B001",
+      "qty": 35,
+      "unit": "gram",
+      "row": 167
+    },
+    {
+      "sku": "PF016",
+      "source_menu": "PEPPERONI L",
+      "material": "B010",
+      "qty": 100,
+      "unit": "gram",
+      "row": 168
+    },
+    {
+      "sku": "PF016",
+      "source_menu": "PEPPERONI L",
+      "material": "B002",
+      "qty": 35,
+      "unit": "gram",
+      "row": 169
+    },
+    {
+      "sku": "PF016",
+      "source_menu": "PEPPERONI L",
+      "material": "B011",
+      "qty": 15,
+      "unit": "gram",
+      "row": 170
+    },
+    {
+      "sku": "PF016",
+      "source_menu": "PEPPERONI L",
+      "material": "B020",
+      "qty": 25,
+      "unit": "gram",
+      "row": 171
+    },
+    {
+      "sku": "PF016",
+      "source_menu": "PEPPERONI L",
+      "material": "B018",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 172
+    },
+    {
+      "sku": "PF022",
+      "source_menu": "SMOKED BEEF L",
+      "material": "B010",
+      "qty": 45,
+      "unit": "gram",
+      "row": 173
+    },
+    {
+      "sku": "PF022",
+      "source_menu": "SMOKED BEEF L",
+      "material": "B002",
+      "qty": 35,
+      "unit": "gram",
+      "row": 174
+    },
+    {
+      "sku": "PF022",
+      "source_menu": "SMOKED BEEF L",
+      "material": "B011",
+      "qty": 20,
+      "unit": "gram",
+      "row": 175
+    },
+    {
+      "sku": "PF022",
+      "source_menu": "SMOKED BEEF L",
+      "material": "B017",
+      "qty": 20,
+      "unit": "gram",
+      "row": 176
+    },
+    {
+      "sku": "PF022",
+      "source_menu": "SMOKED BEEF L",
+      "material": "B014",
+      "qty": 32,
+      "unit": "gram",
+      "row": 177
+    },
+    {
+      "sku": "PF022",
+      "source_menu": "SMOKED BEEF L",
+      "material": "B022",
+      "qty": 45,
+      "unit": "gram",
+      "row": 178
+    },
+    {
+      "sku": "PF022",
+      "source_menu": "SMOKED BEEF L",
+      "material": "B025",
+      "qty": 19,
+      "unit": "gram",
+      "row": 179
+    },
+    {
+      "sku": "PF022",
+      "source_menu": "SMOKED BEEF L",
+      "material": "B018",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 180
+    },
+    {
+      "sku": "PF034",
+      "source_menu": "SEA FOOD L",
+      "material": "B001",
+      "qty": 35,
+      "unit": "gram",
+      "row": 181
+    },
+    {
+      "sku": "PF034",
+      "source_menu": "SEA FOOD L",
+      "material": "B010",
+      "qty": 100,
+      "unit": "gram",
+      "row": 182
+    },
+    {
+      "sku": "PF034",
+      "source_menu": "SEA FOOD L",
+      "material": "B002",
+      "qty": 35,
+      "unit": "gram",
+      "row": 183
+    },
+    {
+      "sku": "PF034",
+      "source_menu": "SEA FOOD L",
+      "material": "B011",
+      "qty": 15,
+      "unit": "gram",
+      "row": 184
+    },
+    {
+      "sku": "PF034",
+      "source_menu": "SEA FOOD L",
+      "material": "B027",
+      "qty": 15,
+      "unit": "gram",
+      "row": 185
+    },
+    {
+      "sku": "PF034",
+      "source_menu": "SEA FOOD L",
+      "material": "B028",
+      "qty": 18,
+      "unit": "gram",
+      "row": 186
+    },
+    {
+      "sku": "PF034",
+      "source_menu": "SEA FOOD L",
+      "material": "B029",
+      "qty": 32,
+      "unit": "gram",
+      "row": 187
+    },
+    {
+      "sku": "PF034",
+      "source_menu": "SEA FOOD L",
+      "material": "B025",
+      "qty": 19,
+      "unit": "gram",
+      "row": 188
+    },
+    {
+      "sku": "PF034",
+      "source_menu": "SEA FOOD L",
+      "material": "B018",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 189
+    },
+    {
+      "sku": "PF001",
+      "source_menu": "SUPER SUPREME L",
+      "material": "B001",
+      "qty": 35,
+      "unit": "gram",
+      "row": 190
+    },
+    {
+      "sku": "PF001",
+      "source_menu": "SUPER SUPREME L",
+      "material": "B010",
+      "qty": 100,
+      "unit": "gram",
+      "row": 191
+    },
+    {
+      "sku": "PF001",
+      "source_menu": "SUPER SUPREME L",
+      "material": "B002",
+      "qty": 35,
+      "unit": "gram",
+      "row": 192
+    },
+    {
+      "sku": "PF001",
+      "source_menu": "SUPER SUPREME L",
+      "material": "B011",
+      "qty": 15,
+      "unit": "gram",
+      "row": 193
+    },
+    {
+      "sku": "PF001",
+      "source_menu": "SUPER SUPREME L",
+      "material": "B008",
+      "qty": 2,
+      "unit": "gram",
+      "row": 194
+    },
+    {
+      "sku": "PF001",
+      "source_menu": "SUPER SUPREME L",
+      "material": "B003",
+      "qty": 25,
+      "unit": "gram",
+      "row": 195
+    },
+    {
+      "sku": "PF001",
+      "source_menu": "SUPER SUPREME L",
+      "material": "B020",
+      "qty": 17,
+      "unit": "gram",
+      "row": 196
+    },
+    {
+      "sku": "PF001",
+      "source_menu": "SUPER SUPREME L",
+      "material": "B014",
+      "qty": 11,
+      "unit": "gram",
+      "row": 197
+    },
+    {
+      "sku": "PF001",
+      "source_menu": "SUPER SUPREME L",
+      "material": "B025",
+      "qty": 19,
+      "unit": "gram",
+      "row": 198
+    },
+    {
+      "sku": "PF001",
+      "source_menu": "SUPER SUPREME L",
+      "material": "B018",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 199
+    },
+    {
+      "sku": "PF025",
+      "source_menu": "SAUSAGE L",
+      "material": "B001",
+      "qty": 35,
+      "unit": "gram",
+      "row": 200
+    },
+    {
+      "sku": "PF025",
+      "source_menu": "SAUSAGE L",
+      "material": "B010",
+      "qty": 45,
+      "unit": "gram",
+      "row": 201
+    },
+    {
+      "sku": "PF025",
+      "source_menu": "SAUSAGE L",
+      "material": "B002",
+      "qty": 35,
+      "unit": "gram",
+      "row": 202
+    },
+    {
+      "sku": "PF025",
+      "source_menu": "SAUSAGE L",
+      "material": "B011",
+      "qty": 15,
+      "unit": "gram",
+      "row": 203
+    },
+    {
+      "sku": "PF025",
+      "source_menu": "SAUSAGE L",
+      "material": "B017",
+      "qty": 25,
+      "unit": "gram",
+      "row": 204
+    },
+    {
+      "sku": "PF025",
+      "source_menu": "SAUSAGE L",
+      "material": "B022",
+      "qty": 45,
+      "unit": "gram",
+      "row": 205
+    },
+    {
+      "sku": "PF025",
+      "source_menu": "SAUSAGE L",
+      "material": "B023",
+      "qty": 24,
+      "unit": "gram",
+      "row": 206
+    },
+    {
+      "sku": "PF025",
+      "source_menu": "SAUSAGE L",
+      "material": "B024",
+      "qty": 24,
+      "unit": "gram",
+      "row": 207
+    },
+    {
+      "sku": "PF025",
+      "source_menu": "SAUSAGE L",
+      "material": "B025",
+      "qty": 19,
+      "unit": "gram",
+      "row": 208
+    },
+    {
+      "sku": "PF025",
+      "source_menu": "SAUSAGE L",
+      "material": "B018",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 209
+    },
+    {
+      "sku": "PF031",
+      "source_menu": "VEGAN L",
+      "material": "B001",
+      "qty": 35,
+      "unit": "gram",
+      "row": 210
+    },
+    {
+      "sku": "PF031",
+      "source_menu": "VEGAN L",
+      "material": "B010",
+      "qty": 100,
+      "unit": "gram",
+      "row": 211
+    },
+    {
+      "sku": "PF031",
+      "source_menu": "VEGAN L",
+      "material": "B002",
+      "qty": 35,
+      "unit": "gram",
+      "row": 212
+    },
+    {
+      "sku": "PF031",
+      "source_menu": "VEGAN L",
+      "material": "B011",
+      "qty": 15,
+      "unit": "gram",
+      "row": 213
+    },
+    {
+      "sku": "PF031",
+      "source_menu": "VEGAN L",
+      "material": "B012",
+      "qty": 38,
+      "unit": "gram",
+      "row": 214
+    },
+    {
+      "sku": "PF031",
+      "source_menu": "VEGAN L",
+      "material": "B021",
+      "qty": 30,
+      "unit": "gram",
+      "row": 215
+    },
+    {
+      "sku": "PF031",
+      "source_menu": "VEGAN L",
+      "material": "B025",
+      "qty": 19,
+      "unit": "gram",
+      "row": 216
+    },
+    {
+      "sku": "PF031",
+      "source_menu": "VEGAN L",
+      "material": "B026",
+      "qty": 38,
+      "unit": "gram",
+      "row": 217
+    },
+    {
+      "sku": "PF031",
+      "source_menu": "VEGAN L",
+      "material": "B018",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 218
+    },
+    {
+      "sku": "PF014",
+      "source_menu": "BEEF MUSHROM M",
+      "material": "B001",
+      "qty": 25,
+      "unit": "gram",
+      "row": 219
+    },
+    {
+      "sku": "PF014",
+      "source_menu": "BEEF MUSHROM M",
+      "material": "B010",
+      "qty": 80,
+      "unit": "gram",
+      "row": 220
+    },
+    {
+      "sku": "PF014",
+      "source_menu": "BEEF MUSHROM M",
+      "material": "B002",
+      "qty": 25,
+      "unit": "gram",
+      "row": 221
+    },
+    {
+      "sku": "PF014",
+      "source_menu": "BEEF MUSHROM M",
+      "material": "B011",
+      "qty": 10,
+      "unit": "gram",
+      "row": 222
+    },
+    {
+      "sku": "PF014",
+      "source_menu": "BEEF MUSHROM M",
+      "material": "B003",
+      "qty": 25,
+      "unit": "gram",
+      "row": 223
+    },
+    {
+      "sku": "PF014",
+      "source_menu": "BEEF MUSHROM M",
+      "material": "B020",
+      "qty": 13,
+      "unit": "gram",
+      "row": 224
+    },
+    {
+      "sku": "PF014",
+      "source_menu": "BEEF MUSHROM M",
+      "material": "B021",
+      "qty": 35,
+      "unit": "gram",
+      "row": 225
+    },
+    {
+      "sku": "PF014",
+      "source_menu": "BEEF MUSHROM M",
+      "material": "B013",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 226
+    },
+    {
+      "sku": "PF008",
+      "source_menu": "CHEESE LOVER M",
+      "material": "B001",
+      "qty": 25,
+      "unit": "gram",
+      "row": 227
+    },
+    {
+      "sku": "PF008",
+      "source_menu": "CHEESE LOVER M",
+      "material": "B010",
+      "qty": 35,
+      "unit": "gram",
+      "row": 228
+    },
+    {
+      "sku": "PF008",
+      "source_menu": "CHEESE LOVER M",
+      "material": "B002",
+      "qty": 25,
+      "unit": "gram",
+      "row": 229
+    },
+    {
+      "sku": "PF008",
+      "source_menu": "CHEESE LOVER M",
+      "material": "B011",
+      "qty": 10,
+      "unit": "gram",
+      "row": 230
+    },
+    {
+      "sku": "PF008",
+      "source_menu": "CHEESE LOVER M",
+      "material": "B022",
+      "qty": 35,
+      "unit": "gram",
+      "row": 231
+    },
+    {
+      "sku": "PF008",
+      "source_menu": "CHEESE LOVER M",
+      "material": "B004",
+      "qty": 12,
+      "unit": "gram",
+      "row": 232
+    },
+    {
+      "sku": "PF008",
+      "source_menu": "CHEESE LOVER M",
+      "material": "B013",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 233
+    },
+    {
+      "sku": "PF011",
+      "source_menu": "DELUXE CHEESE M",
+      "material": "B001",
+      "qty": 25,
+      "unit": "gram",
+      "row": 234
+    },
+    {
+      "sku": "PF011",
+      "source_menu": "DELUXE CHEESE M",
+      "material": "B010",
+      "qty": 100,
+      "unit": "gram",
+      "row": 235
+    },
+    {
+      "sku": "PF011",
+      "source_menu": "DELUXE CHEESE M",
+      "material": "B002",
+      "qty": 25,
+      "unit": "gram",
+      "row": 236
+    },
+    {
+      "sku": "PF011",
+      "source_menu": "DELUXE CHEESE M",
+      "material": "B011",
+      "qty": 10,
+      "unit": "gram",
+      "row": 237
+    },
+    {
+      "sku": "PF011",
+      "source_menu": "DELUXE CHEESE M",
+      "material": "B013",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 238
+    },
+    {
+      "sku": "PF005",
+      "source_menu": "MEAT LOVER M",
+      "material": "B001",
+      "qty": 25,
+      "unit": "gram",
+      "row": 239
+    },
+    {
+      "sku": "PF005",
+      "source_menu": "MEAT LOVER M",
+      "material": "B010",
+      "qty": 80,
+      "unit": "gram",
+      "row": 240
+    },
+    {
+      "sku": "PF005",
+      "source_menu": "MEAT LOVER M",
+      "material": "B002",
+      "qty": 25,
+      "unit": "gram",
+      "row": 241
+    },
+    {
+      "sku": "PF005",
+      "source_menu": "MEAT LOVER M",
+      "material": "B011",
+      "qty": 10,
+      "unit": "gram",
+      "row": 242
+    },
+    {
+      "sku": "PF005",
+      "source_menu": "MEAT LOVER M",
+      "material": "B008",
+      "qty": 1.5,
+      "unit": "gram",
+      "row": 243
+    },
+    {
+      "sku": "PF005",
+      "source_menu": "MEAT LOVER M",
+      "material": "B003",
+      "qty": 25,
+      "unit": "gram",
+      "row": 244
+    },
+    {
+      "sku": "PF005",
+      "source_menu": "MEAT LOVER M",
+      "material": "B023",
+      "qty": 12,
+      "unit": "gram",
+      "row": 245
+    },
+    {
+      "sku": "PF005",
+      "source_menu": "MEAT LOVER M",
+      "material": "B024",
+      "qty": 12,
+      "unit": "gram",
+      "row": 246
+    },
+    {
+      "sku": "PF005",
+      "source_menu": "MEAT LOVER M",
+      "material": "B013",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 247
+    },
+    {
+      "sku": "PF029",
+      "source_menu": "MIX M",
+      "material": "B001",
+      "qty": 25,
+      "unit": "gram",
+      "row": 248
+    },
+    {
+      "sku": "PF029",
+      "source_menu": "MIX M",
+      "material": "B010",
+      "qty": 35,
+      "unit": "gram",
+      "row": 249
+    },
+    {
+      "sku": "PF029",
+      "source_menu": "MIX M",
+      "material": "B002",
+      "qty": 25,
+      "unit": "gram",
+      "row": 250
+    },
+    {
+      "sku": "PF029",
+      "source_menu": "MIX M",
+      "material": "B011",
+      "qty": 10,
+      "unit": "gram",
+      "row": 251
+    },
+    {
+      "sku": "PF029",
+      "source_menu": "MIX M",
+      "material": "B008",
+      "qty": 1.5,
+      "unit": "gram",
+      "row": 252
+    },
+    {
+      "sku": "PF029",
+      "source_menu": "MIX M",
+      "material": "B003",
+      "qty": 25,
+      "unit": "gram",
+      "row": 253
+    },
+    {
+      "sku": "PF029",
+      "source_menu": "MIX M",
+      "material": "B022",
+      "qty": 35,
+      "unit": "gram",
+      "row": 254
+    },
+    {
+      "sku": "PF029",
+      "source_menu": "MIX M",
+      "material": "B023",
+      "qty": 10,
+      "unit": "gram",
+      "row": 255
+    },
+    {
+      "sku": "PF029",
+      "source_menu": "MIX M",
+      "material": "B012",
+      "qty": 25,
+      "unit": "gram",
+      "row": 256
+    },
+    {
+      "sku": "PF029",
+      "source_menu": "MIX M",
+      "material": "B025",
+      "qty": 29,
+      "unit": "gram",
+      "row": 257
+    },
+    {
+      "sku": "PF029",
+      "source_menu": "MIX M",
+      "material": "B026",
+      "qty": 25,
+      "unit": "gram",
+      "row": 258
+    },
+    {
+      "sku": "PF029",
+      "source_menu": "MIX M",
+      "material": "B013",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 259
+    },
+    {
+      "sku": "PF017",
+      "source_menu": "PEPPERONI M",
+      "material": "B001",
+      "qty": 25,
+      "unit": "gram",
+      "row": 260
+    },
+    {
+      "sku": "PF017",
+      "source_menu": "PEPPERONI M",
+      "material": "B010",
+      "qty": 80,
+      "unit": "gram",
+      "row": 261
+    },
+    {
+      "sku": "PF017",
+      "source_menu": "PEPPERONI M",
+      "material": "B002",
+      "qty": 25,
+      "unit": "gram",
+      "row": 262
+    },
+    {
+      "sku": "PF017",
+      "source_menu": "PEPPERONI M",
+      "material": "B011",
+      "qty": 10,
+      "unit": "gram",
+      "row": 263
+    },
+    {
+      "sku": "PF017",
+      "source_menu": "PEPPERONI M",
+      "material": "B020",
+      "qty": 19,
+      "unit": "gram",
+      "row": 264
+    },
+    {
+      "sku": "PF017",
+      "source_menu": "PEPPERONI M",
+      "material": "B013",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 265
+    },
+    {
+      "sku": "PF023",
+      "source_menu": "SMOKED BEEF M",
+      "material": "B001",
+      "qty": 25,
+      "unit": "gram",
+      "row": 266
+    },
+    {
+      "sku": "PF023",
+      "source_menu": "SMOKED BEEF M",
+      "material": "B010",
+      "qty": 35,
+      "unit": "gram",
+      "row": 267
+    },
+    {
+      "sku": "PF023",
+      "source_menu": "SMOKED BEEF M",
+      "material": "B002",
+      "qty": 25,
+      "unit": "gram",
+      "row": 268
+    },
+    {
+      "sku": "PF023",
+      "source_menu": "SMOKED BEEF M",
+      "material": "B011",
+      "qty": 10,
+      "unit": "gram",
+      "row": 269
+    },
+    {
+      "sku": "PF023",
+      "source_menu": "SMOKED BEEF M",
+      "material": "B014",
+      "qty": 21,
+      "unit": "gram",
+      "row": 270
+    },
+    {
+      "sku": "PF023",
+      "source_menu": "SMOKED BEEF M",
+      "material": "B022",
+      "qty": 35,
+      "unit": "gram",
+      "row": 271
+    },
+    {
+      "sku": "PF023",
+      "source_menu": "SMOKED BEEF M",
+      "material": "B025",
+      "qty": 15,
+      "unit": "gram",
+      "row": 272
+    },
+    {
+      "sku": "PF023",
+      "source_menu": "SMOKED BEEF M",
+      "material": "B013",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 273
+    },
+    {
+      "sku": "PF035",
+      "source_menu": "SEA FOOD M",
+      "material": "B010",
+      "qty": 80,
+      "unit": "gram",
+      "row": 274
+    },
+    {
+      "sku": "PF035",
+      "source_menu": "SEA FOOD M",
+      "material": "B002",
+      "qty": 25,
+      "unit": "gram",
+      "row": 275
+    },
+    {
+      "sku": "PF035",
+      "source_menu": "SEA FOOD M",
+      "material": "B011",
+      "qty": 16,
+      "unit": "gram",
+      "row": 276
+    },
+    {
+      "sku": "PF035",
+      "source_menu": "SEA FOOD M",
+      "material": "B027",
+      "qty": 10,
+      "unit": "gram",
+      "row": 277
+    },
+    {
+      "sku": "PF035",
+      "source_menu": "SEA FOOD M",
+      "material": "B028",
+      "qty": 12,
+      "unit": "gram",
+      "row": 278
+    },
+    {
+      "sku": "PF035",
+      "source_menu": "SEA FOOD M",
+      "material": "B029",
+      "qty": 24,
+      "unit": "gram",
+      "row": 279
+    },
+    {
+      "sku": "PF035",
+      "source_menu": "SEA FOOD M",
+      "material": "B015",
+      "qty": 25,
+      "unit": "gram",
+      "row": 280
+    },
+    {
+      "sku": "PF035",
+      "source_menu": "SEA FOOD M",
+      "material": "B025",
+      "qty": 15,
+      "unit": "gram",
+      "row": 281
+    },
+    {
+      "sku": "PF035",
+      "source_menu": "SEA FOOD M",
+      "material": "B013",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 282
+    },
+    {
+      "sku": "PF002",
+      "source_menu": "SUPER SUPREME M",
+      "material": "B001",
+      "qty": 25,
+      "unit": "gram",
+      "row": 283
+    },
+    {
+      "sku": "PF002",
+      "source_menu": "SUPER SUPREME M",
+      "material": "B010",
+      "qty": 80,
+      "unit": "gram",
+      "row": 284
+    },
+    {
+      "sku": "PF002",
+      "source_menu": "SUPER SUPREME M",
+      "material": "B002",
+      "qty": 25,
+      "unit": "gram",
+      "row": 285
+    },
+    {
+      "sku": "PF002",
+      "source_menu": "SUPER SUPREME M",
+      "material": "B011",
+      "qty": 10,
+      "unit": "gram",
+      "row": 286
+    },
+    {
+      "sku": "PF002",
+      "source_menu": "SUPER SUPREME M",
+      "material": "B008",
+      "qty": 1.5,
+      "unit": "gram",
+      "row": 287
+    },
+    {
+      "sku": "PF002",
+      "source_menu": "SUPER SUPREME M",
+      "material": "B003",
+      "qty": 13,
+      "unit": "gram",
+      "row": 288
+    },
+    {
+      "sku": "PF002",
+      "source_menu": "SUPER SUPREME M",
+      "material": "B020",
+      "qty": 13,
+      "unit": "gram",
+      "row": 289
+    },
+    {
+      "sku": "PF002",
+      "source_menu": "SUPER SUPREME M",
+      "material": "B014",
+      "qty": 8,
+      "unit": "gram",
+      "row": 290
+    },
+    {
+      "sku": "PF002",
+      "source_menu": "SUPER SUPREME M",
+      "material": "B025",
+      "qty": 19,
+      "unit": "gram",
+      "row": 291
+    },
+    {
+      "sku": "PF002",
+      "source_menu": "SUPER SUPREME M",
+      "material": "B013",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 292
+    },
+    {
+      "sku": "PF026",
+      "source_menu": "SAUSAGE M",
+      "material": "B001",
+      "qty": 25,
+      "unit": "gram",
+      "row": 293
+    },
+    {
+      "sku": "PF026",
+      "source_menu": "SAUSAGE M",
+      "material": "B010",
+      "qty": 35,
+      "unit": "gram",
+      "row": 294
+    },
+    {
+      "sku": "PF026",
+      "source_menu": "SAUSAGE M",
+      "material": "B002",
+      "qty": 25,
+      "unit": "gram",
+      "row": 295
+    },
+    {
+      "sku": "PF026",
+      "source_menu": "SAUSAGE M",
+      "material": "B011",
+      "qty": 10,
+      "unit": "gram",
+      "row": 296
+    },
+    {
+      "sku": "PF026",
+      "source_menu": "SAUSAGE M",
+      "material": "B022",
+      "qty": 35,
+      "unit": "gram",
+      "row": 297
+    },
+    {
+      "sku": "PF026",
+      "source_menu": "SAUSAGE M",
+      "material": "B023",
+      "qty": 12,
+      "unit": "gram",
+      "row": 298
+    },
+    {
+      "sku": "PF026",
+      "source_menu": "SAUSAGE M",
+      "material": "B024",
+      "qty": 12,
+      "unit": "gram",
+      "row": 299
+    },
+    {
+      "sku": "PF026",
+      "source_menu": "SAUSAGE M",
+      "material": "B025",
+      "qty": 15,
+      "unit": "gram",
+      "row": 300
+    },
+    {
+      "sku": "PF026",
+      "source_menu": "SAUSAGE M",
+      "material": "B013",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 301
+    },
+    {
+      "sku": "PF032",
+      "source_menu": "VEGAN M",
+      "material": "B001",
+      "qty": 25,
+      "unit": "gram",
+      "row": 302
+    },
+    {
+      "sku": "PF032",
+      "source_menu": "VEGAN M",
+      "material": "B010",
+      "qty": 80,
+      "unit": "gram",
+      "row": 303
+    },
+    {
+      "sku": "PF032",
+      "source_menu": "VEGAN M",
+      "material": "B002",
+      "qty": 25,
+      "unit": "gram",
+      "row": 304
+    },
+    {
+      "sku": "PF032",
+      "source_menu": "VEGAN M",
+      "material": "B011",
+      "qty": 10,
+      "unit": "gram",
+      "row": 305
+    },
+    {
+      "sku": "PF032",
+      "source_menu": "VEGAN M",
+      "material": "B012",
+      "qty": 25,
+      "unit": "gram",
+      "row": 306
+    },
+    {
+      "sku": "PF032",
+      "source_menu": "VEGAN M",
+      "material": "B021",
+      "qty": 35,
+      "unit": "gram",
+      "row": 307
+    },
+    {
+      "sku": "PF032",
+      "source_menu": "VEGAN M",
+      "material": "B025",
+      "qty": 19,
+      "unit": "gram",
+      "row": 308
+    },
+    {
+      "sku": "PF032",
+      "source_menu": "VEGAN M",
+      "material": "B026",
+      "qty": 25,
+      "unit": "gram",
+      "row": 309
+    },
+    {
+      "sku": "PF032",
+      "source_menu": "VEGAN M",
+      "material": "B013",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 310
+    },
+    {
+      "sku": "PF021",
+      "source_menu": "BEEF CORN S",
+      "material": "B001",
+      "qty": 20,
+      "unit": "gram",
+      "row": 311
+    },
+    {
+      "sku": "PF021",
+      "source_menu": "BEEF CORN S",
+      "material": "B010",
+      "qty": 40,
+      "unit": "gram",
+      "row": 312
+    },
+    {
+      "sku": "PF021",
+      "source_menu": "BEEF CORN S",
+      "material": "B002",
+      "qty": 20,
+      "unit": "gram",
+      "row": 313
+    },
+    {
+      "sku": "PF021",
+      "source_menu": "BEEF CORN S",
+      "material": "B011",
+      "qty": 5,
+      "unit": "gram",
+      "row": 314
+    },
+    {
+      "sku": "PF021",
+      "source_menu": "BEEF CORN S",
+      "material": "B008",
+      "qty": 1,
+      "unit": "gram",
+      "row": 315
+    },
+    {
+      "sku": "PF021",
+      "source_menu": "BEEF CORN S",
+      "material": "B012",
+      "qty": 25,
+      "unit": "gram",
+      "row": 316
+    },
+    {
+      "sku": "PF021",
+      "source_menu": "BEEF CORN S",
+      "material": "B030",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 317
+    },
+    {
+      "sku": "PF015",
+      "source_menu": "BEEF MUSHROOM S",
+      "material": "B001",
+      "qty": 20,
+      "unit": "gram",
+      "row": 318
+    },
+    {
+      "sku": "PF015",
+      "source_menu": "BEEF MUSHROOM S",
+      "material": "B010",
+      "qty": 40,
+      "unit": "gram",
+      "row": 319
+    },
+    {
+      "sku": "PF015",
+      "source_menu": "BEEF MUSHROOM S",
+      "material": "B002",
+      "qty": 20,
+      "unit": "gram",
+      "row": 320
+    },
+    {
+      "sku": "PF015",
+      "source_menu": "BEEF MUSHROOM S",
+      "material": "B011",
+      "qty": 5,
+      "unit": "gram",
+      "row": 321
+    },
+    {
+      "sku": "PF015",
+      "source_menu": "BEEF MUSHROOM S",
+      "material": "B003",
+      "qty": 13,
+      "unit": "gram",
+      "row": 322
+    },
+    {
+      "sku": "PF015",
+      "source_menu": "BEEF MUSHROOM S",
+      "material": "B020",
+      "qty": 9,
+      "unit": "gram",
+      "row": 323
+    },
+    {
+      "sku": "PF015",
+      "source_menu": "BEEF MUSHROOM S",
+      "material": "B021",
+      "qty": 18,
+      "unit": "gram",
+      "row": 324
+    },
+    {
+      "sku": "PF015",
+      "source_menu": "BEEF MUSHROOM S",
+      "material": "B030",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 325
+    },
+    {
+      "sku": "PF009",
+      "source_menu": "CHEESE LOVER S",
+      "material": "B001",
+      "qty": 20,
+      "unit": "gram",
+      "row": 326
+    },
+    {
+      "sku": "PF009",
+      "source_menu": "CHEESE LOVER S",
+      "material": "B010",
+      "qty": 20,
+      "unit": "gram",
+      "row": 327
+    },
+    {
+      "sku": "PF009",
+      "source_menu": "CHEESE LOVER S",
+      "material": "B002",
+      "qty": 20,
+      "unit": "gram",
+      "row": 328
+    },
+    {
+      "sku": "PF009",
+      "source_menu": "CHEESE LOVER S",
+      "material": "B011",
+      "qty": 5,
+      "unit": "gram",
+      "row": 329
+    },
+    {
+      "sku": "PF009",
+      "source_menu": "CHEESE LOVER S",
+      "material": "B022",
+      "qty": 20,
+      "unit": "gram",
+      "row": 330
+    },
+    {
+      "sku": "PF009",
+      "source_menu": "CHEESE LOVER S",
+      "material": "B004",
+      "qty": 18,
+      "unit": "gram",
+      "row": 331
+    },
+    {
+      "sku": "PF009",
+      "source_menu": "CHEESE LOVER S",
+      "material": "B030",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 332
+    },
+    {
+      "sku": "PF012",
+      "source_menu": "DELUXE CHEESE S",
+      "material": "B001",
+      "qty": 20,
+      "unit": "gram",
+      "row": 333
+    },
+    {
+      "sku": "PF012",
+      "source_menu": "DELUXE CHEESE S",
+      "material": "B010",
+      "qty": 60,
+      "unit": "gram",
+      "row": 334
+    },
+    {
+      "sku": "PF012",
+      "source_menu": "DELUXE CHEESE S",
+      "material": "B002",
+      "qty": 15,
+      "unit": "gram",
+      "row": 335
+    },
+    {
+      "sku": "PF012",
+      "source_menu": "DELUXE CHEESE S",
+      "material": "B011",
+      "qty": 5,
+      "unit": "gram",
+      "row": 336
+    },
+    {
+      "sku": "PF012",
+      "source_menu": "DELUXE CHEESE S",
+      "material": "B030",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 337
+    },
+    {
+      "sku": "PF006",
+      "source_menu": "MEAT LOVER S",
+      "material": "B001",
+      "qty": 20,
+      "unit": "gram",
+      "row": 338
+    },
+    {
+      "sku": "PF006",
+      "source_menu": "MEAT LOVER S",
+      "material": "B010",
+      "qty": 40,
+      "unit": "gram",
+      "row": 339
+    },
+    {
+      "sku": "PF006",
+      "source_menu": "MEAT LOVER S",
+      "material": "B002",
+      "qty": 20,
+      "unit": "gram",
+      "row": 340
+    },
+    {
+      "sku": "PF006",
+      "source_menu": "MEAT LOVER S",
+      "material": "B011",
+      "qty": 5,
+      "unit": "gram",
+      "row": 341
+    },
+    {
+      "sku": "PF006",
+      "source_menu": "MEAT LOVER S",
+      "material": "B008",
+      "qty": 1,
+      "unit": "gram",
+      "row": 342
+    },
+    {
+      "sku": "PF006",
+      "source_menu": "MEAT LOVER S",
+      "material": "B003",
+      "qty": 7,
+      "unit": "gram",
+      "row": 343
+    },
+    {
+      "sku": "PF006",
+      "source_menu": "MEAT LOVER S",
+      "material": "B023",
+      "qty": 6,
+      "unit": "gram",
+      "row": 344
+    },
+    {
+      "sku": "PF006",
+      "source_menu": "MEAT LOVER S",
+      "material": "B024",
+      "qty": 6,
+      "unit": "gram",
+      "row": 345
+    },
+    {
+      "sku": "PF006",
+      "source_menu": "MEAT LOVER S",
+      "material": "B030",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 346
+    },
+    {
+      "sku": "PF030",
+      "source_menu": "MIX S",
+      "material": "B001",
+      "qty": 20,
+      "unit": "gram",
+      "row": 347
+    },
+    {
+      "sku": "PF030",
+      "source_menu": "MIX S",
+      "material": "B010",
+      "qty": 20,
+      "unit": "gram",
+      "row": 348
+    },
+    {
+      "sku": "PF030",
+      "source_menu": "MIX S",
+      "material": "B002",
+      "qty": 20,
+      "unit": "gram",
+      "row": 349
+    },
+    {
+      "sku": "PF030",
+      "source_menu": "MIX S",
+      "material": "B011",
+      "qty": 5,
+      "unit": "gram",
+      "row": 350
+    },
+    {
+      "sku": "PF030",
+      "source_menu": "MIX S",
+      "material": "B008",
+      "qty": 7,
+      "unit": "gram",
+      "row": 351
+    },
+    {
+      "sku": "PF030",
+      "source_menu": "MIX S",
+      "material": "B022",
+      "qty": 20,
+      "unit": "gram",
+      "row": 352
+    },
+    {
+      "sku": "PF030",
+      "source_menu": "MIX S",
+      "material": "B023",
+      "qty": 6,
+      "unit": "gram",
+      "row": 353
+    },
+    {
+      "sku": "PF030",
+      "source_menu": "MIX S",
+      "material": "B012",
+      "qty": 13,
+      "unit": "gram",
+      "row": 354
+    },
+    {
+      "sku": "PF030",
+      "source_menu": "MIX S",
+      "material": "B025",
+      "qty": 13,
+      "unit": "gram",
+      "row": 355
+    },
+    {
+      "sku": "PF030",
+      "source_menu": "MIX S",
+      "material": "B026",
+      "qty": 13,
+      "unit": "gram",
+      "row": 356
+    },
+    {
+      "sku": "PF030",
+      "source_menu": "MIX S",
+      "material": "B030",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 357
+    },
+    {
+      "sku": "PF018",
+      "source_menu": "PEPPERONI S",
+      "material": "B001",
+      "qty": 20,
+      "unit": "gram",
+      "row": 358
+    },
+    {
+      "sku": "PF018",
+      "source_menu": "PEPPERONI S",
+      "material": "B010",
+      "qty": 40,
+      "unit": "gram",
+      "row": 359
+    },
+    {
+      "sku": "PF018",
+      "source_menu": "PEPPERONI S",
+      "material": "B002",
+      "qty": 20,
+      "unit": "gram",
+      "row": 360
+    },
+    {
+      "sku": "PF018",
+      "source_menu": "PEPPERONI S",
+      "material": "B011",
+      "qty": 5,
+      "unit": "gram",
+      "row": 361
+    },
+    {
+      "sku": "PF018",
+      "source_menu": "PEPPERONI S",
+      "material": "B020",
+      "qty": 11,
+      "unit": "gram",
+      "row": 362
+    },
+    {
+      "sku": "PF018",
+      "source_menu": "PEPPERONI S",
+      "material": "B030",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 363
+    },
+    {
+      "sku": "PF024",
+      "source_menu": "SMOKED BEEF S",
+      "material": "B001",
+      "qty": 20,
+      "unit": "gram",
+      "row": 364
+    },
+    {
+      "sku": "PF024",
+      "source_menu": "SMOKED BEEF S",
+      "material": "B010",
+      "qty": 20,
+      "unit": "gram",
+      "row": 365
+    },
+    {
+      "sku": "PF024",
+      "source_menu": "SMOKED BEEF S",
+      "material": "B002",
+      "qty": 15,
+      "unit": "gram",
+      "row": 366
+    },
+    {
+      "sku": "PF024",
+      "source_menu": "SMOKED BEEF S",
+      "material": "B011",
+      "qty": 5,
+      "unit": "gram",
+      "row": 367
+    },
+    {
+      "sku": "PF024",
+      "source_menu": "SMOKED BEEF S",
+      "material": "B014",
+      "qty": 21,
+      "unit": "gram",
+      "row": 368
+    },
+    {
+      "sku": "PF024",
+      "source_menu": "SMOKED BEEF S",
+      "material": "B022",
+      "qty": 20,
+      "unit": "gram",
+      "row": 369
+    },
+    {
+      "sku": "PF024",
+      "source_menu": "SMOKED BEEF S",
+      "material": "B025",
+      "qty": 10,
+      "unit": "gram",
+      "row": 370
+    },
+    {
+      "sku": "PF024",
+      "source_menu": "SMOKED BEEF S",
+      "material": "B030",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 371
+    },
+    {
+      "sku": "PF036",
+      "source_menu": "SEAFOOD S",
+      "material": "B001",
+      "qty": 20,
+      "unit": "gram",
+      "row": 372
+    },
+    {
+      "sku": "PF036",
+      "source_menu": "SEAFOOD S",
+      "material": "B010",
+      "qty": 40,
+      "unit": "gram",
+      "row": 373
+    },
+    {
+      "sku": "PF036",
+      "source_menu": "SEAFOOD S",
+      "material": "B002",
+      "qty": 20,
+      "unit": "gram",
+      "row": 374
+    },
+    {
+      "sku": "PF036",
+      "source_menu": "SEAFOOD S",
+      "material": "B011",
+      "qty": 5,
+      "unit": "gram",
+      "row": 375
+    },
+    {
+      "sku": "PF036",
+      "source_menu": "SEAFOOD S",
+      "material": "B027",
+      "qty": 5,
+      "unit": "gram",
+      "row": 376
+    },
+    {
+      "sku": "PF036",
+      "source_menu": "SEAFOOD S",
+      "material": "B028",
+      "qty": 6,
+      "unit": "gram",
+      "row": 377
+    },
+    {
+      "sku": "PF036",
+      "source_menu": "SEAFOOD S",
+      "material": "B029",
+      "qty": 16,
+      "unit": "gram",
+      "row": 378
+    },
+    {
+      "sku": "PF036",
+      "source_menu": "SEAFOOD S",
+      "material": "B025",
+      "qty": 10,
+      "unit": "gram",
+      "row": 379
+    },
+    {
+      "sku": "PF036",
+      "source_menu": "SEAFOOD S",
+      "material": "B030",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 380
+    },
+    {
+      "sku": "PF003",
+      "source_menu": "SUPER SUPREME S",
+      "material": "B001",
+      "qty": 20,
+      "unit": "gram",
+      "row": 381
+    },
+    {
+      "sku": "PF003",
+      "source_menu": "SUPER SUPREME S",
+      "material": "B010",
+      "qty": 40,
+      "unit": "gram",
+      "row": 382
+    },
+    {
+      "sku": "PF003",
+      "source_menu": "SUPER SUPREME S",
+      "material": "B002",
+      "qty": 15,
+      "unit": "gram",
+      "row": 383
+    },
+    {
+      "sku": "PF003",
+      "source_menu": "SUPER SUPREME S",
+      "material": "B011",
+      "qty": 5,
+      "unit": "gram",
+      "row": 384
+    },
+    {
+      "sku": "PF003",
+      "source_menu": "SUPER SUPREME S",
+      "material": "B008",
+      "qty": 1,
+      "unit": "gram",
+      "row": 385
+    },
+    {
+      "sku": "PF003",
+      "source_menu": "SUPER SUPREME S",
+      "material": "B003",
+      "qty": 7,
+      "unit": "gram",
+      "row": 386
+    },
+    {
+      "sku": "PF003",
+      "source_menu": "SUPER SUPREME S",
+      "material": "B020",
+      "qty": 13,
+      "unit": "gram",
+      "row": 387
+    },
+    {
+      "sku": "PF003",
+      "source_menu": "SUPER SUPREME S",
+      "material": "B014",
+      "qty": 6,
+      "unit": "gram",
+      "row": 388
+    },
+    {
+      "sku": "PF003",
+      "source_menu": "SUPER SUPREME S",
+      "material": "B025",
+      "qty": 13,
+      "unit": "gram",
+      "row": 389
+    },
+    {
+      "sku": "PF003",
+      "source_menu": "SUPER SUPREME S",
+      "material": "B030",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 390
+    },
+    {
+      "sku": "PF027",
+      "source_menu": "SAUSAGE S",
+      "material": "B001",
+      "qty": 20,
+      "unit": "gram",
+      "row": 391
+    },
+    {
+      "sku": "PF027",
+      "source_menu": "SAUSAGE S",
+      "material": "B010",
+      "qty": 20,
+      "unit": "gram",
+      "row": 392
+    },
+    {
+      "sku": "PF027",
+      "source_menu": "SAUSAGE S",
+      "material": "B002",
+      "qty": 15,
+      "unit": "gram",
+      "row": 393
+    },
+    {
+      "sku": "PF027",
+      "source_menu": "SAUSAGE S",
+      "material": "B011",
+      "qty": 5,
+      "unit": "gram",
+      "row": 394
+    },
+    {
+      "sku": "PF027",
+      "source_menu": "SAUSAGE S",
+      "material": "B022",
+      "qty": 20,
+      "unit": "gram",
+      "row": 395
+    },
+    {
+      "sku": "PF027",
+      "source_menu": "SAUSAGE S",
+      "material": "B023",
+      "qty": 6,
+      "unit": "gram",
+      "row": 396
+    },
+    {
+      "sku": "PF027",
+      "source_menu": "SAUSAGE S",
+      "material": "B024",
+      "qty": 6,
+      "unit": "gram",
+      "row": 397
+    },
+    {
+      "sku": "PF027",
+      "source_menu": "SAUSAGE S",
+      "material": "B025",
+      "qty": 10,
+      "unit": "gram",
+      "row": 398
+    },
+    {
+      "sku": "PF027",
+      "source_menu": "SAUSAGE S",
+      "material": "B030",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 399
+    },
+    {
+      "sku": "PF033",
+      "source_menu": "VEGAN S",
+      "material": "B001",
+      "qty": 20,
+      "unit": "gram",
+      "row": 400
+    },
+    {
+      "sku": "PF033",
+      "source_menu": "VEGAN S",
+      "material": "B010",
+      "qty": 40,
+      "unit": "gram",
+      "row": 401
+    },
+    {
+      "sku": "PF033",
+      "source_menu": "VEGAN S",
+      "material": "B002",
+      "qty": 20,
+      "unit": "gram",
+      "row": 402
+    },
+    {
+      "sku": "PF033",
+      "source_menu": "VEGAN S",
+      "material": "B011",
+      "qty": 5,
+      "unit": "gram",
+      "row": 403
+    },
+    {
+      "sku": "PF033",
+      "source_menu": "VEGAN S",
+      "material": "B012",
+      "qty": 13,
+      "unit": "gram",
+      "row": 404
+    },
+    {
+      "sku": "PF033",
+      "source_menu": "VEGAN S",
+      "material": "B021",
+      "qty": 18,
+      "unit": "gram",
+      "row": 405
+    },
+    {
+      "sku": "PF033",
+      "source_menu": "VEGAN S",
+      "material": "B025",
+      "qty": 13,
+      "unit": "gram",
+      "row": 406
+    },
+    {
+      "sku": "PF033",
+      "source_menu": "VEGAN S",
+      "material": "B026",
+      "qty": 13,
+      "unit": "gram",
+      "row": 407
+    },
+    {
+      "sku": "PF033",
+      "source_menu": "VEGAN S",
+      "material": "B030",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 408
+    },
+    {
+      "sku": "PF045",
+      "source_menu": "Air Mineral Santri 600 ml",
+      "material": "D032",
+      "qty": 1,
+      "unit": "botol",
+      "row": 56,
+      "derived": true
+    },
+    {
+      "sku": "PF046",
+      "source_menu": "Fruittea Blackcurrant",
+      "material": "D033",
+      "qty": 1,
+      "unit": "botol",
+      "row": 57,
+      "derived": true
+    },
+    {
+      "sku": "PF047",
+      "source_menu": "The Pucuk",
+      "material": "D034",
+      "qty": 1,
+      "unit": "botol",
+      "row": 58,
+      "derived": true
+    },
+    {
+      "sku": "PF048",
+      "source_menu": "Tebs Lemon Lime",
+      "material": "D035",
+      "qty": 1,
+      "unit": "botol",
+      "row": 59,
+      "derived": true
+    },
+    {
+      "sku": "PF049",
+      "source_menu": "Lemon Tea",
+      "material": "D036",
+      "qty": 1,
+      "unit": "porsi",
+      "row": 60,
+      "derived": true
+    }
+  ],
+  "unmatched_bom": [
+    {
+      "sku": null,
+      "source_menu": "Huruf Beef Cheese",
+      "material": "B004",
+      "qty": 10,
+      "unit": "gram",
+      "row": 112
+    },
+    {
+      "sku": null,
+      "source_menu": "Huruf Beef Cheese",
+      "material": "B016",
+      "qty": 20,
+      "unit": "gram",
+      "row": 113
+    },
+    {
+      "sku": null,
+      "source_menu": "TUNA MELT L",
+      "material": "B010",
+      "qty": 100,
+      "unit": "gram",
+      "row": 114
+    },
+    {
+      "sku": null,
+      "source_menu": "TUNA MELT L",
+      "material": "B002",
+      "qty": 100,
+      "unit": "gram",
+      "row": 115
+    },
+    {
+      "sku": null,
+      "source_menu": "TUNA MELT L",
+      "material": "B017",
+      "qty": 30,
+      "unit": "gram",
+      "row": 116
+    },
+    {
+      "sku": null,
+      "source_menu": "TUNA MELT L",
+      "material": "B012",
+      "qty": 75,
+      "unit": "gram",
+      "row": 117
+    },
+    {
+      "sku": null,
+      "source_menu": "TUNA MELT L",
+      "material": "B018",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 118
+    },
+    {
+      "sku": null,
+      "source_menu": "TUNA MELT L",
+      "material": "B019",
+      "qty": 30,
+      "unit": "gram",
+      "row": 119
+    },
+    {
+      "sku": null,
+      "source_menu": "Meat Lover Slice",
+      "material": "B010",
+      "qty": 20,
+      "unit": "gram",
+      "row": 409
+    },
+    {
+      "sku": null,
+      "source_menu": "Meat Lover Slice",
+      "material": "B002",
+      "qty": 7,
+      "unit": "gram",
+      "row": 410
+    },
+    {
+      "sku": null,
+      "source_menu": "Meat Lover Slice",
+      "material": "B011",
+      "qty": 4,
+      "unit": "gram",
+      "row": 411
+    },
+    {
+      "sku": null,
+      "source_menu": "Meat Lover Slice",
+      "material": "B008",
+      "qty": 6,
+      "unit": "gram",
+      "row": 412
+    },
+    {
+      "sku": null,
+      "source_menu": "Meat Lover Slice",
+      "material": "B003",
+      "qty": 10,
+      "unit": "gram",
+      "row": 413
+    },
+    {
+      "sku": null,
+      "source_menu": "Meat Lover Slice",
+      "material": "B023",
+      "qty": 5,
+      "unit": "gram",
+      "row": 414
+    },
+    {
+      "sku": null,
+      "source_menu": "Meat Lover Slice",
+      "material": "B024",
+      "qty": 5,
+      "unit": "gram",
+      "row": 415
+    },
+    {
+      "sku": null,
+      "source_menu": "Meat Lover Slice",
+      "material": "B015",
+      "qty": 7,
+      "unit": "gram",
+      "row": 416
+    },
+    {
+      "sku": null,
+      "source_menu": "Meat Lover Slice",
+      "material": "B031",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 417
+    }
+  ],
+  "normalizations": [
+    {
+      "row": 65,
+      "field": "menu_alias",
+      "original": "BURGER BEEF CHEESE",
+      "sku": "PF038"
+    },
+    {
+      "row": 66,
+      "field": "menu_alias",
+      "original": "BURGER BEEF CHEESE",
+      "sku": "PF038"
+    },
+    {
+      "row": 67,
+      "field": "menu_alias",
+      "original": "BURGER BEEF CHEESE",
+      "sku": "PF038"
+    },
+    {
+      "row": 68,
+      "field": "menu_alias",
+      "original": "BURGER BEEF CHEESE",
+      "sku": "PF038"
+    },
+    {
+      "row": 69,
+      "field": "menu_alias",
+      "original": "BURGER BEEF CHEESE",
+      "sku": "PF038"
+    },
+    {
+      "row": 70,
+      "field": "menu_alias",
+      "original": "BURGER BEEF CHEESE",
+      "sku": "PF038"
+    },
+    {
+      "row": 71,
+      "field": "menu_alias",
+      "original": "BURGER BEEF CHEESE",
+      "sku": "PF038"
+    },
+    {
+      "row": 72,
+      "field": "menu_alias",
+      "original": "BURGER BEEF ORY",
+      "sku": "PF037"
+    },
+    {
+      "row": 73,
+      "field": "menu_alias",
+      "original": "BURGER BEEF ORY",
+      "sku": "PF037"
+    },
+    {
+      "row": 74,
+      "field": "menu_alias",
+      "original": "BURGER BEEF ORY",
+      "sku": "PF037"
+    },
+    {
+      "row": 75,
+      "field": "menu_alias",
+      "original": "BURGER BEEF ORY",
+      "sku": "PF037"
+    },
+    {
+      "row": 76,
+      "field": "menu_alias",
+      "original": "BURGER BEEF ORY",
+      "sku": "PF037"
+    },
+    {
+      "row": 77,
+      "field": "menu_alias",
+      "original": "BURGER BEEF ORY",
+      "sku": "PF037"
+    },
+    {
+      "row": 78,
+      "field": "menu_alias",
+      "original": "BURGER CHICKEN CHEESE",
+      "sku": "PF042"
+    },
+    {
+      "row": 79,
+      "field": "menu_alias",
+      "original": "BURGER CHICKEN CHEESE",
+      "sku": "PF042"
+    },
+    {
+      "row": 80,
+      "field": "menu_alias",
+      "original": "BURGER CHICKEN CHEESE",
+      "sku": "PF042"
+    },
+    {
+      "row": 81,
+      "field": "menu_alias",
+      "original": "BURGER CHICKEN CHEESE",
+      "sku": "PF042"
+    },
+    {
+      "row": 82,
+      "field": "menu_alias",
+      "original": "BURGER CHICKEN CHEESE",
+      "sku": "PF042"
+    },
+    {
+      "row": 83,
+      "field": "menu_alias",
+      "original": "BURGER CHICKEN CHEESE",
+      "sku": "PF042"
+    },
+    {
+      "row": 84,
+      "field": "menu_alias",
+      "original": "BURGER CHICKEN CHEESE",
+      "sku": "PF042"
+    },
+    {
+      "row": 85,
+      "field": "menu_alias",
+      "original": "BURGER CHICKEN CHEESE",
+      "sku": "PF042"
+    },
+    {
+      "row": 90,
+      "field": "quantity",
+      "original": "1,50",
+      "parsed": 1.5
+    },
+    {
+      "row": 93,
+      "field": "menu_alias",
+      "original": "BURGER CHICKEN ORY",
+      "sku": "PF041"
+    },
+    {
+      "row": 94,
+      "field": "menu_alias",
+      "original": "BURGER CHICKEN ORY",
+      "sku": "PF041"
+    },
+    {
+      "row": 95,
+      "field": "menu_alias",
+      "original": "BURGER CHICKEN ORY",
+      "sku": "PF041"
+    },
+    {
+      "row": 96,
+      "field": "menu_alias",
+      "original": "BURGER CHICKEN ORY",
+      "sku": "PF041"
+    },
+    {
+      "row": 97,
+      "field": "menu_alias",
+      "original": "BURGER CHICKEN ORY",
+      "sku": "PF041"
+    },
+    {
+      "row": 98,
+      "field": "menu_alias",
+      "original": "BURGER CHICKEN ORY",
+      "sku": "PF041"
+    },
+    {
+      "row": 99,
+      "field": "menu_alias",
+      "original": "BURGER SMOKED BEEF CHEESE",
+      "sku": "PF040"
+    },
+    {
+      "row": 100,
+      "field": "menu_alias",
+      "original": "BURGER SMOKED BEEF CHEESE",
+      "sku": "PF040"
+    },
+    {
+      "row": 101,
+      "field": "menu_alias",
+      "original": "BURGER SMOKED BEEF CHEESE",
+      "sku": "PF040"
+    },
+    {
+      "row": 102,
+      "field": "menu_alias",
+      "original": "BURGER SMOKED BEEF CHEESE",
+      "sku": "PF040"
+    },
+    {
+      "row": 103,
+      "field": "menu_alias",
+      "original": "BURGER SMOKED BEEF CHEESE",
+      "sku": "PF040"
+    },
+    {
+      "row": 104,
+      "field": "menu_alias",
+      "original": "BURGER SMOKED BEEF CHEESE",
+      "sku": "PF040"
+    },
+    {
+      "row": 105,
+      "field": "menu_alias",
+      "original": "BURGER SMOKED BEEF CHEESE",
+      "sku": "PF040"
+    },
+    {
+      "row": 106,
+      "field": "menu_alias",
+      "original": "BURGER SMOKED BEEF ORY",
+      "sku": "PF039"
+    },
+    {
+      "row": 107,
+      "field": "menu_alias",
+      "original": "BURGER SMOKED BEEF ORY",
+      "sku": "PF039"
+    },
+    {
+      "row": 108,
+      "field": "menu_alias",
+      "original": "BURGER SMOKED BEEF ORY",
+      "sku": "PF039"
+    },
+    {
+      "row": 109,
+      "field": "menu_alias",
+      "original": "BURGER SMOKED BEEF ORY",
+      "sku": "PF039"
+    },
+    {
+      "row": 110,
+      "field": "menu_alias",
+      "original": "BURGER SMOKED BEEF ORY",
+      "sku": "PF039"
+    },
+    {
+      "row": 111,
+      "field": "menu_alias",
+      "original": "BURGER SMOKED BEEF ORY",
+      "sku": "PF039"
+    },
+    {
+      "row": 135,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER L",
+      "sku": "PF007"
+    },
+    {
+      "row": 136,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER L",
+      "sku": "PF007"
+    },
+    {
+      "row": 137,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER L",
+      "sku": "PF007"
+    },
+    {
+      "row": 138,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER L",
+      "sku": "PF007"
+    },
+    {
+      "row": 139,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER L",
+      "sku": "PF007"
+    },
+    {
+      "row": 140,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER L",
+      "sku": "PF007"
+    },
+    {
+      "row": 141,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER L",
+      "sku": "PF007"
+    },
+    {
+      "row": 147,
+      "field": "menu_alias",
+      "original": "MEAT LOVER L",
+      "sku": "PF004"
+    },
+    {
+      "row": 148,
+      "field": "menu_alias",
+      "original": "MEAT LOVER L",
+      "sku": "PF004"
+    },
+    {
+      "row": 149,
+      "field": "menu_alias",
+      "original": "MEAT LOVER L",
+      "sku": "PF004"
+    },
+    {
+      "row": 150,
+      "field": "menu_alias",
+      "original": "MEAT LOVER L",
+      "sku": "PF004"
+    },
+    {
+      "row": 151,
+      "field": "menu_alias",
+      "original": "MEAT LOVER L",
+      "sku": "PF004"
+    },
+    {
+      "row": 152,
+      "field": "menu_alias",
+      "original": "MEAT LOVER L",
+      "sku": "PF004"
+    },
+    {
+      "row": 153,
+      "field": "menu_alias",
+      "original": "MEAT LOVER L",
+      "sku": "PF004"
+    },
+    {
+      "row": 154,
+      "field": "menu_alias",
+      "original": "MEAT LOVER L",
+      "sku": "PF004"
+    },
+    {
+      "row": 155,
+      "field": "menu_alias",
+      "original": "MEAT LOVER L",
+      "sku": "PF004"
+    },
+    {
+      "row": 156,
+      "field": "menu_alias",
+      "original": "MIX L",
+      "sku": "PF028"
+    },
+    {
+      "row": 157,
+      "field": "menu_alias",
+      "original": "MIX L",
+      "sku": "PF028"
+    },
+    {
+      "row": 158,
+      "field": "menu_alias",
+      "original": "MIX L",
+      "sku": "PF028"
+    },
+    {
+      "row": 159,
+      "field": "menu_alias",
+      "original": "MIX L",
+      "sku": "PF028"
+    },
+    {
+      "row": 160,
+      "field": "menu_alias",
+      "original": "MIX L",
+      "sku": "PF028"
+    },
+    {
+      "row": 161,
+      "field": "menu_alias",
+      "original": "MIX L",
+      "sku": "PF028"
+    },
+    {
+      "row": 162,
+      "field": "menu_alias",
+      "original": "MIX L",
+      "sku": "PF028"
+    },
+    {
+      "row": 163,
+      "field": "menu_alias",
+      "original": "MIX L",
+      "sku": "PF028"
+    },
+    {
+      "row": 164,
+      "field": "menu_alias",
+      "original": "MIX L",
+      "sku": "PF028"
+    },
+    {
+      "row": 165,
+      "field": "menu_alias",
+      "original": "MIX L",
+      "sku": "PF028"
+    },
+    {
+      "row": 166,
+      "field": "menu_alias",
+      "original": "MIX L",
+      "sku": "PF028"
+    },
+    {
+      "row": 181,
+      "field": "menu_alias",
+      "original": "SEA FOOD L",
+      "sku": "PF034"
+    },
+    {
+      "row": 182,
+      "field": "menu_alias",
+      "original": "SEA FOOD L",
+      "sku": "PF034"
+    },
+    {
+      "row": 183,
+      "field": "menu_alias",
+      "original": "SEA FOOD L",
+      "sku": "PF034"
+    },
+    {
+      "row": 184,
+      "field": "menu_alias",
+      "original": "SEA FOOD L",
+      "sku": "PF034"
+    },
+    {
+      "row": 185,
+      "field": "menu_alias",
+      "original": "SEA FOOD L",
+      "sku": "PF034"
+    },
+    {
+      "row": 186,
+      "field": "menu_alias",
+      "original": "SEA FOOD L",
+      "sku": "PF034"
+    },
+    {
+      "row": 187,
+      "field": "menu_alias",
+      "original": "SEA FOOD L",
+      "sku": "PF034"
+    },
+    {
+      "row": 188,
+      "field": "menu_alias",
+      "original": "SEA FOOD L",
+      "sku": "PF034"
+    },
+    {
+      "row": 189,
+      "field": "menu_alias",
+      "original": "SEA FOOD L",
+      "sku": "PF034"
+    },
+    {
+      "row": 210,
+      "field": "menu_alias",
+      "original": "VEGAN L",
+      "sku": "PF031"
+    },
+    {
+      "row": 211,
+      "field": "menu_alias",
+      "original": "VEGAN L",
+      "sku": "PF031"
+    },
+    {
+      "row": 212,
+      "field": "menu_alias",
+      "original": "VEGAN L",
+      "sku": "PF031"
+    },
+    {
+      "row": 213,
+      "field": "menu_alias",
+      "original": "VEGAN L",
+      "sku": "PF031"
+    },
+    {
+      "row": 214,
+      "field": "menu_alias",
+      "original": "VEGAN L",
+      "sku": "PF031"
+    },
+    {
+      "row": 215,
+      "field": "menu_alias",
+      "original": "VEGAN L",
+      "sku": "PF031"
+    },
+    {
+      "row": 216,
+      "field": "menu_alias",
+      "original": "VEGAN L",
+      "sku": "PF031"
+    },
+    {
+      "row": 217,
+      "field": "menu_alias",
+      "original": "VEGAN L",
+      "sku": "PF031"
+    },
+    {
+      "row": 218,
+      "field": "menu_alias",
+      "original": "VEGAN L",
+      "sku": "PF031"
+    },
+    {
+      "row": 219,
+      "field": "menu_alias",
+      "original": "BEEF MUSHROM M",
+      "sku": "PF014"
+    },
+    {
+      "row": 220,
+      "field": "menu_alias",
+      "original": "BEEF MUSHROM M",
+      "sku": "PF014"
+    },
+    {
+      "row": 221,
+      "field": "menu_alias",
+      "original": "BEEF MUSHROM M",
+      "sku": "PF014"
+    },
+    {
+      "row": 222,
+      "field": "menu_alias",
+      "original": "BEEF MUSHROM M",
+      "sku": "PF014"
+    },
+    {
+      "row": 223,
+      "field": "menu_alias",
+      "original": "BEEF MUSHROM M",
+      "sku": "PF014"
+    },
+    {
+      "row": 224,
+      "field": "menu_alias",
+      "original": "BEEF MUSHROM M",
+      "sku": "PF014"
+    },
+    {
+      "row": 225,
+      "field": "menu_alias",
+      "original": "BEEF MUSHROM M",
+      "sku": "PF014"
+    },
+    {
+      "row": 226,
+      "field": "menu_alias",
+      "original": "BEEF MUSHROM M",
+      "sku": "PF014"
+    },
+    {
+      "row": 227,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER M",
+      "sku": "PF008"
+    },
+    {
+      "row": 228,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER M",
+      "sku": "PF008"
+    },
+    {
+      "row": 229,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER M",
+      "sku": "PF008"
+    },
+    {
+      "row": 230,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER M",
+      "sku": "PF008"
+    },
+    {
+      "row": 231,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER M",
+      "sku": "PF008"
+    },
+    {
+      "row": 232,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER M",
+      "sku": "PF008"
+    },
+    {
+      "row": 233,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER M",
+      "sku": "PF008"
+    },
+    {
+      "row": 239,
+      "field": "menu_alias",
+      "original": "MEAT LOVER M",
+      "sku": "PF005"
+    },
+    {
+      "row": 240,
+      "field": "menu_alias",
+      "original": "MEAT LOVER M",
+      "sku": "PF005"
+    },
+    {
+      "row": 241,
+      "field": "menu_alias",
+      "original": "MEAT LOVER M",
+      "sku": "PF005"
+    },
+    {
+      "row": 242,
+      "field": "menu_alias",
+      "original": "MEAT LOVER M",
+      "sku": "PF005"
+    },
+    {
+      "row": 243,
+      "field": "quantity",
+      "original": "1,50",
+      "parsed": 1.5
+    },
+    {
+      "row": 243,
+      "field": "menu_alias",
+      "original": "MEAT LOVER M",
+      "sku": "PF005"
+    },
+    {
+      "row": 244,
+      "field": "menu_alias",
+      "original": "MEAT LOVER M",
+      "sku": "PF005"
+    },
+    {
+      "row": 245,
+      "field": "menu_alias",
+      "original": "MEAT LOVER M",
+      "sku": "PF005"
+    },
+    {
+      "row": 246,
+      "field": "menu_alias",
+      "original": "MEAT LOVER M",
+      "sku": "PF005"
+    },
+    {
+      "row": 247,
+      "field": "menu_alias",
+      "original": "MEAT LOVER M",
+      "sku": "PF005"
+    },
+    {
+      "row": 248,
+      "field": "menu_alias",
+      "original": "MIX M",
+      "sku": "PF029"
+    },
+    {
+      "row": 249,
+      "field": "menu_alias",
+      "original": "MIX M",
+      "sku": "PF029"
+    },
+    {
+      "row": 250,
+      "field": "menu_alias",
+      "original": "MIX M",
+      "sku": "PF029"
+    },
+    {
+      "row": 251,
+      "field": "menu_alias",
+      "original": "MIX M",
+      "sku": "PF029"
+    },
+    {
+      "row": 252,
+      "field": "quantity",
+      "original": "1,50",
+      "parsed": 1.5
+    },
+    {
+      "row": 252,
+      "field": "menu_alias",
+      "original": "MIX M",
+      "sku": "PF029"
+    },
+    {
+      "row": 253,
+      "field": "menu_alias",
+      "original": "MIX M",
+      "sku": "PF029"
+    },
+    {
+      "row": 254,
+      "field": "menu_alias",
+      "original": "MIX M",
+      "sku": "PF029"
+    },
+    {
+      "row": 255,
+      "field": "menu_alias",
+      "original": "MIX M",
+      "sku": "PF029"
+    },
+    {
+      "row": 256,
+      "field": "menu_alias",
+      "original": "MIX M",
+      "sku": "PF029"
+    },
+    {
+      "row": 257,
+      "field": "menu_alias",
+      "original": "MIX M",
+      "sku": "PF029"
+    },
+    {
+      "row": 258,
+      "field": "menu_alias",
+      "original": "MIX M",
+      "sku": "PF029"
+    },
+    {
+      "row": 259,
+      "field": "menu_alias",
+      "original": "MIX M",
+      "sku": "PF029"
+    },
+    {
+      "row": 274,
+      "field": "menu_alias",
+      "original": "SEA FOOD M",
+      "sku": "PF035"
+    },
+    {
+      "row": 275,
+      "field": "menu_alias",
+      "original": "SEA FOOD M",
+      "sku": "PF035"
+    },
+    {
+      "row": 276,
+      "field": "menu_alias",
+      "original": "SEA FOOD M",
+      "sku": "PF035"
+    },
+    {
+      "row": 277,
+      "field": "menu_alias",
+      "original": "SEA FOOD M",
+      "sku": "PF035"
+    },
+    {
+      "row": 278,
+      "field": "menu_alias",
+      "original": "SEA FOOD M",
+      "sku": "PF035"
+    },
+    {
+      "row": 279,
+      "field": "menu_alias",
+      "original": "SEA FOOD M",
+      "sku": "PF035"
+    },
+    {
+      "row": 280,
+      "field": "menu_alias",
+      "original": "SEA FOOD M",
+      "sku": "PF035"
+    },
+    {
+      "row": 281,
+      "field": "menu_alias",
+      "original": "SEA FOOD M",
+      "sku": "PF035"
+    },
+    {
+      "row": 282,
+      "field": "menu_alias",
+      "original": "SEA FOOD M",
+      "sku": "PF035"
+    },
+    {
+      "row": 287,
+      "field": "quantity",
+      "original": "1,50",
+      "parsed": 1.5
+    },
+    {
+      "row": 302,
+      "field": "menu_alias",
+      "original": "VEGAN M",
+      "sku": "PF032"
+    },
+    {
+      "row": 303,
+      "field": "menu_alias",
+      "original": "VEGAN M",
+      "sku": "PF032"
+    },
+    {
+      "row": 304,
+      "field": "menu_alias",
+      "original": "VEGAN M",
+      "sku": "PF032"
+    },
+    {
+      "row": 305,
+      "field": "menu_alias",
+      "original": "VEGAN M",
+      "sku": "PF032"
+    },
+    {
+      "row": 306,
+      "field": "menu_alias",
+      "original": "VEGAN M",
+      "sku": "PF032"
+    },
+    {
+      "row": 307,
+      "field": "menu_alias",
+      "original": "VEGAN M",
+      "sku": "PF032"
+    },
+    {
+      "row": 308,
+      "field": "menu_alias",
+      "original": "VEGAN M",
+      "sku": "PF032"
+    },
+    {
+      "row": 309,
+      "field": "menu_alias",
+      "original": "VEGAN M",
+      "sku": "PF032"
+    },
+    {
+      "row": 310,
+      "field": "menu_alias",
+      "original": "VEGAN M",
+      "sku": "PF032"
+    },
+    {
+      "row": 326,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER S",
+      "sku": "PF009"
+    },
+    {
+      "row": 327,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER S",
+      "sku": "PF009"
+    },
+    {
+      "row": 328,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER S",
+      "sku": "PF009"
+    },
+    {
+      "row": 329,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER S",
+      "sku": "PF009"
+    },
+    {
+      "row": 330,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER S",
+      "sku": "PF009"
+    },
+    {
+      "row": 331,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER S",
+      "sku": "PF009"
+    },
+    {
+      "row": 332,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER S",
+      "sku": "PF009"
+    },
+    {
+      "row": 338,
+      "field": "menu_alias",
+      "original": "MEAT LOVER S",
+      "sku": "PF006"
+    },
+    {
+      "row": 339,
+      "field": "menu_alias",
+      "original": "MEAT LOVER S",
+      "sku": "PF006"
+    },
+    {
+      "row": 340,
+      "field": "menu_alias",
+      "original": "MEAT LOVER S",
+      "sku": "PF006"
+    },
+    {
+      "row": 341,
+      "field": "menu_alias",
+      "original": "MEAT LOVER S",
+      "sku": "PF006"
+    },
+    {
+      "row": 342,
+      "field": "menu_alias",
+      "original": "MEAT LOVER S",
+      "sku": "PF006"
+    },
+    {
+      "row": 343,
+      "field": "menu_alias",
+      "original": "MEAT LOVER S",
+      "sku": "PF006"
+    },
+    {
+      "row": 344,
+      "field": "menu_alias",
+      "original": "MEAT LOVER S",
+      "sku": "PF006"
+    },
+    {
+      "row": 345,
+      "field": "menu_alias",
+      "original": "MEAT LOVER S",
+      "sku": "PF006"
+    },
+    {
+      "row": 346,
+      "field": "menu_alias",
+      "original": "MEAT LOVER S",
+      "sku": "PF006"
+    },
+    {
+      "row": 347,
+      "field": "menu_alias",
+      "original": "MIX S",
+      "sku": "PF030"
+    },
+    {
+      "row": 348,
+      "field": "menu_alias",
+      "original": "MIX S",
+      "sku": "PF030"
+    },
+    {
+      "row": 349,
+      "field": "menu_alias",
+      "original": "MIX S",
+      "sku": "PF030"
+    },
+    {
+      "row": 350,
+      "field": "menu_alias",
+      "original": "MIX S",
+      "sku": "PF030"
+    },
+    {
+      "row": 351,
+      "field": "menu_alias",
+      "original": "MIX S",
+      "sku": "PF030"
+    },
+    {
+      "row": 352,
+      "field": "menu_alias",
+      "original": "MIX S",
+      "sku": "PF030"
+    },
+    {
+      "row": 353,
+      "field": "menu_alias",
+      "original": "MIX S",
+      "sku": "PF030"
+    },
+    {
+      "row": 354,
+      "field": "menu_alias",
+      "original": "MIX S",
+      "sku": "PF030"
+    },
+    {
+      "row": 355,
+      "field": "menu_alias",
+      "original": "MIX S",
+      "sku": "PF030"
+    },
+    {
+      "row": 356,
+      "field": "menu_alias",
+      "original": "MIX S",
+      "sku": "PF030"
+    },
+    {
+      "row": 357,
+      "field": "menu_alias",
+      "original": "MIX S",
+      "sku": "PF030"
+    },
+    {
+      "row": 400,
+      "field": "menu_alias",
+      "original": "VEGAN S",
+      "sku": "PF033"
+    },
+    {
+      "row": 401,
+      "field": "menu_alias",
+      "original": "VEGAN S",
+      "sku": "PF033"
+    },
+    {
+      "row": 402,
+      "field": "menu_alias",
+      "original": "VEGAN S",
+      "sku": "PF033"
+    },
+    {
+      "row": 403,
+      "field": "menu_alias",
+      "original": "VEGAN S",
+      "sku": "PF033"
+    },
+    {
+      "row": 404,
+      "field": "menu_alias",
+      "original": "VEGAN S",
+      "sku": "PF033"
+    },
+    {
+      "row": 405,
+      "field": "menu_alias",
+      "original": "VEGAN S",
+      "sku": "PF033"
+    },
+    {
+      "row": 406,
+      "field": "menu_alias",
+      "original": "VEGAN S",
+      "sku": "PF033"
+    },
+    {
+      "row": 407,
+      "field": "menu_alias",
+      "original": "VEGAN S",
+      "sku": "PF033"
+    },
+    {
+      "row": 408,
+      "field": "menu_alias",
+      "original": "VEGAN S",
+      "sku": "PF033"
+    }
+  ],
+  "source_file": "POS Pizza Fuzta.xlsm",
+  "source_sha256": "04dad675dba756085c406b778b1efb0ab3a15375b2ad3f5d012e7f4c52fa1141",
+  "source_sheet": "https://docs.google.com/spreadsheets/d/1MCGsQK3ILZBpxMRH2-fWdnkxv1I8Cfq83BnCVYbJqmQ/edit?gid=52890219",
+  "locations": {
+    "MEDOKAN": "Outlet Medokan",
+    "KARAH": "Outlet Karah",
+    "GUDANG": "Gudang Bu Elok"
+  }
+}

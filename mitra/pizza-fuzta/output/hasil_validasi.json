@@ -1,0 +1,565 @@
+{
+  "passed": 111,
+  "failed": 0,
+  "formula_engine": "LibreOffice headless 26.8 alpha; actual workbook formulas",
+  "csv_engine": "Python offline CSV round trip; real workbook files",
+  "vba_runtime_tested": false,
+  "excel_desktop_tested": false,
+  "checks": [
+    {
+      "check": "MEDOKAN workbook identity",
+      "result": "PASS",
+      "actual": "MEDOKAN"
+    },
+    {
+      "check": "MEDOKAN PF1 schema",
+      "result": "PASS",
+      "actual": "PF1"
+    },
+    {
+      "check": "MEDOKAN chart retained",
+      "result": "PASS",
+      "actual": 1
+    },
+    {
+      "check": "MEDOKAN no external Excel links",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "KARAH workbook identity",
+      "result": "PASS",
+      "actual": "KARAH"
+    },
+    {
+      "check": "KARAH PF1 schema",
+      "result": "PASS",
+      "actual": "PF1"
+    },
+    {
+      "check": "KARAH chart retained",
+      "result": "PASS",
+      "actual": 1
+    },
+    {
+      "check": "KARAH no external Excel links",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "GUDANG workbook identity",
+      "result": "PASS",
+      "actual": "GUDANG"
+    },
+    {
+      "check": "GUDANG PF1 schema",
+      "result": "PASS",
+      "actual": "PF1"
+    },
+    {
+      "check": "GUDANG chart retained",
+      "result": "PASS",
+      "actual": 1
+    },
+    {
+      "check": "GUDANG no external Excel links",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "Karah has no replacement cashier",
+      "result": "PASS",
+      "actual": false
+    },
+    {
+      "check": "49 source menus",
+      "result": "PASS",
+      "actual": 49
+    },
+    {
+      "check": "mixed recipients require peer filter",
+      "result": "PASS",
+      "actual": true
+    },
+    {
+      "check": "two Medokan shipment rows",
+      "result": "PASS",
+      "actual": 2
+    },
+    {
+      "check": "one Karah shipment row",
+      "result": "PASS",
+      "actual": 1
+    },
+    {
+      "check": "Medokan receipt batch",
+      "result": "PASS",
+      "actual": 2
+    },
+    {
+      "check": "Karah receipt batch",
+      "result": "PASS",
+      "actual": 1
+    },
+    {
+      "check": "duplicate shipment import skips without doubling",
+      "result": "PASS",
+      "actual": 2
+    },
+    {
+      "check": "actual received quantity preserved on repeat",
+      "result": "PASS",
+      "actual": 19
+    },
+    {
+      "check": "receipt date not moved by repeat import",
+      "result": "PASS",
+      "actual": "2026-10-28 00:00:00"
+    },
+    {
+      "check": "wrong unit batch rejected",
+      "result": "PASS",
+      "actual": true
+    },
+    {
+      "check": "wrong unit batch rejected / no partial output",
+      "result": "PASS",
+      "actual": false
+    },
+    {
+      "check": "failed import preserves source byte-for-byte",
+      "result": "PASS",
+      "actual": "40ee8aaecaa58e08ecfa78e88293f104e8c4424896a2bdbfb3a8710354b6e450"
+    },
+    {
+      "check": "wrong destination rejected",
+      "result": "PASS",
+      "actual": true
+    },
+    {
+      "check": "wrong destination rejected / no partial output",
+      "result": "PASS",
+      "actual": false
+    },
+    {
+      "check": "same ID changed shipment rejected",
+      "result": "PASS",
+      "actual": true
+    },
+    {
+      "check": "same ID changed shipment rejected / no partial output",
+      "result": "PASS",
+      "actual": false
+    },
+    {
+      "check": "duplicate IDs in one CSV rejected",
+      "result": "PASS",
+      "actual": true
+    },
+    {
+      "check": "duplicate IDs in one CSV rejected / no partial output",
+      "result": "PASS",
+      "actual": false
+    },
+    {
+      "check": "source file cannot be overwritten",
+      "result": "PASS",
+      "actual": true
+    },
+    {
+      "check": "receipt before shipment rejected",
+      "result": "PASS",
+      "actual": true
+    },
+    {
+      "check": "receipt before shipment rejected / no partial output",
+      "result": "PASS",
+      "actual": false
+    },
+    {
+      "check": "CSV note not evaluated as Excel formula",
+      "result": "PASS",
+      "actual": "s"
+    },
+    {
+      "check": "receipt import records confirmations",
+      "result": "PASS",
+      "actual": 2
+    },
+    {
+      "check": "repeated confirmation skipped",
+      "result": "PASS",
+      "actual": 2
+    },
+    {
+      "check": "confirmation must match original shipment",
+      "result": "PASS",
+      "actual": true
+    },
+    {
+      "check": "confirmation must match original shipment / no partial output",
+      "result": "PASS",
+      "actual": false
+    },
+    {
+      "check": "all selected formula fixtures recalculated",
+      "result": "PASS",
+      "actual": 13
+    },
+    {
+      "check": "medokan-sales no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "medokan-void no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "medokan-historical no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "karah-summary no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "karah-invalid no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "warehouse-ack no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "warehouse-ack-repeat no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "warehouse-return no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "warehouse-production no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "warehouse-bad-production no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "POS_Pizza_Fuzta_Medokan no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "Rekap_Pizza_Fuzta_Karah no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "Gudang_Pizza_Fuzta no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "49th menu usable at cashier",
+      "result": "PASS",
+      "actual": 5000
+    },
+    {
+      "check": "sale receipt valid",
+      "result": "PASS",
+      "actual": "OK"
+    },
+    {
+      "check": "pending recipe does not erase cash sale",
+      "result": "PASS",
+      "actual": "OK"
+    },
+    {
+      "check": "Medokan net sales",
+      "result": "PASS",
+      "actual": 55000
+    },
+    {
+      "check": "GoPay available and counted",
+      "result": "PASS",
+      "actual": 10000
+    },
+    {
+      "check": "cash sales after discount",
+      "result": "PASS",
+      "actual": 45000
+    },
+    {
+      "check": "sale change uses net",
+      "result": "PASS",
+      "actual": 5000
+    },
+    {
+      "check": "Santri purchase cash-out",
+      "result": "PASS",
+      "actual": 24000
+    },
+    {
+      "check": "Medokan drawer excludes GoPay",
+      "result": "PASS",
+      "actual": 30000
+    },
+    {
+      "check": "Medokan drawer reconciles",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "known recipe HPP complete",
+      "result": "PASS",
+      "actual": "LENGKAP"
+    },
+    {
+      "check": "unconfirmed pizza HPP incomplete",
+      "result": "PASS",
+      "actual": "BELUM LENGKAP"
+    },
+    {
+      "check": "pending recipe notice",
+      "result": "PASS",
+      "actual": 1
+    },
+    {
+      "check": "physical Santri stock distinct from pending note",
+      "result": "PASS",
+      "actual": 49
+    },
+    {
+      "check": "raw transfer received once",
+      "result": "PASS",
+      "actual": 100
+    },
+    {
+      "check": "L size quantity recap",
+      "result": "PASS",
+      "actual": 1
+    },
+    {
+      "check": "all drinks quantity recap",
+      "result": "PASS",
+      "actual": 3
+    },
+    {
+      "check": "receipt first line quantity",
+      "result": "PASS",
+      "actual": 1
+    },
+    {
+      "check": "receipt second line quantity",
+      "result": "PASS",
+      "actual": 1
+    },
+    {
+      "check": "receipt final total",
+      "result": "PASS",
+      "actual": 45000
+    },
+    {
+      "check": "VOID reverses sale",
+      "result": "PASS",
+      "actual": 45000
+    },
+    {
+      "check": "VOID restores consumed stock",
+      "result": "PASS",
+      "actual": 51
+    },
+    {
+      "check": "historical receipt cutoff",
+      "result": "PASS",
+      "actual": 20
+    },
+    {
+      "check": "historical sales cutoff",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "Majoo report reconciles",
+      "result": "PASS",
+      "actual": "OK"
+    },
+    {
+      "check": "Karah net not double-discounted",
+      "result": "PASS",
+      "actual": 90000
+    },
+    {
+      "check": "Karah cash excludes noncash",
+      "result": "PASS",
+      "actual": 40000
+    },
+    {
+      "check": "Karah independent purchases tracked",
+      "result": "PASS",
+      "actual": 13
+    },
+    {
+      "check": "Karah cash balance",
+      "result": "PASS",
+      "actual": 45000
+    },
+    {
+      "check": "Karah drawer reconciles",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "Majoo payment mismatch detected",
+      "result": "PASS",
+      "actual": "SELISIH METODE"
+    },
+    {
+      "check": "invalid Majoo report excluded",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "ack does not add stock to sender",
+      "result": "PASS",
+      "actual": 70
+    },
+    {
+      "check": "partial receipt discrepancy visible",
+      "result": "PASS",
+      "actual": "SELISIH"
+    },
+    {
+      "check": "partial receipt delta",
+      "result": "PASS",
+      "actual": -1
+    },
+    {
+      "check": "matching receipt validates",
+      "result": "PASS",
+      "actual": "OK"
+    },
+    {
+      "check": "transfer never becomes revenue",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "request partial realization",
+      "result": "PASS",
+      "actual": 20
+    },
+    {
+      "check": "request remaining",
+      "result": "PASS",
+      "actual": 5
+    },
+    {
+      "check": "request status",
+      "result": "PASS",
+      "actual": "SEBAGIAN"
+    },
+    {
+      "check": "Karah request fulfilled",
+      "result": "PASS",
+      "actual": "TERPENUHI"
+    },
+    {
+      "check": "repeated ack still does not move stock",
+      "result": "PASS",
+      "actual": 70
+    },
+    {
+      "check": "new reverse transfer adds return once",
+      "result": "PASS",
+      "actual": 71
+    },
+    {
+      "check": "paired production input validates",
+      "result": "PASS",
+      "actual": "OK"
+    },
+    {
+      "check": "paired production output validates",
+      "result": "PASS",
+      "actual": "OK"
+    },
+    {
+      "check": "production output stock",
+      "result": "PASS",
+      "actual": 2
+    },
+    {
+      "check": "production input stock",
+      "result": "PASS",
+      "actual": 500
+    },
+    {
+      "check": "one-sided production detected",
+      "result": "PASS",
+      "actual": "LENGKAPI DUA SISI PRODUKSI"
+    },
+    {
+      "check": "one-sided production excluded",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "MEDOKAN operational stock movements blank",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "MEDOKAN operational sales blank",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "MEDOKAN source ingredient price not invented",
+      "result": "PASS",
+      "actual": null
+    },
+    {
+      "check": "KARAH operational stock movements blank",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "KARAH operational sales blank",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "KARAH source ingredient price not invented",
+      "result": "PASS",
+      "actual": null
+    },
+    {
+      "check": "GUDANG operational stock movements blank",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "GUDANG operational sales blank",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "GUDANG source ingredient price not invented",
+      "result": "PASS",
+      "actual": null
+    }
+  ]
+}

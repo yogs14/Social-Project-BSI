@@ -1,0 +1,1223 @@
+{
+  "menus": 49,
+  "materials": 36,
+  "mapped_bom": 341,
+  "unmatched_bom": [
+    {
+      "sku": null,
+      "source_menu": "Huruf Beef Cheese",
+      "material": "B004",
+      "qty": 10,
+      "unit": "gram",
+      "row": 112
+    },
+    {
+      "sku": null,
+      "source_menu": "Huruf Beef Cheese",
+      "material": "B016",
+      "qty": 20,
+      "unit": "gram",
+      "row": 113
+    },
+    {
+      "sku": null,
+      "source_menu": "TUNA MELT L",
+      "material": "B010",
+      "qty": 100,
+      "unit": "gram",
+      "row": 114
+    },
+    {
+      "sku": null,
+      "source_menu": "TUNA MELT L",
+      "material": "B002",
+      "qty": 100,
+      "unit": "gram",
+      "row": 115
+    },
+    {
+      "sku": null,
+      "source_menu": "TUNA MELT L",
+      "material": "B017",
+      "qty": 30,
+      "unit": "gram",
+      "row": 116
+    },
+    {
+      "sku": null,
+      "source_menu": "TUNA MELT L",
+      "material": "B012",
+      "qty": 75,
+      "unit": "gram",
+      "row": 117
+    },
+    {
+      "sku": null,
+      "source_menu": "TUNA MELT L",
+      "material": "B018",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 118
+    },
+    {
+      "sku": null,
+      "source_menu": "TUNA MELT L",
+      "material": "B019",
+      "qty": 30,
+      "unit": "gram",
+      "row": 119
+    },
+    {
+      "sku": null,
+      "source_menu": "Meat Lover Slice",
+      "material": "B010",
+      "qty": 20,
+      "unit": "gram",
+      "row": 409
+    },
+    {
+      "sku": null,
+      "source_menu": "Meat Lover Slice",
+      "material": "B002",
+      "qty": 7,
+      "unit": "gram",
+      "row": 410
+    },
+    {
+      "sku": null,
+      "source_menu": "Meat Lover Slice",
+      "material": "B011",
+      "qty": 4,
+      "unit": "gram",
+      "row": 411
+    },
+    {
+      "sku": null,
+      "source_menu": "Meat Lover Slice",
+      "material": "B008",
+      "qty": 6,
+      "unit": "gram",
+      "row": 412
+    },
+    {
+      "sku": null,
+      "source_menu": "Meat Lover Slice",
+      "material": "B003",
+      "qty": 10,
+      "unit": "gram",
+      "row": 413
+    },
+    {
+      "sku": null,
+      "source_menu": "Meat Lover Slice",
+      "material": "B023",
+      "qty": 5,
+      "unit": "gram",
+      "row": 414
+    },
+    {
+      "sku": null,
+      "source_menu": "Meat Lover Slice",
+      "material": "B024",
+      "qty": 5,
+      "unit": "gram",
+      "row": 415
+    },
+    {
+      "sku": null,
+      "source_menu": "Meat Lover Slice",
+      "material": "B015",
+      "qty": 7,
+      "unit": "gram",
+      "row": 416
+    },
+    {
+      "sku": null,
+      "source_menu": "Meat Lover Slice",
+      "material": "B031",
+      "qty": 1,
+      "unit": "pcs",
+      "row": 417
+    }
+  ],
+  "normalizations": [
+    {
+      "row": 65,
+      "field": "menu_alias",
+      "original": "BURGER BEEF CHEESE",
+      "sku": "PF038"
+    },
+    {
+      "row": 66,
+      "field": "menu_alias",
+      "original": "BURGER BEEF CHEESE",
+      "sku": "PF038"
+    },
+    {
+      "row": 67,
+      "field": "menu_alias",
+      "original": "BURGER BEEF CHEESE",
+      "sku": "PF038"
+    },
+    {
+      "row": 68,
+      "field": "menu_alias",
+      "original": "BURGER BEEF CHEESE",
+      "sku": "PF038"
+    },
+    {
+      "row": 69,
+      "field": "menu_alias",
+      "original": "BURGER BEEF CHEESE",
+      "sku": "PF038"
+    },
+    {
+      "row": 70,
+      "field": "menu_alias",
+      "original": "BURGER BEEF CHEESE",
+      "sku": "PF038"
+    },
+    {
+      "row": 71,
+      "field": "menu_alias",
+      "original": "BURGER BEEF CHEESE",
+      "sku": "PF038"
+    },
+    {
+      "row": 72,
+      "field": "menu_alias",
+      "original": "BURGER BEEF ORY",
+      "sku": "PF037"
+    },
+    {
+      "row": 73,
+      "field": "menu_alias",
+      "original": "BURGER BEEF ORY",
+      "sku": "PF037"
+    },
+    {
+      "row": 74,
+      "field": "menu_alias",
+      "original": "BURGER BEEF ORY",
+      "sku": "PF037"
+    },
+    {
+      "row": 75,
+      "field": "menu_alias",
+      "original": "BURGER BEEF ORY",
+      "sku": "PF037"
+    },
+    {
+      "row": 76,
+      "field": "menu_alias",
+      "original": "BURGER BEEF ORY",
+      "sku": "PF037"
+    },
+    {
+      "row": 77,
+      "field": "menu_alias",
+      "original": "BURGER BEEF ORY",
+      "sku": "PF037"
+    },
+    {
+      "row": 78,
+      "field": "menu_alias",
+      "original": "BURGER CHICKEN CHEESE",
+      "sku": "PF042"
+    },
+    {
+      "row": 79,
+      "field": "menu_alias",
+      "original": "BURGER CHICKEN CHEESE",
+      "sku": "PF042"
+    },
+    {
+      "row": 80,
+      "field": "menu_alias",
+      "original": "BURGER CHICKEN CHEESE",
+      "sku": "PF042"
+    },
+    {
+      "row": 81,
+      "field": "menu_alias",
+      "original": "BURGER CHICKEN CHEESE",
+      "sku": "PF042"
+    },
+    {
+      "row": 82,
+      "field": "menu_alias",
+      "original": "BURGER CHICKEN CHEESE",
+      "sku": "PF042"
+    },
+    {
+      "row": 83,
+      "field": "menu_alias",
+      "original": "BURGER CHICKEN CHEESE",
+      "sku": "PF042"
+    },
+    {
+      "row": 84,
+      "field": "menu_alias",
+      "original": "BURGER CHICKEN CHEESE",
+      "sku": "PF042"
+    },
+    {
+      "row": 85,
+      "field": "menu_alias",
+      "original": "BURGER CHICKEN CHEESE",
+      "sku": "PF042"
+    },
+    {
+      "row": 90,
+      "field": "quantity",
+      "original": "1,50",
+      "parsed": 1.5
+    },
+    {
+      "row": 93,
+      "field": "menu_alias",
+      "original": "BURGER CHICKEN ORY",
+      "sku": "PF041"
+    },
+    {
+      "row": 94,
+      "field": "menu_alias",
+      "original": "BURGER CHICKEN ORY",
+      "sku": "PF041"
+    },
+    {
+      "row": 95,
+      "field": "menu_alias",
+      "original": "BURGER CHICKEN ORY",
+      "sku": "PF041"
+    },
+    {
+      "row": 96,
+      "field": "menu_alias",
+      "original": "BURGER CHICKEN ORY",
+      "sku": "PF041"
+    },
+    {
+      "row": 97,
+      "field": "menu_alias",
+      "original": "BURGER CHICKEN ORY",
+      "sku": "PF041"
+    },
+    {
+      "row": 98,
+      "field": "menu_alias",
+      "original": "BURGER CHICKEN ORY",
+      "sku": "PF041"
+    },
+    {
+      "row": 99,
+      "field": "menu_alias",
+      "original": "BURGER SMOKED BEEF CHEESE",
+      "sku": "PF040"
+    },
+    {
+      "row": 100,
+      "field": "menu_alias",
+      "original": "BURGER SMOKED BEEF CHEESE",
+      "sku": "PF040"
+    },
+    {
+      "row": 101,
+      "field": "menu_alias",
+      "original": "BURGER SMOKED BEEF CHEESE",
+      "sku": "PF040"
+    },
+    {
+      "row": 102,
+      "field": "menu_alias",
+      "original": "BURGER SMOKED BEEF CHEESE",
+      "sku": "PF040"
+    },
+    {
+      "row": 103,
+      "field": "menu_alias",
+      "original": "BURGER SMOKED BEEF CHEESE",
+      "sku": "PF040"
+    },
+    {
+      "row": 104,
+      "field": "menu_alias",
+      "original": "BURGER SMOKED BEEF CHEESE",
+      "sku": "PF040"
+    },
+    {
+      "row": 105,
+      "field": "menu_alias",
+      "original": "BURGER SMOKED BEEF CHEESE",
+      "sku": "PF040"
+    },
+    {
+      "row": 106,
+      "field": "menu_alias",
+      "original": "BURGER SMOKED BEEF ORY",
+      "sku": "PF039"
+    },
+    {
+      "row": 107,
+      "field": "menu_alias",
+      "original": "BURGER SMOKED BEEF ORY",
+      "sku": "PF039"
+    },
+    {
+      "row": 108,
+      "field": "menu_alias",
+      "original": "BURGER SMOKED BEEF ORY",
+      "sku": "PF039"
+    },
+    {
+      "row": 109,
+      "field": "menu_alias",
+      "original": "BURGER SMOKED BEEF ORY",
+      "sku": "PF039"
+    },
+    {
+      "row": 110,
+      "field": "menu_alias",
+      "original": "BURGER SMOKED BEEF ORY",
+      "sku": "PF039"
+    },
+    {
+      "row": 111,
+      "field": "menu_alias",
+      "original": "BURGER SMOKED BEEF ORY",
+      "sku": "PF039"
+    },
+    {
+      "row": 135,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER L",
+      "sku": "PF007"
+    },
+    {
+      "row": 136,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER L",
+      "sku": "PF007"
+    },
+    {
+      "row": 137,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER L",
+      "sku": "PF007"
+    },
+    {
+      "row": 138,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER L",
+      "sku": "PF007"
+    },
+    {
+      "row": 139,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER L",
+      "sku": "PF007"
+    },
+    {
+      "row": 140,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER L",
+      "sku": "PF007"
+    },
+    {
+      "row": 141,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER L",
+      "sku": "PF007"
+    },
+    {
+      "row": 147,
+      "field": "menu_alias",
+      "original": "MEAT LOVER L",
+      "sku": "PF004"
+    },
+    {
+      "row": 148,
+      "field": "menu_alias",
+      "original": "MEAT LOVER L",
+      "sku": "PF004"
+    },
+    {
+      "row": 149,
+      "field": "menu_alias",
+      "original": "MEAT LOVER L",
+      "sku": "PF004"
+    },
+    {
+      "row": 150,
+      "field": "menu_alias",
+      "original": "MEAT LOVER L",
+      "sku": "PF004"
+    },
+    {
+      "row": 151,
+      "field": "menu_alias",
+      "original": "MEAT LOVER L",
+      "sku": "PF004"
+    },
+    {
+      "row": 152,
+      "field": "menu_alias",
+      "original": "MEAT LOVER L",
+      "sku": "PF004"
+    },
+    {
+      "row": 153,
+      "field": "menu_alias",
+      "original": "MEAT LOVER L",
+      "sku": "PF004"
+    },
+    {
+      "row": 154,
+      "field": "menu_alias",
+      "original": "MEAT LOVER L",
+      "sku": "PF004"
+    },
+    {
+      "row": 155,
+      "field": "menu_alias",
+      "original": "MEAT LOVER L",
+      "sku": "PF004"
+    },
+    {
+      "row": 156,
+      "field": "menu_alias",
+      "original": "MIX L",
+      "sku": "PF028"
+    },
+    {
+      "row": 157,
+      "field": "menu_alias",
+      "original": "MIX L",
+      "sku": "PF028"
+    },
+    {
+      "row": 158,
+      "field": "menu_alias",
+      "original": "MIX L",
+      "sku": "PF028"
+    },
+    {
+      "row": 159,
+      "field": "menu_alias",
+      "original": "MIX L",
+      "sku": "PF028"
+    },
+    {
+      "row": 160,
+      "field": "menu_alias",
+      "original": "MIX L",
+      "sku": "PF028"
+    },
+    {
+      "row": 161,
+      "field": "menu_alias",
+      "original": "MIX L",
+      "sku": "PF028"
+    },
+    {
+      "row": 162,
+      "field": "menu_alias",
+      "original": "MIX L",
+      "sku": "PF028"
+    },
+    {
+      "row": 163,
+      "field": "menu_alias",
+      "original": "MIX L",
+      "sku": "PF028"
+    },
+    {
+      "row": 164,
+      "field": "menu_alias",
+      "original": "MIX L",
+      "sku": "PF028"
+    },
+    {
+      "row": 165,
+      "field": "menu_alias",
+      "original": "MIX L",
+      "sku": "PF028"
+    },
+    {
+      "row": 166,
+      "field": "menu_alias",
+      "original": "MIX L",
+      "sku": "PF028"
+    },
+    {
+      "row": 181,
+      "field": "menu_alias",
+      "original": "SEA FOOD L",
+      "sku": "PF034"
+    },
+    {
+      "row": 182,
+      "field": "menu_alias",
+      "original": "SEA FOOD L",
+      "sku": "PF034"
+    },
+    {
+      "row": 183,
+      "field": "menu_alias",
+      "original": "SEA FOOD L",
+      "sku": "PF034"
+    },
+    {
+      "row": 184,
+      "field": "menu_alias",
+      "original": "SEA FOOD L",
+      "sku": "PF034"
+    },
+    {
+      "row": 185,
+      "field": "menu_alias",
+      "original": "SEA FOOD L",
+      "sku": "PF034"
+    },
+    {
+      "row": 186,
+      "field": "menu_alias",
+      "original": "SEA FOOD L",
+      "sku": "PF034"
+    },
+    {
+      "row": 187,
+      "field": "menu_alias",
+      "original": "SEA FOOD L",
+      "sku": "PF034"
+    },
+    {
+      "row": 188,
+      "field": "menu_alias",
+      "original": "SEA FOOD L",
+      "sku": "PF034"
+    },
+    {
+      "row": 189,
+      "field": "menu_alias",
+      "original": "SEA FOOD L",
+      "sku": "PF034"
+    },
+    {
+      "row": 210,
+      "field": "menu_alias",
+      "original": "VEGAN L",
+      "sku": "PF031"
+    },
+    {
+      "row": 211,
+      "field": "menu_alias",
+      "original": "VEGAN L",
+      "sku": "PF031"
+    },
+    {
+      "row": 212,
+      "field": "menu_alias",
+      "original": "VEGAN L",
+      "sku": "PF031"
+    },
+    {
+      "row": 213,
+      "field": "menu_alias",
+      "original": "VEGAN L",
+      "sku": "PF031"
+    },
+    {
+      "row": 214,
+      "field": "menu_alias",
+      "original": "VEGAN L",
+      "sku": "PF031"
+    },
+    {
+      "row": 215,
+      "field": "menu_alias",
+      "original": "VEGAN L",
+      "sku": "PF031"
+    },
+    {
+      "row": 216,
+      "field": "menu_alias",
+      "original": "VEGAN L",
+      "sku": "PF031"
+    },
+    {
+      "row": 217,
+      "field": "menu_alias",
+      "original": "VEGAN L",
+      "sku": "PF031"
+    },
+    {
+      "row": 218,
+      "field": "menu_alias",
+      "original": "VEGAN L",
+      "sku": "PF031"
+    },
+    {
+      "row": 219,
+      "field": "menu_alias",
+      "original": "BEEF MUSHROM M",
+      "sku": "PF014"
+    },
+    {
+      "row": 220,
+      "field": "menu_alias",
+      "original": "BEEF MUSHROM M",
+      "sku": "PF014"
+    },
+    {
+      "row": 221,
+      "field": "menu_alias",
+      "original": "BEEF MUSHROM M",
+      "sku": "PF014"
+    },
+    {
+      "row": 222,
+      "field": "menu_alias",
+      "original": "BEEF MUSHROM M",
+      "sku": "PF014"
+    },
+    {
+      "row": 223,
+      "field": "menu_alias",
+      "original": "BEEF MUSHROM M",
+      "sku": "PF014"
+    },
+    {
+      "row": 224,
+      "field": "menu_alias",
+      "original": "BEEF MUSHROM M",
+      "sku": "PF014"
+    },
+    {
+      "row": 225,
+      "field": "menu_alias",
+      "original": "BEEF MUSHROM M",
+      "sku": "PF014"
+    },
+    {
+      "row": 226,
+      "field": "menu_alias",
+      "original": "BEEF MUSHROM M",
+      "sku": "PF014"
+    },
+    {
+      "row": 227,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER M",
+      "sku": "PF008"
+    },
+    {
+      "row": 228,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER M",
+      "sku": "PF008"
+    },
+    {
+      "row": 229,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER M",
+      "sku": "PF008"
+    },
+    {
+      "row": 230,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER M",
+      "sku": "PF008"
+    },
+    {
+      "row": 231,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER M",
+      "sku": "PF008"
+    },
+    {
+      "row": 232,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER M",
+      "sku": "PF008"
+    },
+    {
+      "row": 233,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER M",
+      "sku": "PF008"
+    },
+    {
+      "row": 239,
+      "field": "menu_alias",
+      "original": "MEAT LOVER M",
+      "sku": "PF005"
+    },
+    {
+      "row": 240,
+      "field": "menu_alias",
+      "original": "MEAT LOVER M",
+      "sku": "PF005"
+    },
+    {
+      "row": 241,
+      "field": "menu_alias",
+      "original": "MEAT LOVER M",
+      "sku": "PF005"
+    },
+    {
+      "row": 242,
+      "field": "menu_alias",
+      "original": "MEAT LOVER M",
+      "sku": "PF005"
+    },
+    {
+      "row": 243,
+      "field": "quantity",
+      "original": "1,50",
+      "parsed": 1.5
+    },
+    {
+      "row": 243,
+      "field": "menu_alias",
+      "original": "MEAT LOVER M",
+      "sku": "PF005"
+    },
+    {
+      "row": 244,
+      "field": "menu_alias",
+      "original": "MEAT LOVER M",
+      "sku": "PF005"
+    },
+    {
+      "row": 245,
+      "field": "menu_alias",
+      "original": "MEAT LOVER M",
+      "sku": "PF005"
+    },
+    {
+      "row": 246,
+      "field": "menu_alias",
+      "original": "MEAT LOVER M",
+      "sku": "PF005"
+    },
+    {
+      "row": 247,
+      "field": "menu_alias",
+      "original": "MEAT LOVER M",
+      "sku": "PF005"
+    },
+    {
+      "row": 248,
+      "field": "menu_alias",
+      "original": "MIX M",
+      "sku": "PF029"
+    },
+    {
+      "row": 249,
+      "field": "menu_alias",
+      "original": "MIX M",
+      "sku": "PF029"
+    },
+    {
+      "row": 250,
+      "field": "menu_alias",
+      "original": "MIX M",
+      "sku": "PF029"
+    },
+    {
+      "row": 251,
+      "field": "menu_alias",
+      "original": "MIX M",
+      "sku": "PF029"
+    },
+    {
+      "row": 252,
+      "field": "quantity",
+      "original": "1,50",
+      "parsed": 1.5
+    },
+    {
+      "row": 252,
+      "field": "menu_alias",
+      "original": "MIX M",
+      "sku": "PF029"
+    },
+    {
+      "row": 253,
+      "field": "menu_alias",
+      "original": "MIX M",
+      "sku": "PF029"
+    },
+    {
+      "row": 254,
+      "field": "menu_alias",
+      "original": "MIX M",
+      "sku": "PF029"
+    },
+    {
+      "row": 255,
+      "field": "menu_alias",
+      "original": "MIX M",
+      "sku": "PF029"
+    },
+    {
+      "row": 256,
+      "field": "menu_alias",
+      "original": "MIX M",
+      "sku": "PF029"
+    },
+    {
+      "row": 257,
+      "field": "menu_alias",
+      "original": "MIX M",
+      "sku": "PF029"
+    },
+    {
+      "row": 258,
+      "field": "menu_alias",
+      "original": "MIX M",
+      "sku": "PF029"
+    },
+    {
+      "row": 259,
+      "field": "menu_alias",
+      "original": "MIX M",
+      "sku": "PF029"
+    },
+    {
+      "row": 274,
+      "field": "menu_alias",
+      "original": "SEA FOOD M",
+      "sku": "PF035"
+    },
+    {
+      "row": 275,
+      "field": "menu_alias",
+      "original": "SEA FOOD M",
+      "sku": "PF035"
+    },
+    {
+      "row": 276,
+      "field": "menu_alias",
+      "original": "SEA FOOD M",
+      "sku": "PF035"
+    },
+    {
+      "row": 277,
+      "field": "menu_alias",
+      "original": "SEA FOOD M",
+      "sku": "PF035"
+    },
+    {
+      "row": 278,
+      "field": "menu_alias",
+      "original": "SEA FOOD M",
+      "sku": "PF035"
+    },
+    {
+      "row": 279,
+      "field": "menu_alias",
+      "original": "SEA FOOD M",
+      "sku": "PF035"
+    },
+    {
+      "row": 280,
+      "field": "menu_alias",
+      "original": "SEA FOOD M",
+      "sku": "PF035"
+    },
+    {
+      "row": 281,
+      "field": "menu_alias",
+      "original": "SEA FOOD M",
+      "sku": "PF035"
+    },
+    {
+      "row": 282,
+      "field": "menu_alias",
+      "original": "SEA FOOD M",
+      "sku": "PF035"
+    },
+    {
+      "row": 287,
+      "field": "quantity",
+      "original": "1,50",
+      "parsed": 1.5
+    },
+    {
+      "row": 302,
+      "field": "menu_alias",
+      "original": "VEGAN M",
+      "sku": "PF032"
+    },
+    {
+      "row": 303,
+      "field": "menu_alias",
+      "original": "VEGAN M",
+      "sku": "PF032"
+    },
+    {
+      "row": 304,
+      "field": "menu_alias",
+      "original": "VEGAN M",
+      "sku": "PF032"
+    },
+    {
+      "row": 305,
+      "field": "menu_alias",
+      "original": "VEGAN M",
+      "sku": "PF032"
+    },
+    {
+      "row": 306,
+      "field": "menu_alias",
+      "original": "VEGAN M",
+      "sku": "PF032"
+    },
+    {
+      "row": 307,
+      "field": "menu_alias",
+      "original": "VEGAN M",
+      "sku": "PF032"
+    },
+    {
+      "row": 308,
+      "field": "menu_alias",
+      "original": "VEGAN M",
+      "sku": "PF032"
+    },
+    {
+      "row": 309,
+      "field": "menu_alias",
+      "original": "VEGAN M",
+      "sku": "PF032"
+    },
+    {
+      "row": 310,
+      "field": "menu_alias",
+      "original": "VEGAN M",
+      "sku": "PF032"
+    },
+    {
+      "row": 326,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER S",
+      "sku": "PF009"
+    },
+    {
+      "row": 327,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER S",
+      "sku": "PF009"
+    },
+    {
+      "row": 328,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER S",
+      "sku": "PF009"
+    },
+    {
+      "row": 329,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER S",
+      "sku": "PF009"
+    },
+    {
+      "row": 330,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER S",
+      "sku": "PF009"
+    },
+    {
+      "row": 331,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER S",
+      "sku": "PF009"
+    },
+    {
+      "row": 332,
+      "field": "menu_alias",
+      "original": "CHEESE LOVER S",
+      "sku": "PF009"
+    },
+    {
+      "row": 338,
+      "field": "menu_alias",
+      "original": "MEAT LOVER S",
+      "sku": "PF006"
+    },
+    {
+      "row": 339,
+      "field": "menu_alias",
+      "original": "MEAT LOVER S",
+      "sku": "PF006"
+    },
+    {
+      "row": 340,
+      "field": "menu_alias",
+      "original": "MEAT LOVER S",
+      "sku": "PF006"
+    },
+    {
+      "row": 341,
+      "field": "menu_alias",
+      "original": "MEAT LOVER S",
+      "sku": "PF006"
+    },
+    {
+      "row": 342,
+      "field": "menu_alias",
+      "original": "MEAT LOVER S",
+      "sku": "PF006"
+    },
+    {
+      "row": 343,
+      "field": "menu_alias",
+      "original": "MEAT LOVER S",
+      "sku": "PF006"
+    },
+    {
+      "row": 344,
+      "field": "menu_alias",
+      "original": "MEAT LOVER S",
+      "sku": "PF006"
+    },
+    {
+      "row": 345,
+      "field": "menu_alias",
+      "original": "MEAT LOVER S",
+      "sku": "PF006"
+    },
+    {
+      "row": 346,
+      "field": "menu_alias",
+      "original": "MEAT LOVER S",
+      "sku": "PF006"
+    },
+    {
+      "row": 347,
+      "field": "menu_alias",
+      "original": "MIX S",
+      "sku": "PF030"
+    },
+    {
+      "row": 348,
+      "field": "menu_alias",
+      "original": "MIX S",
+      "sku": "PF030"
+    },
+    {
+      "row": 349,
+      "field": "menu_alias",
+      "original": "MIX S",
+      "sku": "PF030"
+    },
+    {
+      "row": 350,
+      "field": "menu_alias",
+      "original": "MIX S",
+      "sku": "PF030"
+    },
+    {
+      "row": 351,
+      "field": "menu_alias",
+      "original": "MIX S",
+      "sku": "PF030"
+    },
+    {
+      "row": 352,
+      "field": "menu_alias",
+      "original": "MIX S",
+      "sku": "PF030"
+    },
+    {
+      "row": 353,
+      "field": "menu_alias",
+      "original": "MIX S",
+      "sku": "PF030"
+    },
+    {
+      "row": 354,
+      "field": "menu_alias",
+      "original": "MIX S",
+      "sku": "PF030"
+    },
+    {
+      "row": 355,
+      "field": "menu_alias",
+      "original": "MIX S",
+      "sku": "PF030"
+    },
+    {
+      "row": 356,
+      "field": "menu_alias",
+      "original": "MIX S",
+      "sku": "PF030"
+    },
+    {
+      "row": 357,
+      "field": "menu_alias",
+      "original": "MIX S",
+      "sku": "PF030"
+    },
+    {
+      "row": 400,
+      "field": "menu_alias",
+      "original": "VEGAN S",
+      "sku": "PF033"
+    },
+    {
+      "row": 401,
+      "field": "menu_alias",
+      "original": "VEGAN S",
+      "sku": "PF033"
+    },
+    {
+      "row": 402,
+      "field": "menu_alias",
+      "original": "VEGAN S",
+      "sku": "PF033"
+    },
+    {
+      "row": 403,
+      "field": "menu_alias",
+      "original": "VEGAN S",
+      "sku": "PF033"
+    },
+    {
+      "row": 404,
+      "field": "menu_alias",
+      "original": "VEGAN S",
+      "sku": "PF033"
+    },
+    {
+      "row": 405,
+      "field": "menu_alias",
+      "original": "VEGAN S",
+      "sku": "PF033"
+    },
+    {
+      "row": 406,
+      "field": "menu_alias",
+      "original": "VEGAN S",
+      "sku": "PF033"
+    },
+    {
+      "row": 407,
+      "field": "menu_alias",
+      "original": "VEGAN S",
+      "sku": "PF033"
+    },
+    {
+      "row": 408,
+      "field": "menu_alias",
+      "original": "VEGAN S",
+      "sku": "PF033"
+    }
+  ],
+  "old_menu_range": "Data Input!A12:A31",
+  "all_new_recipes_approved": false,
+  "prices_and_initial_stock_not_supplied": true,
+  "source_transactions_not_imported": true
+}

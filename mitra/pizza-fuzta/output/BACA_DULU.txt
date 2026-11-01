@@ -1,0 +1,18 @@
+PIZZA FUZTA - BU ELOK
+
+Tiga workbook mandiri:
+- POS_Pizza_Fuzta_Medokan.xlsx: kasir 49 menu, stok dan kas Medokan.
+- Rekap_Pizza_Fuzta_Karah.xlsx: rekap Majoo dan stok/kas pendamping Karah.
+- Gudang_Pizza_Fuzta.xlsx: stok rumah, permintaan, distribusi dan production house.
+
+Tidak ada sinkronisasi otomatis/API Majoo. Pertukaran stok via CSV PF1 offline.
+Semua file mulai tanpa transaksi/saldo fiktif. Isi harga bahan/stok aktual dan
+setujui resep/satuan sebelum mengandalkan pemakaian otomatis. Nota dengan resep
+belum disetujui tercatat sebagai uang, tetapi status stok BELUM LENGKAP.
+
+Tombol: simpan salinan .xlsm, impor KEDUA modul .bas, Debug > Compile VBAProject,
+lalu Alt+F8 > PasangTombol. VBA belum diuji di Excel desktop, belum tertanam di
+.xlsx. Rumus diuji dengan LibreOffice dan pertukaran CSV diuji dengan Python.
+
+Gunakan PANDUAN_PIZZA_FUZTA.md untuk langkah kasir, rekap, transfer dan koreksi.
+Jangan memakai macro lama dalam file sumber sebagai modul baru ini.
