@@ -1,0 +1,389 @@
+{
+  "passed": 76,
+  "failed": 0,
+  "engine": "LibreOffice headless 26.8 alpha; real formula recalculation",
+  "vba_runtime_tested": false,
+  "excel_desktop_tested": false,
+  "checks": [
+    {
+      "check": "invoice print area belongs to invoice",
+      "result": "PASS",
+      "actual": "'CETAK INVOICE'!$A$7:$F$79"
+    },
+    {
+      "check": "dashboard print area belongs to dashboard",
+      "result": "PASS",
+      "actual": "'DASHBOARD'!$A$1:$Q$48"
+    },
+    {
+      "check": "movement table includes PO and freight",
+      "result": "PASS",
+      "actual": "A6:W2006"
+    },
+    {
+      "check": "VBA not falsely embedded in xlsx",
+      "result": "PASS",
+      "actual": null
+    },
+    {
+      "check": "expected worksheet count",
+      "result": "PASS",
+      "actual": 14
+    },
+    {
+      "check": "Recalculated expected files",
+      "result": "PASS",
+      "actual": 10
+    },
+    {
+      "check": "normal / no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "historical / no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "partial / no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "returns_damage / no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "invalid / no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "changed_invoice / no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "draft / no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "retired_outlet / no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "void / no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "POS_Gian_Fataya / no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "movement 7 valid",
+      "result": "PASS",
+      "actual": "OK"
+    },
+    {
+      "check": "movement 8 valid",
+      "result": "PASS",
+      "actual": "OK"
+    },
+    {
+      "check": "movement 9 valid",
+      "result": "PASS",
+      "actual": "OK"
+    },
+    {
+      "check": "movement 10 valid",
+      "result": "PASS",
+      "actual": "OK"
+    },
+    {
+      "check": "movement 11 valid",
+      "result": "PASS",
+      "actual": "OK"
+    },
+    {
+      "check": "movement 12 valid",
+      "result": "PASS",
+      "actual": "OK"
+    },
+    {
+      "check": "carryover: 40 - 30 + 40 = 50",
+      "result": "PASS",
+      "actual": 50
+    },
+    {
+      "check": "central stock after three shipments",
+      "result": "PASS",
+      "actual": 100
+    },
+    {
+      "check": "other region stock separate",
+      "result": "PASS",
+      "actual": 15
+    },
+    {
+      "check": "shipment not counted as revenue",
+      "result": "PASS",
+      "actual": 350000
+    },
+    {
+      "check": "invoice only linked region sales",
+      "result": "PASS",
+      "actual": 300000
+    },
+    {
+      "check": "invoice percentage discount",
+      "result": "PASS",
+      "actual": 30000
+    },
+    {
+      "check": "freight after discount",
+      "result": "PASS",
+      "actual": 290000
+    },
+    {
+      "check": "full payment",
+      "result": "PASS",
+      "actual": 290000
+    },
+    {
+      "check": "paid invoice balance",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "paid invoice status",
+      "result": "PASS",
+      "actual": "LUNAS"
+    },
+    {
+      "check": "invoice source reconciles",
+      "result": "PASS",
+      "actual": "OK"
+    },
+    {
+      "check": "invoice print recipient ready",
+      "result": "PASS",
+      "actual": "SIAP CETAK"
+    },
+    {
+      "check": "invoice line quantity",
+      "result": "PASS",
+      "actual": 30
+    },
+    {
+      "check": "invoice line gross",
+      "result": "PASS",
+      "actual": 300000
+    },
+    {
+      "check": "printed invoice number present",
+      "result": "PASS",
+      "actual": "INV-UJI"
+    },
+    {
+      "check": "unbilled other region",
+      "result": "PASS",
+      "actual": 50000
+    },
+    {
+      "check": "historical outlet stock excludes next month shipment",
+      "result": "PASS",
+      "actual": 10
+    },
+    {
+      "check": "historical central stock",
+      "result": "PASS",
+      "actual": 140
+    },
+    {
+      "check": "historical cash excludes future settlement",
+      "result": "PASS",
+      "actual": 100000
+    },
+    {
+      "check": "historical receivable excludes future settlement",
+      "result": "PASS",
+      "actual": 190000
+    },
+    {
+      "check": "partial payment balance",
+      "result": "PASS",
+      "actual": 190000
+    },
+    {
+      "check": "partial payment status",
+      "result": "PASS",
+      "actual": "SEBAGIAN"
+    },
+    {
+      "check": "return and spoilage reduce outlet stock",
+      "result": "PASS",
+      "actual": 43
+    },
+    {
+      "check": "return increases warehouse stock",
+      "result": "PASS",
+      "actual": 105
+    },
+    {
+      "check": "return and spoilage do not become revenue",
+      "result": "PASS",
+      "actual": 350000
+    },
+    {
+      "check": "invalid movement 14 detected",
+      "result": "PASS",
+      "actual": "SUDAH KEDALUWARSA"
+    },
+    {
+      "check": "invalid movement 14 excluded",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "invalid movement 15 detected",
+      "result": "PASS",
+      "actual": "ISI HARGA JUAL"
+    },
+    {
+      "check": "invalid movement 15 excluded",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "invalid movement 16 detected",
+      "result": "PASS",
+      "actual": "ID GANDA"
+    },
+    {
+      "check": "invalid movement 16 excluded",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "invalid movement 17 detected",
+      "result": "PASS",
+      "actual": "ID GANDA"
+    },
+    {
+      "check": "invalid movement 17 excluded",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "invalid movement 19 detected",
+      "result": "PASS",
+      "actual": "ISI NO PO/SJ"
+    },
+    {
+      "check": "invalid movement 19 excluded",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "invalid movement 20 detected",
+      "result": "PASS",
+      "actual": "CEK QTY"
+    },
+    {
+      "check": "invalid movement 20 excluded",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "expired stock retained until disposal",
+      "result": "PASS",
+      "actual": 10
+    },
+    {
+      "check": "negative historical balance detected",
+      "result": "PASS",
+      "actual": true
+    },
+    {
+      "check": "post-issue source edit detected",
+      "result": "PASS",
+      "actual": "SELISIH SUMBER"
+    },
+    {
+      "check": "snapshot remains fixed after price edit",
+      "result": "PASS",
+      "actual": 300000
+    },
+    {
+      "check": "invalid invoice print stopped",
+      "result": "PASS",
+      "actual": "STOP: PERIKSA INVOICE DAN SUMBER"
+    },
+    {
+      "check": "draft invoice payments excluded",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "draft invoice excluded from issued totals",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "draft invoice not printable",
+      "result": "PASS",
+      "actual": "BUKAN INVOICE TERBIT"
+    },
+    {
+      "check": "retiring outlet preserves historical sales",
+      "result": "PASS",
+      "actual": 350000
+    },
+    {
+      "check": "retiring outlet preserves its stock",
+      "result": "PASS",
+      "actual": 50
+    },
+    {
+      "check": "void invoice has no receivable",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "void invoice sales available for rebilling",
+      "result": "PASS",
+      "actual": 350000
+    },
+    {
+      "check": "production workbook has no invented sale price",
+      "result": "PASS",
+      "actual": null
+    },
+    {
+      "check": "source material cost sum",
+      "result": "PASS",
+      "actual": 9410
+    },
+    {
+      "check": "production workbook no sales",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "production workbook no invoice selected",
+      "result": "PASS",
+      "actual": "PILIH ID INVOICE"
+    },
+    {
+      "check": "production workbook no transaction IDs",
+      "result": "PASS",
+      "actual": 0
+    }
+  ]
+}

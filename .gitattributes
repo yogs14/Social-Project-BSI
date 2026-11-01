@@ -1,0 +1,4 @@
+*.bas text eol=crlf whitespace=cr-at-eol
+*.xlsx binary
+*.zip binary
+*.jpeg binary

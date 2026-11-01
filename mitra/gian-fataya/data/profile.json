@@ -1,0 +1,61 @@
+{
+  "name": "Gian Fataya",
+  "owner": "Bu Santi",
+  "regions": [
+    "Jawa Timur",
+    "Jawa Tengah",
+    "Medan - Aceh",
+    "Sulawesi Selatan",
+    "Kalimantan",
+    "Sumatera Selatan",
+    "Batam",
+    "Jabodetabek"
+  ],
+  "product": {
+    "sku": "GF-PST-001",
+    "name": "Pastel (pouch)",
+    "unit": "pouch",
+    "price": null
+  },
+  "ingredients": [
+    [
+      "Tepung",
+      60,
+      "gram",
+      750
+    ],
+    [
+      "Minyak",
+      30,
+      "ml",
+      1350
+    ],
+    [
+      "Abon",
+      25,
+      "gram",
+      4050
+    ],
+    [
+      "Margarin",
+      60,
+      "gram",
+      420
+    ],
+    [
+      "Telor",
+      35,
+      "gram",
+      840
+    ],
+    [
+      "Pouch",
+      1,
+      "lembar",
+      2000
+    ]
+  ],
+  "source_sheet": "https://docs.google.com/spreadsheets/d/1MCGsQK3ILZBpxMRH2-fWdnkxv1I8Cfq83BnCVYbJqmQ/edit?gid=52890219#gid=52890219",
+  "source_folder": "https://drive.google.com/drive/folders/17mIij9nPDVeZT6HhQXOdQyLcn6g52oZ6",
+  "mom_date": "2026-10-22"
+}

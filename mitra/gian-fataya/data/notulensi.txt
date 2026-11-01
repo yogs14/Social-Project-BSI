@@ -1,0 +1,30 @@
+ | Notulensi Sesi 1-on-1 Bengkel UMKM |  |  |  |
+ |  |  |  |  |
+ | Nama UMKM | Gian Fataya - Bu Santi |  | Peserta | - Yoga
+- Agta
+- Shonia
+- Salma
+ | Tanggal | 22/10/2026 |  |  |
+ | Catatan Diskusi |  |  |  |
+ | - Sistem kerjasama dengan Amanda -> Konsinyasi
+- PO dilakukan sebulan sekali, menyesuaikan permintaan minimal 10 pcs
+- Ada toko lain selain Amanda, seperti toko oleh oleh di Semarang. Ada 3 outlet yang bekerjasama selain Amanda.
+- Tidak ada outlet milik sendiri, rumah hanya ada stok. Pusat distribusinya di rumah.
+- Bu Santi sebelumnya udah pake pencatatan di spreadsheet atau Excel, tapi basic aja. Pencatatannya lebih ke rekapitulasi karena masing-masing toko berbeda, serta untuk arus kas Bu Santi sendiri.
+- Dari yang sudah ada di dashboard bengkel UMKM, ada yg perlu ditambahkan? -> KOLOM ONGKIR/PENGIRIMAN DAN DISKON (karena biasanya ada diskon sekian persen)
+- Yang harus ada: Stok awal - Distribusi by PO - Penjualan - Sisa stok akhir - Invoice
+- NEEDS VISUALISASI DATA: Grafik area yang terbanyak (mana kota yang grafik tertinggi, sedang, flat)
+- Kalo misal stok ga abis? A: Kalo belum terjual, selama belum exp akan jadi stok di tokonya. Misal masuk PO 40 pcs, di akhir bulan sisa 10, lalu bulan depannya masuk lagi 40, berarti tercatat ada 50 stok. Kalo misal sampe exp belum terjual, akan jadi stok berjalan.
+- Kalo misal ada yg rusak, ada retur kah? A: Sejauh ini belum pernah ada yang rusak. Kalo misal ada kerusakan krn digigit hewan misal kemasannya, bisa retur, cuma belum pernah ada retur sejauh ini.
+- KEBUTUHAN UTAMA: STOK, PENJUALAN, INVOICE
+- Invoice Ibunya selama ini pake dokumen dikirim format pdf. Jadi Bu Santi buat 1 rekapan + invoicenya. Invoicenya PER AREA/WILAYAH. Misal di Jabodetabek, yang ditagih ya penanggungjawab area itu. NOTES DR TIM: MINTA CONTOH INVOICE EKSISTING (terlampir kemarin di grup)
+- Di wilayah Jatim, itu ada sekitar 14 outlet yang tersebar di beberapa kota. Lingkup wilayah Jatim tuh sampe Mataram (NTB).
+- Tiap outlet bayarnya SETELAH TERJUAL. Yang terjual yang dibayarkan, sisa stocknya masuk ke stok bulan berikutnya.
+- Ada agen di tiap provinsi/wilayah. Ada 8 wilayah buat Amanda meliputi Jatim, Jateng, Jabar, Kaltim, Batam, Sumut (Medan + Aceh), Jabodetabek, Sulsel + Jayapura (cmiiw guys, ak agak bingung kmrn dengerinnya 😢)
+- Kalo buat outlet lainnya itu terpusat di Jateng dan Aceh, kurleb di atas 5.
+- REQ TIM: DAFTAR OUTLET DAN PERWILAYAHNY
+- Sistem distribusi lewat ekspedisi -> perlu kolom ongkir (eh jujur ini ak agak mis lanjutannya, sinyalku kaya putus putus maafkeun)
+- REQ YOGA: Minta ibunya buat data stock, outlet, data bahan baku buat produksi per pcs nya)
+- Pendapat Agta: Kayanya perlu dipertambangin lagi terkait bahan baku karena kayanya ibunya ga yg terlalu butuh di bagian produksi/inventory. Lebih ke butuh buat pengelolaan stok, outlet, invoice. |  |  |  |
+ | Drive file informasi data UMKM |  |  |  |
+ | Bu Santi_GianFataya |  |  |  |

@@ -1,0 +1,16 @@
+GIAN FATAYA - KONSINYASI DAN INVOICE WILAYAH
+
+1. Buka POS_Gian_Fataya.xlsx, mulai dari sheet MULAI.
+2. Isi harga jual, outlet, PIC/alamat tagihan, lot/expired, dan stok awal aktual.
+3. Jurnal manual langsung bekerja tanpa macro. Sel biru untuk input;
+   sel abu-abu berisi rumus. Jangan mengubah kode master yang sudah dipakai.
+4. Tombol FORM/PDF opsional: simpan sebagai .xlsm, Alt+F11 > File > Import
+   Modul_GianFataya.bas, Debug > Compile VBAProject, lalu Alt+F8 > PasangTombol.
+5. Simpan file dengan Ctrl+S dan cadangkan sebelum penagihan bulanan.
+
+Tidak ada transaksi atau harga jual fiktif di file utama.
+Biaya bahan Rp9.410/pouch berasal dari foto mitra, bukan harga jual atau HPP lengkap.
+VBA diberikan terpisah; tidak tertanam dalam .xlsx, dan belum dijalankan di Excel desktop.
+Rumus dihitung ulang dan diuji dengan LibreOffice pada data simulasi terpisah.
+Format invoice sementara karena contoh invoice asli belum tersedia.
+Panduan lengkap: PANDUAN_GIAN_FATAYA.md.

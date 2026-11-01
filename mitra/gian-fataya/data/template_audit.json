@@ -1,0 +1,7 @@
+{
+  "reference_template": "Template_POS_Kosong.xlsm",
+  "sha256": "5d4d20a54a88175d7b1803690c7f4d6485d3bf5a652caea60231e69806b088bf",
+  "adaptation": "Struktur kasir restoran disesuaikan menjadi jurnal konsinyasi; tidak menyalin VBA restoran ke workbook baru.",
+  "new_workbook_type": "xlsx; VBA opsional diberikan sebagai bas terpisah",
+  "template_unchanged": true
+}
