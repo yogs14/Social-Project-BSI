@@ -1,0 +1,16 @@
+MURITA CREPES - PAK SYARIF
+
+1. Buka POS_Murita_Crepes.xlsx, mulai dari MULAI.
+2. Periksa 34 menu/harga sumber; isi harga SKM, stok awal, saldo kas aktual.
+3. Produksi dua tahap: bahan mentah -> PREMIX -> WET -> kasir.
+4. Kalibrasi sendok topping bila datanya sudah ada; sebelum itu takaran adalah acuan.
+5. Loyalty awalnya TIDAK aktif. Tetapkan aturan terlebih dahulu; pelanggan opsional.
+6. Untuk tombol: simpan salinan .xlsm, impor Modul_MuritaCrepes.bas via Alt+F11,
+   Debug > Compile VBAProject, lalu Alt+F8 > PasangTombol. Simpan dengan Ctrl+S.
+7. Tanpa macro, jurnal NOTA, ITEM dan GERAK BAHAN diisi bersama sesuai panduan.
+
+Tidak ada penjualan, saldo stok atau pelanggan fiktif dalam workbook utama.
+Rumus sumber SKM yang salah tidak dipakai; HPP belum lengkap sampai harga diketahui.
+Rumus diuji dengan LibreOffice pada simulasi terpisah. VBA belum dikompilasi/
+dijalankan di Excel desktop dan belum tertanam di .xlsx; uji sebelum operasional.
+Panduan lengkap: PANDUAN_MURITA_CREPES.md.

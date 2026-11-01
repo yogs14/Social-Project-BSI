@@ -1,0 +1,444 @@
+{
+  "passed": 87,
+  "failed": 0,
+  "engine": "LibreOffice headless 26.8 alpha; real workbook formula recalculation",
+  "vba_runtime_tested": false,
+  "excel_desktop_tested": false,
+  "checks": [
+    {
+      "check": "20 sheets",
+      "result": "PASS",
+      "actual": 20
+    },
+    {
+      "check": "34 source menus",
+      "result": "PASS",
+      "actual": 34
+    },
+    {
+      "check": "receipt print area",
+      "result": "PASS",
+      "actual": "'STRUK'!$A$7:$F$35"
+    },
+    {
+      "check": "VBA separate, not falsely embedded",
+      "result": "PASS",
+      "actual": null
+    },
+    {
+      "check": "all files recalculated",
+      "result": "PASS",
+      "actual": 10
+    },
+    {
+      "check": "normal / no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "incomplete / no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "changed_masters / no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "yield28 / no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "historical / no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "void / no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "invalid / no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "missing_usage / no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "too_many_items / no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "POS_Murita_Crepes / no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "dry weight sums all seven ingredients",
+      "result": "PASS",
+      "actual": 2908.5
+    },
+    {
+      "check": "dry cost uses actual ingredient prices",
+      "result": "PASS",
+      "actual": 56731.25
+    },
+    {
+      "check": "unit premix cost",
+      "result": "PASS",
+      "actual": 19.5053292074953
+    },
+    {
+      "check": "wet target output",
+      "result": "PASS",
+      "actual": 1895
+    },
+    {
+      "check": "wet portion for 30 crepes",
+      "result": "PASS",
+      "actual": 63.1666666666667
+    },
+    {
+      "check": "SKM known cost included in HPP",
+      "result": "PASS",
+      "actual": 1459.52004387796
+    },
+    {
+      "check": "recipe HPP complete after actual SKM input",
+      "result": "PASS",
+      "actual": "LENGKAP"
+    },
+    {
+      "check": "34th menu accepted beyond legacy 20",
+      "result": "PASS",
+      "actual": 10000
+    },
+    {
+      "check": "23:00 accepted",
+      "result": "PASS",
+      "actual": "OK"
+    },
+    {
+      "check": "cash change correct",
+      "result": "PASS",
+      "actual": 6000
+    },
+    {
+      "check": "net sales after one receipt discount",
+      "result": "PASS",
+      "actual": 19000
+    },
+    {
+      "check": "receipt count independent of item count",
+      "result": "PASS",
+      "actual": 2
+    },
+    {
+      "check": "four items sold",
+      "result": "PASS",
+      "actual": 4
+    },
+    {
+      "check": "business expenses exclude prive",
+      "result": "PASS",
+      "actual": 1000
+    },
+    {
+      "check": "stock purchases reported separately",
+      "result": "PASS",
+      "actual": 2400
+    },
+    {
+      "check": "contribution avoids double counting purchases/prive",
+      "result": "PASS",
+      "actual": 12305.9198244882
+    },
+    {
+      "check": "raw materials consumed only at premix production",
+      "result": "PASS",
+      "actual": 9656.180162
+    },
+    {
+      "check": "premix fully transferred into wet dough",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "wet stock consumed once by sales",
+      "result": "PASS",
+      "actual": 1642.333333
+    },
+    {
+      "check": "butter consumed only at wet production",
+      "result": "PASS",
+      "actual": 9935
+    },
+    {
+      "check": "topping stock accounts for purchase and four crepes",
+      "result": "PASS",
+      "actual": 10055
+    },
+    {
+      "check": "second topping usage separate",
+      "result": "PASS",
+      "actual": 9985
+    },
+    {
+      "check": "SKM quantity consumed despite different cost unit",
+      "result": "PASS",
+      "actual": 9977.48
+    },
+    {
+      "check": "CRM visits per receipt",
+      "result": "PASS",
+      "actual": 2
+    },
+    {
+      "check": "CRM net spend",
+      "result": "PASS",
+      "actual": 19000
+    },
+    {
+      "check": "CRM latest actual visit date",
+      "result": "PASS",
+      "actual": "2026-10-25 00:00:00"
+    },
+    {
+      "check": "loyalty earned per receipt",
+      "result": "PASS",
+      "actual": 3
+    },
+    {
+      "check": "loyalty redeemed",
+      "result": "PASS",
+      "actual": -1
+    },
+    {
+      "check": "loyalty balance",
+      "result": "PASS",
+      "actual": 2
+    },
+    {
+      "check": "cash drawer excludes QRIS and gross cash tender",
+      "result": "PASS",
+      "actual": 22100
+    },
+    {
+      "check": "cash drawer reconciles",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "receipt printable",
+      "result": "PASS",
+      "actual": "SIAP CETAK"
+    },
+    {
+      "check": "receipt first menu quantity",
+      "result": "PASS",
+      "actual": 2
+    },
+    {
+      "check": "receipt second menu quantity",
+      "result": "PASS",
+      "actual": 1
+    },
+    {
+      "check": "receipt total",
+      "result": "PASS",
+      "actual": 14000
+    },
+    {
+      "check": "missing SKM does not fabricate full margin",
+      "result": "PASS",
+      "actual": "HPP BELUM LENGKAP"
+    },
+    {
+      "check": "missing HPP still permits sales recording",
+      "result": "PASS",
+      "actual": 19000
+    },
+    {
+      "check": "three sampled spoon weights averaged",
+      "result": "PASS",
+      "actual": 12
+    },
+    {
+      "check": "spoon calibration replaces standard usage",
+      "result": "PASS",
+      "actual": 24
+    },
+    {
+      "check": "calibration mode",
+      "result": "PASS",
+      "actual": "TERKALIBRASI"
+    },
+    {
+      "check": "changed prices do not alter sales snapshot",
+      "result": "PASS",
+      "actual": 19000
+    },
+    {
+      "check": "changed recipe does not alter stock snapshot",
+      "result": "PASS",
+      "actual": 10055
+    },
+    {
+      "check": "changed loyalty rules do not alter past points",
+      "result": "PASS",
+      "actual": 3
+    },
+    {
+      "check": "retiring menu does not invalidate history",
+      "result": "PASS",
+      "actual": "OK"
+    },
+    {
+      "check": "yield 28 adjusts wet grams per portion",
+      "result": "PASS",
+      "actual": 67.6785714285714
+    },
+    {
+      "check": "yield change leaves posted consumption frozen",
+      "result": "PASS",
+      "actual": 1642.333333
+    },
+    {
+      "check": "historical sales cutoff",
+      "result": "PASS",
+      "actual": 14000
+    },
+    {
+      "check": "historical visits cutoff",
+      "result": "PASS",
+      "actual": 1
+    },
+    {
+      "check": "historical points cutoff",
+      "result": "PASS",
+      "actual": 2
+    },
+    {
+      "check": "historical wet stock cutoff",
+      "result": "PASS",
+      "actual": 1705.5
+    },
+    {
+      "check": "VOID removes net sales",
+      "result": "PASS",
+      "actual": 5000
+    },
+    {
+      "check": "VOID removes CRM visit",
+      "result": "PASS",
+      "actual": 1
+    },
+    {
+      "check": "VOID restores stock consumption",
+      "result": "PASS",
+      "actual": 10085
+    },
+    {
+      "check": "VOID reverses earned points",
+      "result": "PASS",
+      "actual": 1
+    },
+    {
+      "check": "VOID receipt cannot print",
+      "result": "PASS",
+      "actual": "NOTA VOID / TIDAK VALID"
+    },
+    {
+      "check": "discount above gross caught",
+      "result": "PASS",
+      "actual": "CEK DISKON"
+    },
+    {
+      "check": "negative movement quantity caught",
+      "result": "PASS",
+      "actual": "CEK QTY"
+    },
+    {
+      "check": "negative stock caught",
+      "result": "PASS",
+      "actual": true
+    },
+    {
+      "check": "duplicate stock IDs caught",
+      "result": "PASS",
+      "actual": "ID GANDA"
+    },
+    {
+      "check": "invalid price caught",
+      "result": "PASS",
+      "actual": "CEK HARGA"
+    },
+    {
+      "check": "negative points caught",
+      "result": "PASS",
+      "actual": true
+    },
+    {
+      "check": "missing stock usage caught before receipt accepted",
+      "result": "PASS",
+      "actual": "ISI PEMAKAIAN"
+    },
+    {
+      "check": "incomplete receipt excluded from net sales",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "overlong manual note detected",
+      "result": "PASS",
+      "actual": "MAKS 12 ITEM"
+    },
+    {
+      "check": "overlong receipt not silently truncated",
+      "result": "PASS",
+      "actual": "NOTA VOID / TIDAK VALID"
+    },
+    {
+      "check": "operational workbook has no fake notes",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "operational workbook has no customer data",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "SKM purchase price deliberately blank",
+      "result": "PASS",
+      "actual": null
+    },
+    {
+      "check": "loyalty disabled without invented policy",
+      "result": "PASS",
+      "actual": "TIDAK"
+    },
+    {
+      "check": "no invented points threshold",
+      "result": "PASS",
+      "actual": null
+    },
+    {
+      "check": "default source HPP incomplete honestly",
+      "result": "PASS",
+      "actual": "BELUM LENGKAP"
+    },
+    {
+      "check": "default premix validates",
+      "result": "PASS",
+      "actual": "OK"
+    }
+  ]
+}

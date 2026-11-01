@@ -1,8 +1,13 @@
 # Social Project BSI — template operasional UMKM
 
-Implementasi pertama: **Gian Fataya**, stok konsinyasi dan invoice per wilayah berdasarkan MoM 22 Oktober 2026.
+Workbook operasional setiap mitra mengikuti MoM dan data pendukung dashboard Bengkel UMKM.
 
-Lihat [panduan](mitra/gian-fataya/docs/PANDUAN_GIAN_FATAYA.md). Workbook dan paket distribusi ada di `mitra/gian-fataya/output/`.
+| Mitra | Alur yang disiapkan | Workbook | Panduan |
+| --- | --- | --- | --- |
+| Gian Fataya — Bu Santi | Stok konsinyasi, distribusi outlet, invoice wilayah dan pembayaran bertahap | [Excel](mitra/gian-fataya/output/POS_Gian_Fataya.xlsx) · [Paket ZIP](mitra/gian-fataya/output/Paket_POS_Gian_Fataya.zip) | [Panduan](mitra/gian-fataya/docs/PANDUAN_GIAN_FATAYA.md) |
+| Murita Crepes — Pak Syarif | POS 34 menu, premiks tujuh bahan, adonan basah, kalibrasi topping, kas usaha/pribadi dan CRM/poin | [Excel](mitra/murita-crepes/output/POS_Murita_Crepes.xlsx) · [Paket ZIP](mitra/murita-crepes/output/Paket_POS_Murita_Crepes.zip) | [Panduan](mitra/murita-crepes/docs/PANDUAN_MURITA_CREPES.md) |
+
+File utama tidak memuat transaksi/pelanggan/saldo fiktif. Data yang belum tersedia ditandai untuk diisi mitra. Pada Murita, harga SKM dari rumus sumber tidak dipakai karena salah referensi; HPP tetap ditandai belum lengkap sampai harga sebenarnya diisi. Loyalty awalnya nonaktif karena kebijakan hadiah belum diberikan.
 
 ## Menghasilkan dan memvalidasi workbook
 
@@ -13,10 +18,19 @@ cd /workspace/Social-Project-BSI/mitra/gian-fataya
 python3 -m pip install -r requirements.txt
 python3 src/build_workbook.py
 python3 tests/validate_workbook.py
+python3 src/package_delivery.py
+
+cd /workspace/Social-Project-BSI/mitra/murita-crepes
+python3 -m pip install -r requirements.txt
+python3 src/build_workbook.py
+python3 tests/validate_workbook.py
+python3 src/package_delivery.py
 ```
 
 Python 3.11+; generator memakai XlsxWriter, pengujian memakai openpyxl dan `soffice` (LibreOffice headless). Tidak ada server atau database untuk dijalankan. Pengujian memakai file simulasi terpisah di `/tmp`, menghitung ulang rumus yang benar-benar digunakan workbook, lalu menyimpan hasil validasi JSON. File operasional tetap tanpa transaksi contoh.
 
-Workbook utama `.xlsx` bekerja dengan jurnal manual. Sumber VBA tambahan tersedia di `vba/Modul_GianFataya.bas`; impor ke salinan `.xlsm` di Excel desktop untuk tombol FORM/PDF. VBA tidak dikompilasi atau dieksekusi di Linux. Modul restoran pada lampiran awal tidak dibawa ke file konsinyasi.
+Workbook utama `.xlsx` bekerja dengan rumus dan jurnal manual. Sumber VBA tersedia pada direktori `vba/` masing-masing mitra; impor ke salinan `.xlsm` di Excel desktop untuk tombol pencatatan dan ekspor PDF. VBA belum dikompilasi atau dieksekusi di Linux; periksa Debug → Compile VBAProject dan alur tombol sebelum operasional. Modul restoran lama tidak digunakan untuk alur konsinyasi atau produksi bertahap.
 
-Data referensi yang berhasil dibaca tersimpan lokal bersama metadata sumber di `data/`. Harga jual, outlet, PIC tagihan, saldo awal, tanggal expired dan rekening belum tersedia dan harus diisi dari data mitra yang telah dikonfirmasi.
+Data referensi yang berhasil dibaca tersimpan bersama metadata sumber di `data/` masing-masing mitra. Hasil uji ada pada `output/hasil_validasi.json`. Pengujian menghitung rumus workbook sebenarnya: stok, perbedaan penjualan/kas, cutoff tanggal, snapshot, pembatalan dan kebutuhan khusus tiap mitra. File simulasi tidak masuk ke workbook operasional.
+
+Untuk Murita, alurnya **bahan mentah → premiks → adonan basah → penjualan**: tujuh bahan mentah tidak dipotong dua kali saat kasir mencatat penjualan. Harga, kuantitas bahan, HPP dan poin disimpan sebagai snapshot oleh VBA; perubahan harga/kalibrasi tidak mengubah jurnal lama. Kontak pelanggan opsional, dan tidak ada pengiriman pesan otomatis.

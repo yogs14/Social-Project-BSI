@@ -1,0 +1,15 @@
+Murita Crepes - Pak Syarif
+24 Oktober 2026
+
+- Murita hariannya buka jam 5 sore sampai jam 11 malam. Senin libur krn ada pekerjaan lain. Udah mulai dari tahun 2022, setelah covid.Masih dikelola sendiri, belum ada karyawan.
+- Kendala terbesar: KURANGNYA ALAT UNTUK MENCATAT KEUANGAN MAUPUN PEMASARAN
+- ALUR: Beli bahan dilakukan ketika stok menipis, tidak bisa ditentukan. Frekuensi satu pekan beli 2x, hari rabu belanja, di Jumat/Sabtu malam belanja lagi.
+- Kalo crepes dibagi jadi 2 bahan utama, bahan baku inti/kulit itu belanjanya sepekan 2x. Kemudian yang kedua, bahan baku topping menyesuaikan dengan stok yang ada.
+- Keuangannya masih tercampur antara keuangan bisnis dan pribadi.
+DASHBOARDNYA:
+- Yang belum bisa dimanage topping krn toppingnya banyak dan ga pake timbangan tapi pake sendok, jadi antara satu dan lainnya ada perbedaan volume/massa.
+- Buat bikinnya itu tepung dicampur -> Saran yoga: better dipecah dulu, terus ada sendiri tepung rekombinasi dari campuran tepung-tepung itu. GABUNGAN DARI 7 BAHAN ITU -> TEPUNG PREMIKS. Pak Syarif minta soluasi gimana nanti setelah ada gabungan 7 bahan itu supaya ada tepung premiks/adonan kering di bawahnya (di excel yg file namenya ada "gpt")
+- 1 kg tepung premiks menghasilkan kurleb 28-30 crepes. Anggaplah 30 pcs lah.
+- SOLUSI: DIBUATKAN OPERASI MATEMATIKA UNTUK BAHAN REKOMBINASI. Lalu untuk volume adonan basah itu kombinasi dari mentega dan air.
+REQ:
+Bisa ga ada sistem loyalty atau CRM? Sementara kalau dari kami sendiri, ada beberapa yang berlangganan. Makanya milih excel karena gratis dan jangka panjang.

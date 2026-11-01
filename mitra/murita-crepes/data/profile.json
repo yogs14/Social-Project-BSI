@@ -1,0 +1,584 @@
+{
+  "business": "Murita Crepes",
+  "owner": "Pak Syarif",
+  "mom_date": "2026-10-24",
+  "open": "17:00",
+  "close": "23:00",
+  "closed_day": "Senin",
+  "materials": [
+    {
+      "code": "RAW01",
+      "name": "TEPUNG BERAS Rose Brand",
+      "group": "BAHAN PREMIKS",
+      "unit": "gram",
+      "price": 9500,
+      "pack": 500,
+      "recipe_weight": 1000,
+      "track": "YA"
+    },
+    {
+      "code": "RAW02",
+      "name": "TEPUNG TERIGU Segitiga biru",
+      "group": "BAHAN PREMIKS",
+      "unit": "gram",
+      "price": 5000,
+      "pack": 500,
+      "recipe_weight": 500,
+      "track": "YA"
+    },
+    {
+      "code": "RAW03",
+      "name": "TEPUNG MAIZENA Bola deli repacked",
+      "group": "BAHAN PREMIKS",
+      "unit": "gram",
+      "price": 7500,
+      "pack": 500,
+      "recipe_weight": 500,
+      "track": "YA"
+    },
+    {
+      "code": "RAW04",
+      "name": "FULLCREAM Mildiura",
+      "group": "BAHAN PREMIKS",
+      "unit": "gram",
+      "price": 18500,
+      "pack": 500,
+      "recipe_weight": 400,
+      "track": "YA"
+    },
+    {
+      "code": "RAW05",
+      "name": "GULA PASIR Raja Gula",
+      "group": "BAHAN PREMIKS",
+      "unit": "gram",
+      "price": 8800,
+      "pack": 500,
+      "recipe_weight": 500,
+      "track": "YA"
+    },
+    {
+      "code": "RAW06",
+      "name": "Garam",
+      "group": "BAHAN PREMIKS",
+      "unit": "gram",
+      "price": 2500,
+      "pack": 200,
+      "recipe_weight": 6.5,
+      "track": "YA"
+    },
+    {
+      "code": "RAW07",
+      "name": "vanili L'arome",
+      "group": "BAHAN PREMIKS",
+      "unit": "gram",
+      "price": 31000,
+      "pack": 40,
+      "recipe_weight": 2,
+      "track": "YA"
+    },
+    {
+      "code": "BTR",
+      "name": "Mentega Forvita",
+      "group": "BAHAN ADONAN",
+      "unit": "gram",
+      "price": 6000,
+      "pack": 200,
+      "track": "YA"
+    },
+    {
+      "code": "WTR",
+      "name": "Air",
+      "group": "BAHAN ADONAN",
+      "unit": "gram",
+      "price": 0,
+      "pack": 1,
+      "track": "TIDAK"
+    },
+    {
+      "code": "SKM",
+      "name": "SKM 3 sapi",
+      "group": "PELENGKAP",
+      "unit": "gram",
+      "price": null,
+      "pack": 490,
+      "track": "YA"
+    },
+    {
+      "code": "GAS",
+      "name": "Gas LPG 3 kg (waktu pakai)",
+      "group": "PELENGKAP",
+      "unit": "menit",
+      "price": 22000,
+      "pack": 360,
+      "track": "TIDAK"
+    },
+    {
+      "code": "PACK",
+      "name": "Contong kertas minyak",
+      "group": "KEMASAN",
+      "unit": "lembar",
+      "price": 10000,
+      "pack": 100,
+      "track": "YA"
+    },
+    {
+      "code": "TOP01",
+      "name": "Meses zebra",
+      "group": "TOPPING",
+      "unit": "gram",
+      "price": 24000,
+      "pack": 1000,
+      "portion": 15,
+      "track": "YA"
+    },
+    {
+      "code": "TOP02",
+      "name": "straberi selai soffil",
+      "group": "TOPPING",
+      "unit": "gram",
+      "price": 3600,
+      "pack": 250,
+      "portion": 15,
+      "track": "YA"
+    },
+    {
+      "code": "TOP03",
+      "name": "Bluberri selai soffil",
+      "group": "TOPPING",
+      "unit": "gram",
+      "price": 3600,
+      "pack": 250,
+      "portion": 15,
+      "track": "YA"
+    },
+    {
+      "code": "TOP04",
+      "name": "coklat glaze innova",
+      "group": "TOPPING",
+      "unit": "gram",
+      "price": 13000,
+      "pack": 250,
+      "portion": 20,
+      "track": "YA"
+    },
+    {
+      "code": "TOP05",
+      "name": "Greentea glaze dip Plaza",
+      "group": "TOPPING",
+      "unit": "gram",
+      "price": 10700,
+      "pack": 250,
+      "portion": 20,
+      "track": "YA"
+    },
+    {
+      "code": "TOP06",
+      "name": "kacang selai",
+      "group": "TOPPING",
+      "unit": "gram",
+      "price": 10000,
+      "pack": 250,
+      "portion": 25,
+      "track": "YA"
+    },
+    {
+      "code": "TOP07",
+      "name": "keju winches",
+      "group": "TOPPING",
+      "unit": "gram",
+      "price": 12000,
+      "pack": 250,
+      "portion": 25,
+      "track": "YA"
+    },
+    {
+      "code": "TOP08",
+      "name": "marsmellow",
+      "group": "TOPPING",
+      "unit": "pcs",
+      "price": 9000,
+      "pack": 20,
+      "portion": 2,
+      "track": "YA"
+    },
+    {
+      "code": "TOP09",
+      "name": "milo",
+      "group": "TOPPING",
+      "unit": "gram",
+      "price": 2200,
+      "pack": 22,
+      "portion": 11,
+      "track": "YA"
+    },
+    {
+      "code": "TOP10",
+      "name": "Pisang",
+      "group": "TOPPING",
+      "unit": "buah",
+      "price": 10000,
+      "pack": 18,
+      "portion": 1,
+      "track": "YA"
+    },
+    {
+      "code": "TOP11",
+      "name": "taro glaze dip plaza",
+      "group": "TOPPING",
+      "unit": "gram",
+      "price": 10700,
+      "pack": 250,
+      "portion": 25,
+      "track": "YA"
+    },
+    {
+      "code": "TOP12",
+      "name": "Tiramisu glaze collata",
+      "group": "TOPPING",
+      "unit": "gram",
+      "price": 16500,
+      "pack": 250,
+      "portion": 20,
+      "track": "YA"
+    },
+    {
+      "code": "TOP13",
+      "name": "Oreo crumb",
+      "group": "TOPPING",
+      "unit": "gram",
+      "price": 16000,
+      "pack": 250,
+      "portion": 20,
+      "track": "YA"
+    },
+    {
+      "code": "PREMIX",
+      "name": "Tepung premiks / adonan kering",
+      "group": "ANTARA",
+      "unit": "gram",
+      "price": null,
+      "pack": 1,
+      "track": "YA"
+    },
+    {
+      "code": "WET",
+      "name": "Adonan basah siap masak",
+      "group": "ANTARA",
+      "unit": "gram",
+      "price": null,
+      "pack": 1,
+      "track": "YA"
+    }
+  ],
+  "menus": [
+    {
+      "sku": "MC001",
+      "name": "Crepes Meses zebra",
+      "price": 5000,
+      "toppings": [
+        "TOP01"
+      ]
+    },
+    {
+      "sku": "MC002",
+      "name": "Crepes straberi selai soffil",
+      "price": 5000,
+      "toppings": [
+        "TOP02"
+      ]
+    },
+    {
+      "sku": "MC003",
+      "name": "Crepes Bluberri selai soffil",
+      "price": 5000,
+      "toppings": [
+        "TOP03"
+      ]
+    },
+    {
+      "sku": "MC004",
+      "name": "Crepes coklat glaze innova",
+      "price": 6000,
+      "toppings": [
+        "TOP04"
+      ]
+    },
+    {
+      "sku": "MC005",
+      "name": "Crepes Greentea glaze dip Plaza",
+      "price": 6000,
+      "toppings": [
+        "TOP05"
+      ]
+    },
+    {
+      "sku": "MC006",
+      "name": "Crepes kacang selai",
+      "price": 6000,
+      "toppings": [
+        "TOP06"
+      ]
+    },
+    {
+      "sku": "MC007",
+      "name": "Crepes keju winches",
+      "price": 6000,
+      "toppings": [
+        "TOP07"
+      ]
+    },
+    {
+      "sku": "MC008",
+      "name": "Crepes marsmellow",
+      "price": 6000,
+      "toppings": [
+        "TOP08"
+      ]
+    },
+    {
+      "sku": "MC009",
+      "name": "Crepes milo",
+      "price": 6000,
+      "toppings": [
+        "TOP09"
+      ]
+    },
+    {
+      "sku": "MC010",
+      "name": "Crepes Pisang",
+      "price": 6000,
+      "toppings": [
+        "TOP10"
+      ]
+    },
+    {
+      "sku": "MC011",
+      "name": "Crepes taro glaze dip plaza",
+      "price": 6000,
+      "toppings": [
+        "TOP11"
+      ]
+    },
+    {
+      "sku": "MC012",
+      "name": "Crepes Tiramisu glaze collata",
+      "price": 6000,
+      "toppings": [
+        "TOP12"
+      ]
+    },
+    {
+      "sku": "MC013",
+      "name": "Crepes Oreo crumb",
+      "price": 6000,
+      "toppings": [
+        "TOP13"
+      ]
+    },
+    {
+      "sku": "MC014",
+      "name": "Crepes coklat straberri",
+      "price": 8000,
+      "toppings": [
+        "TOP01",
+        "TOP02"
+      ]
+    },
+    {
+      "sku": "MC015",
+      "name": "Crepes coklat blueberri",
+      "price": 8000,
+      "toppings": [
+        "TOP01",
+        "TOP03"
+      ]
+    },
+    {
+      "sku": "MC016",
+      "name": "Crepes coklat oreo",
+      "price": 8000,
+      "toppings": [
+        "TOP01",
+        "TOP13"
+      ]
+    },
+    {
+      "sku": "MC017",
+      "name": "Crepes coklat keju",
+      "price": 8000,
+      "toppings": [
+        "TOP01",
+        "TOP07"
+      ]
+    },
+    {
+      "sku": "MC018",
+      "name": "Crepes coklat kacang",
+      "price": 8000,
+      "toppings": [
+        "TOP01",
+        "TOP06"
+      ]
+    },
+    {
+      "sku": "MC019",
+      "name": "Crepes Pisang coklat",
+      "price": 8000,
+      "toppings": [
+        "TOP10",
+        "TOP01"
+      ]
+    },
+    {
+      "sku": "MC020",
+      "name": "Crepes pisang milo",
+      "price": 8000,
+      "toppings": [
+        "TOP10",
+        "TOP09"
+      ]
+    },
+    {
+      "sku": "MC021",
+      "name": "Crepes pisang kacang",
+      "price": 8000,
+      "toppings": [
+        "TOP10",
+        "TOP06"
+      ]
+    },
+    {
+      "sku": "MC022",
+      "name": "Crepes pisang straberi",
+      "price": 8000,
+      "toppings": [
+        "TOP10",
+        "TOP02"
+      ]
+    },
+    {
+      "sku": "MC023",
+      "name": "Crepes pisang bluberi",
+      "price": 8000,
+      "toppings": [
+        "TOP10",
+        "TOP03"
+      ]
+    },
+    {
+      "sku": "MC024",
+      "name": "Crepes pisang keju",
+      "price": 8000,
+      "toppings": [
+        "TOP10",
+        "TOP07"
+      ]
+    },
+    {
+      "sku": "MC025",
+      "name": "Crepes keju oreo",
+      "price": 8000,
+      "toppings": [
+        "TOP07",
+        "TOP13"
+      ]
+    },
+    {
+      "sku": "MC026",
+      "name": "Crepes keju milo",
+      "price": 8000,
+      "toppings": [
+        "TOP07",
+        "TOP09"
+      ]
+    },
+    {
+      "sku": "MC027",
+      "name": "Crepes keju kacang",
+      "price": 8000,
+      "toppings": [
+        "TOP07",
+        "TOP06"
+      ]
+    },
+    {
+      "sku": "MC028",
+      "name": "Crepes pisang coklat straberi",
+      "price": 10000,
+      "toppings": [
+        "TOP10",
+        "TOP01",
+        "TOP02"
+      ]
+    },
+    {
+      "sku": "MC029",
+      "name": "Crepes pisang coklat bluberi",
+      "price": 10000,
+      "toppings": [
+        "TOP10",
+        "TOP01",
+        "TOP03"
+      ]
+    },
+    {
+      "sku": "MC030",
+      "name": "Crepes pisang coklat oreo",
+      "price": 10000,
+      "toppings": [
+        "TOP10",
+        "TOP01",
+        "TOP13"
+      ]
+    },
+    {
+      "sku": "MC031",
+      "name": "Crepes pisang coklat keju",
+      "price": 10000,
+      "toppings": [
+        "TOP10",
+        "TOP01",
+        "TOP07"
+      ]
+    },
+    {
+      "sku": "MC032",
+      "name": "Crepes pisang oreo keju",
+      "price": 10000,
+      "toppings": [
+        "TOP10",
+        "TOP13",
+        "TOP07"
+      ]
+    },
+    {
+      "sku": "MC033",
+      "name": "Crepes pisang tiramisu coklat",
+      "price": 10000,
+      "toppings": [
+        "TOP10",
+        "TOP12",
+        "TOP01"
+      ]
+    },
+    {
+      "sku": "MC034",
+      "name": "Crepes pisang milo keju",
+      "price": 10000,
+      "toppings": [
+        "TOP10",
+        "TOP09",
+        "TOP07"
+      ]
+    }
+  ],
+  "yield_per_kg": 30,
+  "butter_ratio": 0.065,
+  "water_ratio": 0.83,
+  "skm_per_crepe": 5.63,
+  "gas_minutes_per_crepe": 4,
+  "pack_per_crepe": 0.25,
+  "loyalty_active": false,
+  "source_folder": "https://drive.google.com/drive/folders/1nqkXUGihEdjwkEBubi3W3uETu7ioPvM9",
+  "source_sheet": "https://docs.google.com/spreadsheets/d/1MCGsQK3ILZBpxMRH2-fWdnkxv1I8Cfq83BnCVYbJqmQ/edit?gid=52890219"
+}
