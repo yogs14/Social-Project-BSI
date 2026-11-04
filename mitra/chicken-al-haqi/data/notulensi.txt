@@ -1,0 +1,13 @@
+Chicken Al-Haqi - Mba Gita
+23 Oktober 2026
+
+- Outletnya buka dari jam 9 pagi - 9 malem. Kalo weekend mulai jam 06.30/07.00.
+- Sehari bisa menjual 5 kg atau sekitar 50 pcs. Ga nentu kadang bisa 30/40, kalo lagi rame banget bisa 80 pcs. Untuk minggu minggu ini stabil di 40-50 pcs, bulan lalu menurun kadang sekitar 25-30 pcs aja.
+- Kalau kendala persediaan sebetulnya ga terlalu gimana gimana. Mungkin kadang kalo telat ke pasar >07.00, udah abis atau sisa dada aja/paha aja. Sejauh ini aman, kecuali kalau ada pesenan. Bisa pesen dulu ke suppliernya, cuma kadang suka lupa.
+- Pencatatan masih manual pake catatan, masih nyampur karena jualan ayam sama obat, keuangan juga masih nyampur.
+- TERKAIT DASHBOARD, isinya udah sesuai, cuma FITURNYA KEBANYAKAN, karena menunya dikit, jadi bisa dikurangi beberapa fiturnya (perlu chat ibunya)
+- Prosesnya: Belanja kiloan (langsung banyak), kalo bumbuin per kilo atau paling banyak per 3 kg biar lebis meresap dan takarannya pas.
+- Per kilo, kalo dada sama paha atas dapet 9 (harga 9k). Kalo paha bawah dan sayap dapet 10 (harga 8k)
+- Harganya termurah dibanding yang lain karena ga ada biaya sewa, jd bisa neken di situ.
+- Dulu pernah nyoba nyatet di Excel sendiri. Jadi sehari hari pas jualan dicatat manual, trus dimasukin ke Excel, tapi seringnya abis jualan ya ga dicatet.
+- DATA YANG PERLU DIKIRIM: Bahan baku buat bikin per pcs, menu, fitur yang perlu ditambah dan dikurangi apa dari dashboardnya

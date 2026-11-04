@@ -1,0 +1,117 @@
+{
+  "business": "Chicken Al-Haqi",
+  "owner": "Mba Gita",
+  "mom_date": "2026-10-23",
+  "items": [
+    {
+      "code": "SAYAP",
+      "name": "Sayap",
+      "price": 8000,
+      "unit": "pcs",
+      "estimate_per_kg": 10,
+      "track": "YA",
+      "hpp_confirmed": "TIDAK"
+    },
+    {
+      "code": "PAHA-BAWAH",
+      "name": "Paha Bawah",
+      "price": 8000,
+      "unit": "pcs",
+      "estimate_per_kg": 10,
+      "track": "YA",
+      "hpp_confirmed": "TIDAK"
+    },
+    {
+      "code": "PAHA-ATAS",
+      "name": "Paha Atas",
+      "price": 9000,
+      "unit": "pcs",
+      "estimate_per_kg": 9,
+      "track": "YA",
+      "hpp_confirmed": "TIDAK"
+    },
+    {
+      "code": "DADA",
+      "name": "Dada",
+      "price": 9000,
+      "unit": "pcs",
+      "estimate_per_kg": 9,
+      "track": "YA",
+      "hpp_confirmed": "TIDAK"
+    },
+    {
+      "code": "NASI",
+      "name": "Nasi",
+      "price": 3000,
+      "unit": "porsi",
+      "estimate_per_kg": null,
+      "track": "TIDAK",
+      "hpp_confirmed": "TIDAK"
+    }
+  ],
+  "flavors": [
+    {
+      "name": "Original",
+      "extra": 0,
+      "hpp": 0,
+      "confirmed": "YA"
+    },
+    {
+      "name": "Sambal Geprek",
+      "extra": 3000,
+      "hpp": null,
+      "confirmed": "TIDAK"
+    },
+    {
+      "name": "Saus Keju",
+      "extra": 3000,
+      "hpp": null,
+      "confirmed": "TIDAK"
+    },
+    {
+      "name": "Hot Spicy",
+      "extra": 3000,
+      "hpp": null,
+      "confirmed": "TIDAK"
+    }
+  ],
+  "per_kg_source": [
+    [
+      "Ayam",
+      35000
+    ],
+    [
+      "Racikan terigu ",
+      15000
+    ],
+    [
+      "Bumbu marinasi",
+      3000
+    ]
+  ],
+  "per_piece_source": [
+    [
+      "Ayam",
+      3500
+    ],
+    [
+      "Terigu dan bumbu",
+      2000
+    ],
+    [
+      "Bumbu marinasi",
+      500
+    ],
+    [
+      "Minyak goreng",
+      1000
+    ]
+  ],
+  "source_file": "Chicken Al Haqi.xlsx",
+  "source_sha256": "7b4824ccc2fe93b3bdfdae2d5cdf015a1a4aa54fe1fec6625732c8b28d110c40",
+  "source_url": "https://drive.google.com/file/d/1Rjog2-miOHMaHQFsJvXjnNQ-6UfhPgnr/view",
+  "source_folder": "https://drive.google.com/drive/folders/1IdRJ1c3qRyKnSoydSSBu6M-ZBSya7dCI",
+  "source_sheet": "https://docs.google.com/spreadsheets/d/1MCGsQK3ILZBpxMRH2-fWdnkxv1I8Cfq83BnCVYbJqmQ/edit?gid=52890219",
+  "hours": "Hari biasa 09.00–21.00; weekend mulai 06.30/07.00",
+  "max_seasoning_kg": 3
+}

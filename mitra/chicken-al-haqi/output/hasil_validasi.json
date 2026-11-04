@@ -1,0 +1,444 @@
+{
+  "passed": 87,
+  "failed": 0,
+  "engine": "LibreOffice headless; actual workbook formula recalculation",
+  "vba_runtime_tested": false,
+  "excel_desktop_tested": false,
+  "checks": [
+    {
+      "check": "seven visible user tabs",
+      "result": "PASS",
+      "actual": 7
+    },
+    {
+      "check": "two backend audit tabs",
+      "result": "PASS",
+      "actual": 2
+    },
+    {
+      "check": "daily chart present",
+      "result": "PASS",
+      "actual": 1
+    },
+    {
+      "check": "no external workbook links",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "VBA not falsely embedded",
+      "result": "PASS",
+      "actual": null
+    },
+    {
+      "check": "correction table starts separately",
+      "result": "PASS",
+      "actual": "A35:J235"
+    },
+    {
+      "check": "all selected workbook files recalculated",
+      "result": "PASS",
+      "actual": 11
+    },
+    {
+      "check": "normal no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "unknown_opening no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "incomplete_hpp no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "changed_master no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "void no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "nextday no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "before_opening no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "invalid no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "negative_stock no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "duplicate_purchase no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "POS_Chicken_Al_Haqi no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "merged sauce prices correctly applied",
+      "result": "PASS",
+      "actual": 3000
+    },
+    {
+      "check": "other merged sauce price",
+      "result": "PASS",
+      "actual": 3000
+    },
+    {
+      "check": "source per-pcs cost sums to 7000 only once",
+      "result": "PASS",
+      "actual": 7000
+    },
+    {
+      "check": "two kg dada estimate is 18, not stock",
+      "result": "PASS",
+      "actual": 18
+    },
+    {
+      "check": "actual 17 pcs differs from estimate",
+      "result": "PASS",
+      "actual": -1
+    },
+    {
+      "check": "actual pcs is effective stock input",
+      "result": "PASS",
+      "actual": 17
+    },
+    {
+      "check": "sayap per-kg estimate differs by one",
+      "result": "PASS",
+      "actual": 1
+    },
+    {
+      "check": "purchase above three kg allowed",
+      "result": "PASS",
+      "actual": "OK"
+    },
+    {
+      "check": "five kg planning split into two seasoning batches",
+      "result": "PASS",
+      "actual": 2
+    },
+    {
+      "check": "cashier adds sauce per piece",
+      "result": "PASS",
+      "actual": 12000
+    },
+    {
+      "check": "two sauce portions charge twice",
+      "result": "PASS",
+      "actual": 24000
+    },
+    {
+      "check": "rice separate subtotal",
+      "result": "PASS",
+      "actual": 6000
+    },
+    {
+      "check": "cashier gross",
+      "result": "PASS",
+      "actual": 30000
+    },
+    {
+      "check": "Saturday 06:30 accepted",
+      "result": "PASS",
+      "actual": "OK"
+    },
+    {
+      "check": "early 07:00 accepted",
+      "result": "PASS",
+      "actual": "OK"
+    },
+    {
+      "check": "receipt gross includes rice and sauce",
+      "result": "PASS",
+      "actual": 46000
+    },
+    {
+      "check": "discount once per receipt",
+      "result": "PASS",
+      "actual": 45000
+    },
+    {
+      "check": "cash change based on netto",
+      "result": "PASS",
+      "actual": 5000
+    },
+    {
+      "check": "daily net sales",
+      "result": "PASS",
+      "actual": 56000
+    },
+    {
+      "check": "daily receipt count",
+      "result": "PASS",
+      "actual": 2
+    },
+    {
+      "check": "chicken count excludes rice",
+      "result": "PASS",
+      "actual": 5
+    },
+    {
+      "check": "purchase cash and transfer total",
+      "result": "PASS",
+      "actual": 105000
+    },
+    {
+      "check": "business expenses exclude owner/medicine transfers",
+      "result": "PASS",
+      "actual": 10000
+    },
+    {
+      "check": "confirmed HPP comparison excludes double purchase cost",
+      "result": "PASS",
+      "actual": 14700
+    },
+    {
+      "check": "only net cash sales enter drawer",
+      "result": "PASS",
+      "actual": 45000
+    },
+    {
+      "check": "only cash purchases reduce drawer",
+      "result": "PASS",
+      "actual": 70000
+    },
+    {
+      "check": "owner and other-business cash movement included once",
+      "result": "PASS",
+      "actual": 80000
+    },
+    {
+      "check": "cash balance reconciles",
+      "result": "PASS",
+      "actual": 75000
+    },
+    {
+      "check": "physical cash difference zero",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "QRIS kept separate",
+      "result": "PASS",
+      "actual": 11000
+    },
+    {
+      "check": "dada stock actual pcs not kg plus pcs",
+      "result": "PASS",
+      "actual": 20
+    },
+    {
+      "check": "sayap sale and waste once",
+      "result": "PASS",
+      "actual": 12
+    },
+    {
+      "check": "nasi deliberately not tracked",
+      "result": "PASS",
+      "actual": "TIDAK DILACAK"
+    },
+    {
+      "check": "waste does not become revenue",
+      "result": "PASS",
+      "actual": -1
+    },
+    {
+      "check": "unconfirmed-stock alert clear with initial counts",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "missing stock opening is labelled",
+      "result": "PASS",
+      "actual": "BELUM AWAL"
+    },
+    {
+      "check": "unknown stock stays blank not fictitious zero",
+      "result": "PASS",
+      "actual": true
+    },
+    {
+      "check": "four unknown chicken openings visible",
+      "result": "PASS",
+      "actual": 4
+    },
+    {
+      "check": "cash recording survives missing stock opening",
+      "result": "PASS",
+      "actual": 56000
+    },
+    {
+      "check": "unconfirmed HPP never presented as profit",
+      "result": "PASS",
+      "actual": "HPP BELUM DIKONFIRMASI"
+    },
+    {
+      "check": "unknown HPP does not erase actual cash sales",
+      "result": "PASS",
+      "actual": 56000
+    },
+    {
+      "check": "changed sauce surcharge applies only to next cart",
+      "result": "PASS",
+      "actual": 13500
+    },
+    {
+      "check": "posted sale prices remain frozen",
+      "result": "PASS",
+      "actual": 56000
+    },
+    {
+      "check": "posted HPP remains frozen",
+      "result": "PASS",
+      "actual": 14700
+    },
+    {
+      "check": "actual pcs unaffected by changed yield estimate",
+      "result": "PASS",
+      "actual": 20
+    },
+    {
+      "check": "VOID removes receipt net",
+      "result": "PASS",
+      "actual": 11000
+    },
+    {
+      "check": "VOID restores dada pcs",
+      "result": "PASS",
+      "actual": 22
+    },
+    {
+      "check": "VOID restores sayap pcs",
+      "result": "PASS",
+      "actual": 14
+    },
+    {
+      "check": "report one selected day only",
+      "result": "PASS",
+      "actual": 9000
+    },
+    {
+      "check": "stock carries across days including next purchase",
+      "result": "PASS",
+      "actual": 66
+    },
+    {
+      "check": "next-day physical correction included",
+      "result": "PASS",
+      "actual": 7
+    },
+    {
+      "check": "sales before report cutoff excluded",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "stock before opening not invented",
+      "result": "PASS",
+      "actual": true
+    },
+    {
+      "check": "stock before opening labelled",
+      "result": "PASS",
+      "actual": "BELUM MULAI"
+    },
+    {
+      "check": "fractional purchased pieces rejected",
+      "result": "PASS",
+      "actual": "ISI PCS AKTUAL"
+    },
+    {
+      "check": "invalid purchase excluded from stock",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "nasi cannot have sauce price",
+      "result": "PASS",
+      "actual": "NASI TANPA SAUS"
+    },
+    {
+      "check": "insufficient payment detected",
+      "result": "PASS",
+      "actual": "CEK PEMBAYARAN"
+    },
+    {
+      "check": "invalid receipts not counted as sales",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "oversized waste creates negative alert",
+      "result": "PASS",
+      "actual": true
+    },
+    {
+      "check": "stock shortage visible in sale history",
+      "result": "PASS",
+      "actual": true
+    },
+    {
+      "check": "negative closing stock marked",
+      "result": "PASS",
+      "actual": "STOK NEGATIF"
+    },
+    {
+      "check": "duplicate purchase IDs rejected",
+      "result": "PASS",
+      "actual": "ID GANDA"
+    },
+    {
+      "check": "duplicate purchase not added twice",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "main workbook no fake receipts",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "main workbook no fake purchases",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "main workbook initial stock unknown",
+      "result": "PASS",
+      "actual": "BELUM AWAL"
+    },
+    {
+      "check": "main HPP not confirmed by assumption",
+      "result": "PASS",
+      "actual": "TIDAK"
+    },
+    {
+      "check": "no invented opening cash",
+      "result": "PASS",
+      "actual": true
+    }
+  ]
+}
