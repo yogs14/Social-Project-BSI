@@ -11,6 +11,8 @@ Workbook operasional setiap mitra mengikuti MoM dan data pendukung dashboard Ben
 
 File utama tidak memuat transaksi/pelanggan/saldo fiktif. Data yang belum tersedia ditandai untuk diisi mitra. Pada Murita, harga SKM dari rumus sumber tidak dipakai karena salah referensi; HPP tetap ditandai belum lengkap sampai harga sebenarnya diisi. Loyalty awalnya nonaktif karena kebijakan hadiah belum diberikan.
 
+Untuk mencoba tombol PDF Gian Fataya, tersedia [paket latihan SIMULASI](mitra/gian-fataya/demo/Paket_SIMULASI_Uji_PDF.zip) dan [panduan langkah demi langkah](mitra/gian-fataya/demo/PANDUAN_UJI_PDF.md). Salinan ini sengaja berisi satu invoice latihan Rp290.000 dan berlabel BUKAN TAGIHAN NYATA; file operasional tetap kosong. Impor VBA ke salinan `.xlsm` di Excel desktop sebelum menjalankan tombol.
+
 ## Menghasilkan dan memvalidasi workbook
 
 Gunakan checkout yang ada; cloud task sudah terisolasi, tidak perlu worktree baru.
