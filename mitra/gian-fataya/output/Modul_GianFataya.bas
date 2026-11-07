@@ -8,8 +8,22 @@ Private Const LAST_MOVE As Long = 2006
 Private Const LAST_INV As Long = 406
 Private Const LAST_PAY As Long = 1006
 
-Private Function WS(ByVal title As String) As Worksheet
-    Set WS = ThisWorkbook.Worksheets(title)
+'Logical sections are ranges anchored at their physical position in v2.
+'Range.Cells and Range.Range remain relative to this anchor.
+Private Function WS(ByVal title As String) As Range
+    Select Case title
+        Case "MUTASI": Set WS = ThisWorkbook.Worksheets("TRANSAKSI").Range("A1:X2006")
+        Case "INVOICE": Set WS = ThisWorkbook.Worksheets("TAGIHAN").Range("A1:R406")
+        Case "PEMBAYARAN": Set WS = ThisWorkbook.Worksheets("TAGIHAN").Range("A431:J1436")
+        Case "FORM": Set WS = ThisWorkbook.Worksheets("BERANDA").Range("A71:L115")
+        Case "WILAYAH": Set WS = ThisWorkbook.Worksheets("DATA USAHA").Range("A1:I26")
+        Case "OUTLET": Set WS = ThisWorkbook.Worksheets("DATA USAHA").Range("A29:I95")
+        Case "PRODUK": Set WS = ThisWorkbook.Worksheets("DATA USAHA").Range("A97:I152")
+        Case "LOT": Set WS = ThisWorkbook.Worksheets("DATA USAHA").Range("A155:I240")
+        Case "REFERENSI": Set WS = ThisWorkbook.Worksheets("DATA USAHA").Range("A263:O306")
+        Case "CETAK INVOICE": Set WS = ThisWorkbook.Worksheets("CETAK INVOICE").Range("A1:L79")
+        Case Else: Err.Raise vbObjectError + 500, "Gian Fataya", "Bagian tidak dikenal: " & title
+    End Select
 End Function
 
 Private Sub Require(ByVal condition As Boolean, ByVal message As String)
@@ -31,7 +45,7 @@ Private Function DayOf(ByVal value As Variant, ByVal label As String) As Date
     Require DayOf > 0, label & " tidak valid."
 End Function
 
-Private Function FindID(ByVal sheet As Worksheet, ByVal id As String, ByVal last As Long) As Long
+Private Function FindID(ByVal sheet As Range, ByVal id As String, ByVal last As Long) As Long
     Dim r As Long
     Require Len(id) > 0, "Pilih kode/ID terlebih dahulu."
     Require Application.CountIf(sheet.Range("A7:A" & last), id) = 1, "Kode tidak ditemukan atau ganda: " & id
@@ -40,21 +54,25 @@ Private Function FindID(ByVal sheet As Worksheet, ByVal id As String, ByVal last
     Next r
 End Function
 
-Private Function EmptyRow(ByVal sheet As Worksheet, ByVal last As Long, ByVal lastInput As String) As Long
+Private Function EmptyRow(ByVal sheet As Range, ByVal last As Long, ByVal lastInput As String) As Long
     Dim r As Long, occupied As Boolean
     For r = FIRST_ROW To last
         If Len(CStr(sheet.Cells(r, 1).Value)) = 0 Then
-            occupied = Application.CountA(sheet.Range("A" & r & ":" & lastInput & r)) > 0
-            If sheet.Name = "MUTASI" Then occupied = occupied Or Application.CountA(sheet.Range("U" & r & ":W" & r)) > 0
-            If sheet.Name = "INVOICE" Then occupied = occupied Or Len(CStr(sheet.Cells(r, 18).Value)) > 0
-            Require Not occupied, "Lengkapi atau bersihkan baris parsial " & r & " pada " & sheet.Name & "."
+            If sheet.Parent.Name = "TRANSAKSI" Then
+                'O defaults to AKTIF and J:L are formulas, not partial user input.
+                occupied = Application.CountA(sheet.Range("B" & r & ":I" & r & ",M" & r & ":N" & r & ",P" & r)) > 0
+            Else
+                occupied = Application.CountA(sheet.Range("A" & r & ":" & lastInput & r)) > 0
+                If sheet.Parent.Name = "TAGIHAN" And sheet.Row = 1 Then occupied = occupied Or Len(CStr(sheet.Cells(r, 18).Value)) > 0
+            End If
+            Require Not occupied, "Lengkapi atau bersihkan baris parsial " & r & " pada " & sheet.Parent.Name & "."
             EmptyRow = r: Exit Function
         End If
     Next r
-    Err.Raise vbObjectError + 502, , "Kapasitas tabel " & sheet.Name & " penuh. Arsipkan atau perluas versi workbook."
+    Err.Raise vbObjectError + 502, , "Kapasitas tabel " & sheet.Parent.Name & " penuh. Arsipkan atau perluas versi workbook."
 End Function
 
-Private Function NewID(ByVal prefix As String, ByVal sheet As Worksheet, ByVal last As Long) As String
+Private Function NewID(ByVal prefix As String, ByVal sheet As Range, ByVal last As Long) As String
     Dim i As Long, candidate As String
     For i = 1 To 999
         candidate = "GF-" & prefix & "-" & Format$(Now, "yyyymmdd-hhnnss") & "-" & Format$(i, "00")
@@ -65,12 +83,16 @@ End Function
 
 Private Sub CheckMoves()
     Application.CalculateFull
-    Require Application.CountIfs(WS("MUTASI").Range("A7:A2006"), "<>", WS("MUTASI").Range("R7:R2006"), "<>OK") = 0, "Masih ada mutasi tidak valid. Periksa kolom Cek."
-    Require Application.CountIf(WS("MUTASI").Range("T7:T2006"), "<0") = 0, "Ada saldo historis negatif. Periksa stok, urutan tanggal, dan lot."
+    Require Application.CountIfs(WS("MUTASI").Range("A7:A2006"), "<>", WS("MUTASI").Range("J7:J2006"), "<>OK") = 0, "Masih ada mutasi tidak valid. Periksa kolom Cek."
+    Require Application.CountIf(WS("MUTASI").Range("L7:L2006"), "<0") = 0, "Ada saldo historis negatif. Periksa stok, urutan tanggal, dan lot."
+End Sub
+
+Private Sub CheckPO()
+    Require Application.CountIf(WS("MUTASI").Range("K7:K2006"), "PO < 10 PCS") = 0, "Lengkapi PO minimal 10 pcs per nomor PO dan outlet; beberapa lot boleh digabung."
 End Sub
 
 Public Sub SimpanMutasi()
-    Dim f As Worksheet, t As Worksheet, r As Long, locRow As Long, lotRow As Long
+    Dim f As Range, t As Range, r As Long, locRow As Long, lotRow As Long
     Dim kind As String, location As String, lot As String, note As String, po As String
     Dim qty As Double, price As Double, freight As Double, day As Date, written As Boolean
     On Error GoTo Failed
@@ -86,7 +108,7 @@ Public Sub SimpanMutasi()
     Require qty > 0 And qty = Fix(qty), "Qty harus bilangan bulat positif."
     note = Trim$(CStr(f.Range("B12").Value)): po = Trim$(CStr(f.Range("H8").Value))
     If kind = "KIRIM" Then Require Len(po) > 0, "Isi nomor PO atau surat jalan."
-    If kind = "RUSAK" Or kind = "TAMBAH" Or kind = "KURANG" Then Require Len(note) > 0, "Isi alasan mutasi/koreksi."
+    If kind = "RETUR" Or kind = "RUSAK" Or kind = "TAMBAH" Or kind = "KURANG" Then Require Len(note) > 0, "Isi alasan mutasi/koreksi."
     If kind = "JUAL" Then
         price = NumberOf(f.Range("E10").Value, "Harga jual saat transaksi")
         Require price > 0, "Harga jual harus positif."
@@ -98,26 +120,30 @@ Public Sub SimpanMutasi()
     t.Cells(r, 2).Value = day: t.Cells(r, 3).Value = kind
     t.Cells(r, 4).Value = location: t.Cells(r, 5).Value = lot: t.Cells(r, 6).Value = qty
     If kind = "JUAL" Then t.Cells(r, 7).Value = price
-    t.Cells(r, 9).Value = "AKTIF": t.Cells(r, 10).Value = note
-    t.Cells(r, 21).Value = po: t.Cells(r, 22).Value = f.Range("H10").Value
-    t.Cells(r, 23).Value = freight
+    t.Cells(r, 15).Value = "AKTIF": t.Cells(r, 16).Value = note
+    t.Cells(r, 8).Value = po: t.Cells(r, 14).Value = f.Range("H10").Value
+    t.Cells(r, 9).Value = freight
     Application.CalculateFull
-    Require CStr(t.Cells(r, 18).Value) = "OK", "Mutasi ditolak: " & CStr(t.Cells(r, 18).Value)
+    Require CStr(t.Cells(r, 10).Value) = "OK", "Mutasi ditolak: " & CStr(t.Cells(r, 10).Value)
     CheckMoves
     written = False
     f.Range("B10,E10,B12,H8,H10,H12").ClearContents
+    If t.Cells(r, 11).Value = "PO < 10 PCS" Then MsgBox "Baris tercatat. Lengkapi total PO sampai 10 pcs sebelum menerbitkan invoice.", vbExclamation, "PO belum lengkap"
     MsgBox "Mutasi tercatat: " & t.Cells(r, 1).Value & vbCrLf & "Tekan Ctrl+S untuk menyimpan file.", vbInformation, "Gian Fataya"
     Exit Sub
 Failed:
     Dim message As String
     message = Err.Description
-    If written Then t.Range("A" & r & ":J" & r & ",U" & r & ":W" & r).ClearContents
+    If written Then
+        t.Range("A" & r & ":I" & r & ",M" & r & ":P" & r).ClearContents
+        t.Cells(r, 15).Value = "AKTIF"
+    End If
     Application.CalculateFull
     MsgBox message, vbExclamation, "Mutasi belum disimpan"
 End Sub
 
 Public Sub TerbitkanInvoice()
-    Dim f As Worksheet, t As Worksheet, m As Worksheet, r As Long, i As Long, areaRow As Long
+    Dim f As Range, t As Range, m As Range, r As Long, i As Long, areaRow As Long
     Dim area As String, id As String, day As Date, start As Date, finish As Date, due As Date
     Dim discount As Double, freight As Double, gross As Double, chosen As Collection, item As Variant
     Dim written As Boolean, reason As String
@@ -135,10 +161,11 @@ Public Sub TerbitkanInvoice()
     freight = NumberOf(f.Range("B26").Value, "Ongkir ditagih (isi 0 bila tidak ada)")
     Require discount >= 0 And discount <= 1 And freight >= 0, "Diskon harus 0-100%; ongkir tidak negatif."
     CheckMoves
+    CheckPO
     For i = FIRST_ROW To LAST_MOVE
-        If CStr(m.Cells(i, 3).Value) = "JUAL" And CStr(m.Cells(i, 9).Value) = "AKTIF" And CStr(m.Cells(i, 8).Value) = "" And CStr(m.Cells(i, 13).Value) = area Then
+        If CStr(m.Cells(i, 3).Value) = "JUAL" And CStr(m.Cells(i, 15).Value) = "AKTIF" And CStr(m.Cells(i, 13).Value) = "" And CStr(m.Cells(i, 19).Value) = area Then
             If m.Cells(i, 2).Value >= start And m.Cells(i, 2).Value <= finish Then
-                chosen.Add i: gross = gross + CDbl(m.Cells(i, 17).Value)
+                chosen.Add i: gross = gross + CDbl(m.Cells(i, 23).Value)
             End If
         End If
     Next i
@@ -150,7 +177,7 @@ Public Sub TerbitkanInvoice()
     t.Cells(r, 4).Value = start: t.Cells(r, 5).Value = finish: t.Cells(r, 6).Value = due
     t.Cells(r, 7).Value = discount: t.Cells(r, 8).Value = freight: t.Cells(r, 9).Value = "DRAF"
     t.Cells(r, 10).Value = gross: t.Cells(r, 18).Value = f.Range("B28").Value
-    For Each item In chosen: m.Cells(CLng(item), 8).Value = id: Next item
+    For Each item In chosen: m.Cells(CLng(item), 13).Value = id: Next item
     Application.CalculateFull
     Require CStr(t.Cells(r, 16).Value) = "OK", "Rekonsiliasi invoice gagal: " & CStr(t.Cells(r, 16).Value)
     t.Cells(r, 9).Value = "TERBIT"
@@ -158,14 +185,19 @@ Public Sub TerbitkanInvoice()
     Require CStr(t.Cells(r, 16).Value) = "OK", "Invoice tidak valid setelah diterbitkan."
     written = False
     WS("CETAK INVOICE").Range("B5").Value = id
-    WS("CETAK INVOICE").Activate
+    WS("CETAK INVOICE").Parent.Activate
     MsgBox "Invoice diterbitkan: " & id & vbCrLf & "Tekan Ctrl+S untuk menyimpan file.", vbInformation, "Gian Fataya"
+    If WS("CETAK INVOICE").Range("A14").Value = "SIAP CETAK" Then
+        EksporInvoicePDF
+    Else
+        MsgBox "Lengkapi PIC/alamat di DATA USAHA sebelum ekspor PDF.", vbExclamation, "Invoice tersimpan"
+    End If
     Exit Sub
 Failed:
     reason = Err.Description
     If written Then
         For Each item In chosen
-            If CStr(m.Cells(CLng(item), 8).Value) = id Then m.Cells(CLng(item), 8).ClearContents
+            If CStr(m.Cells(CLng(item), 13).Value) = id Then m.Cells(CLng(item), 13).ClearContents
         Next item
         t.Range("A" & r & ":J" & r).ClearContents: t.Cells(r, 18).ClearContents
     End If
@@ -174,7 +206,7 @@ Failed:
 End Sub
 
 Public Sub SimpanPembayaran()
-    Dim f As Worksheet, t As Worksheet, inv As Worksheet, ir As Long, r As Long
+    Dim f As Range, t As Range, inv As Range, ir As Long, r As Long
     Dim id As String, method As String, day As Date, amount As Double, written As Boolean, reason As String
     On Error GoTo Failed
     Set f = WS("FORM"): Set t = WS("PEMBAYARAN"): Set inv = WS("INVOICE")
@@ -205,13 +237,14 @@ Failed:
 End Sub
 
 Public Sub EksporInvoicePDF()
-    Dim s As Worksheet, t As Worksheet, r As Long, i As Long, file As Variant
+    Dim s As Range, t As Range, r As Long, i As Long, file As Variant
     Dim id As String, safeID As String, reason As String, hidden(17 To 66) As Boolean, hiddenSaved As Boolean
     On Error GoTo Failed
     Set s = WS("CETAK INVOICE"): Set t = WS("INVOICE")
     Application.CalculateFull
     id = Trim$(CStr(s.Range("B5").Value)): r = FindID(t, id, LAST_INV)
     CheckMoves
+    CheckPO
     Require s.Range("A14").Value = "SIAP CETAK", "Belum siap cetak: " & CStr(s.Range("A14").Value)
     safeID = id
     For i = 1 To Len(safeID)
@@ -221,55 +254,55 @@ Public Sub EksporInvoicePDF()
     If VarType(file) = vbBoolean Then Exit Sub
     If LCase$(Right$(CStr(file), 4)) <> ".pdf" Then file = CStr(file) & ".pdf"
     For i = 17 To 66
-        hidden(i) = s.Rows(i).Hidden
+        hidden(i) = s.Parent.Rows(i).Hidden
     Next i
     hiddenSaved = True
     For i = 17 To 66
-        s.Rows(i).Hidden = (Val(s.Cells(i, 4).Value) = 0)
+        s.Parent.Rows(i).Hidden = (Val(s.Cells(i, 4).Value) = 0)
     Next i
-    s.ExportAsFixedFormat Type:=xlTypePDF, Filename:=CStr(file), Quality:=xlQualityStandard, IncludeDocProperties:=True, IgnorePrintAreas:=False, OpenAfterPublish:=False
-    For i = 17 To 66: s.Rows(i).Hidden = hidden(i): Next i
+    s.Parent.ExportAsFixedFormat Type:=xlTypePDF, Filename:=CStr(file), Quality:=xlQualityStandard, IncludeDocProperties:=True, IgnorePrintAreas:=False, OpenAfterPublish:=False
+    For i = 17 To 66: s.Parent.Rows(i).Hidden = hidden(i): Next i
     MsgBox "PDF tersimpan: " & CStr(file), vbInformation, "Gian Fataya"
     Exit Sub
 Failed:
     reason = Err.Description
     If hiddenSaved Then
-        For i = 17 To 66: s.Rows(i).Hidden = hidden(i): Next i
+        For i = 17 To 66: s.Parent.Rows(i).Hidden = hidden(i): Next i
     End If
     MsgBox reason, vbExclamation, "PDF belum dibuat"
 End Sub
 
 Public Sub VoidMutasi()
-    Dim t As Worksheet, r As Long, reason As String, oldNote As String, changed As Boolean, message As String
+    Dim t As Range, r As Long, reason As String, oldNote As String, changed As Boolean, message As String
     On Error GoTo Failed
     Set t = WS("MUTASI")
-    Require (ActiveSheet Is t), "Pilih baris pada sheet MUTASI."
-    r = ActiveCell.Row
+    Require (ActiveSheet Is t.Parent), "Pilih baris pada sheet TRANSAKSI."
+    r = ActiveCell.Row - t.Row + 1
     Require r >= FIRST_ROW And r <= LAST_MOVE, "Pilih baris transaksi."
-    Require Len(CStr(t.Cells(r, 1).Value)) > 0 And t.Cells(r, 9).Value = "AKTIF", "Pilih transaksi AKTIF."
-    Require Len(CStr(t.Cells(r, 8).Value)) = 0, "Batalkan invoice terkait lebih dahulu."
+    Require Len(CStr(t.Cells(r, 1).Value)) > 0 And t.Cells(r, 15).Value = "AKTIF", "Pilih transaksi AKTIF."
+    Require Len(CStr(t.Cells(r, 13).Value)) = 0, "Batalkan invoice terkait lebih dahulu."
     reason = Trim$(InputBox("Alasan pembatalan mutasi " & t.Cells(r, 1).Value & ":", "Void Mutasi"))
     If Len(reason) = 0 Then Exit Sub
-    oldNote = CStr(t.Cells(r, 10).Value)
+    oldNote = CStr(t.Cells(r, 16).Value)
     Require Len(oldNote) + Len(reason) + 10 < 32767, "Catatan mutasi terlalu panjang."
-    t.Cells(r, 9).Value = "VOID": changed = True
+    t.Cells(r, 15).Value = "VOID": changed = True
     CheckMoves
-    t.Cells(r, 10).Value = oldNote & " | VOID: " & reason
+    t.Cells(r, 16).Value = oldNote & " | VOID: " & reason
     MsgBox "Mutasi dibatalkan. Riwayat tetap disimpan; tekan Ctrl+S.", vbInformation, "Gian Fataya"
     Exit Sub
 Failed:
     message = Err.Description
-    If changed Then t.Cells(r, 9).Value = "AKTIF": Application.CalculateFull
+    If changed Then t.Cells(r, 15).Value = "AKTIF": Application.CalculateFull
     MsgBox message, vbExclamation, "Pembatalan gagal"
 End Sub
 
 Public Sub VoidInvoice()
-    Dim t As Worksheet, m As Worksheet, p As Worksheet, r As Long, i As Long, id As String, reason As String
+    Dim t As Range, m As Range, p As Range, r As Long, i As Long, id As String, reason As String
     Dim changes As Collection, item As Variant, oldState As String, oldNote As String, editing As Boolean, message As String
     On Error GoTo Failed
     Set t = WS("INVOICE"): Set m = WS("MUTASI"): Set p = WS("PEMBAYARAN")
-    Require (ActiveSheet Is t), "Pilih baris pada sheet INVOICE."
-    r = ActiveCell.Row
+    Require (ActiveSheet Is t.Parent), "Pilih baris invoice pada sheet TAGIHAN."
+    r = ActiveCell.Row - t.Row + 1
     Require r >= FIRST_ROW And r <= LAST_INV, "Pilih baris invoice."
     id = CStr(t.Cells(r, 1).Value)
     Require Len(id) > 0 And t.Cells(r, 9).Value <> "VOID", "Pilih invoice yang belum VOID."
@@ -280,16 +313,16 @@ Public Sub VoidInvoice()
     oldState = CStr(t.Cells(r, 9).Value): oldNote = CStr(t.Cells(r, 18).Value)
     Require Len(oldNote) + Len(reason) + 10 < 32767, "Catatan invoice terlalu panjang."
     For i = FIRST_ROW To LAST_MOVE
-        If CStr(m.Cells(i, 8).Value) = id Then
-            Require Len(CStr(m.Cells(i, 10).Value)) + Len(id) + Len(reason) + 25 < 32767, "Catatan mutasi terlalu panjang."
-            changes.Add Array(i, CStr(m.Cells(i, 10).Value))
+        If CStr(m.Cells(i, 13).Value) = id Then
+            Require Len(CStr(m.Cells(i, 16).Value)) + Len(id) + Len(reason) + 25 < 32767, "Catatan mutasi terlalu panjang."
+            changes.Add Array(i, CStr(m.Cells(i, 16).Value))
         End If
     Next i
     editing = True
     For i = FIRST_ROW To LAST_MOVE
-        If CStr(m.Cells(i, 8).Value) = id Then
-            m.Cells(i, 8).ClearContents
-            m.Cells(i, 10).Value = CStr(m.Cells(i, 10).Value) & " | Invoice " & id & " VOID: " & reason
+        If CStr(m.Cells(i, 13).Value) = id Then
+            m.Cells(i, 13).ClearContents
+            m.Cells(i, 16).Value = CStr(m.Cells(i, 16).Value) & " | Invoice " & id & " VOID: " & reason
         End If
     Next i
     t.Cells(r, 9).Value = "VOID": t.Cells(r, 18).Value = CStr(t.Cells(r, 18).Value) & " | VOID: " & reason
@@ -302,8 +335,8 @@ Failed:
     If editing Then
         On Error Resume Next
         For Each item In changes
-            m.Cells(CLng(item(0)), 8).Value = id
-            m.Cells(CLng(item(0)), 10).Value = CStr(item(1))
+            m.Cells(CLng(item(0)), 13).Value = id
+            m.Cells(CLng(item(0)), 16).Value = CStr(item(1))
         Next item
         t.Cells(r, 9).Value = oldState: t.Cells(r, 18).Value = oldNote
         Application.CalculateFull
@@ -313,11 +346,11 @@ Failed:
 End Sub
 
 Public Sub VoidPembayaran()
-    Dim t As Worksheet, r As Long, reason As String
+    Dim t As Range, r As Long, reason As String
     On Error GoTo Failed
     Set t = WS("PEMBAYARAN")
-    Require (ActiveSheet Is t), "Pilih baris pada sheet PEMBAYARAN."
-    r = ActiveCell.Row
+    Require (ActiveSheet Is t.Parent), "Pilih baris pembayaran pada sheet TAGIHAN (mulai baris 437)."
+    r = ActiveCell.Row - t.Row + 1
     Require r >= FIRST_ROW And r <= LAST_PAY, "Pilih baris pembayaran."
     Require Len(CStr(t.Cells(r, 1).Value)) > 0 And t.Cells(r, 6).Value = "AKTIF", "Pilih pembayaran AKTIF."
     reason = Trim$(InputBox("Alasan pembatalan pembayaran:", "Void Pembayaran"))
@@ -331,9 +364,9 @@ Failed:
     MsgBox Err.Description, vbExclamation, "Pembatalan gagal"
 End Sub
 
-Private Sub ButtonAt(ByVal sheet As Worksheet, ByVal anchor As String, ByVal title As String, ByVal action As String)
+Private Sub ButtonAt(ByVal sheet As Range, ByVal anchor As String, ByVal title As String, ByVal action As String)
     Dim b As Button
-    Set b = sheet.Buttons.Add(sheet.Range(anchor).Left, sheet.Range(anchor).Top, 200, 27)
+    Set b = sheet.Parent.Buttons.Add(sheet.Range(anchor).Left, sheet.Range(anchor).Top, 200, 27)
     b.Name = "gf_" & action: b.Caption = title
     b.OnAction = "'" & Replace(ThisWorkbook.Name, "'", "''") & "'!" & action
     b.Font.Name = "Calibri": b.Font.Size = 11
@@ -348,7 +381,7 @@ Public Sub PasangTombol()
         Next i
     Next sheet
     ButtonAt WS("FORM"), "H6", "SIMPAN MUTASI", "SimpanMutasi"
-    ButtonAt WS("FORM"), "H21", "TERBITKAN INVOICE", "TerbitkanInvoice"
+    ButtonAt WS("FORM"), "H21", "TERBITKAN + PDF", "TerbitkanInvoice"
     ButtonAt WS("FORM"), "H38", "SIMPAN PEMBAYARAN", "SimpanPembayaran"
     ButtonAt WS("CETAK INVOICE"), "D5", "EKSPOR INVOICE PDF", "EksporInvoicePDF"
     'Void actions use Alt+F8 from the selected ledger row; never placed over data.

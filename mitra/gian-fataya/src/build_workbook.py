@@ -9,9 +9,11 @@ import argparse
 import datetime as dt
 import json
 from pathlib import Path
+import tempfile
 
 import xlsxwriter
 from xlsxwriter.utility import xl_col_to_name as col
+from compact_layout import compact
 
 ROOT = Path(__file__).resolve().parents[1]
 FIRST = 7
@@ -29,7 +31,7 @@ def lookup(cell, sheet, key, result, default='""'):
     return f'IFERROR(INDEX({rng(sheet,result)},MATCH({cell},{rng(sheet,key)},0)),{default})'
 
 
-def build(dest: Path):
+def build_engine(dest: Path):
     profile = json.loads((ROOT / "data/profile.json").read_text())
     dest.parent.mkdir(parents=True, exist_ok=True)
     wb = xlsxwriter.Workbook(str(dest))
@@ -156,11 +158,12 @@ def build(dest: Path):
         s.write(i,5,"Sumber: foto mitra; PIC dan cakupan perlu konfirmasi",fmt["input"])
     s.set_column("B:D",28);s.set_column("F:F",52);audit(s,"G",26)
 
-    s=base("OUTLET","Daftarkan outlet sebenarnya; jangan menggunakan nama wilayah sebagai pengganti outlet. GDG adalah stok pusat di rumah Bu Santi.")
-    table(s,"tblOutlet",["Kode Lokasi","Nama Lokasi","Kode Wilayah","PIC Outlet","Alamat","Kontak","Status","Cek"],CAP["OUTLET"],{
-        "H":lambda r:f'IF(A{r}="","",IF(COUNTIF({rng("OUTLET","A")},A{r})>1,"ID GANDA",IF(B{r}="","ISI NAMA",IF(AND(A{r}<>"GDG",COUNTIF(DaftarWilayah,C{r})<>1),"CEK WILAYAH",IF(AND(G{r}<>"AKTIF",G{r}<>"NONAKTIF"),"CEK STATUS","OK")))))'},set("ABCDEFG"))
+    s=base("OUTLET","Daftarkan outlet aktual dan pilih Amanda atau Independen. GDG adalah stok pusat di rumah Bu Santi.")
+    table(s,"tblOutlet",["Kode Lokasi","Nama Lokasi","Kode Wilayah","PIC Outlet","Alamat","Kontak","Status","Cek","Kelompok Mitra"],CAP["OUTLET"],{
+        "H":lambda r:f'IF(A{r}="","",IF(COUNTIF({rng("OUTLET","A")},A{r})>1,"ID GANDA",IF(B{r}="","ISI NAMA",IF(AND(A{r}<>"GDG",COUNTIF(DaftarWilayah,C{r})<>1),"CEK WILAYAH",IF(AND(G{r}<>"AKTIF",G{r}<>"NONAKTIF"),"CEK STATUS",IF(AND(A{r}<>"GDG",I{r}<>"Amanda",I{r}<>"Independen"),"PILIH KELOMPOK","OK"))))))'},set("ABCDEFGI"))
     s.write_row("A7",["GDG","Gudang Rumah Bu Santi","PUSAT","Bu Santi","","","AKTIF"],fmt["input"])
     listv(s,"C8:C67","=DaftarWilayah");listv(s,"G7:G67",["AKTIF","NONAKTIF"])
+    listv(s,"I8:I67",["Amanda","Independen"]);s.write("I7","PUSAT",fmt["calc"])
     s.set_column("B:B",30);s.set_column("D:F",28);audit(s,"H",67)
 
     s=base("PRODUK","Harga jual belum diberikan. HPP bahan acuan tidak mencakup tenaga kerja, overhead atau ongkir. Kode SKU dibuat untuk keperluan sistem.")
@@ -198,6 +201,7 @@ def build(dest: Path):
             (f'AND(OR(C{r}="KIRIM",C{r}="JUAL"),B{r}>N{r})',"SUDAH KEDALUWARSA"),
             (f'AND(C{r}="JUAL",OR(NOT(ISNUMBER(G{r})),G{r}<=0))',"ISI HARGA JUAL"),
             (f'AND(C{r}="KIRIM",U{r}="")',"ISI NO PO/SJ"),
+            (f'AND(OR(C{r}="RETUR",C{r}="RUSAK",C{r}="TAMBAH",C{r}="KURANG"),J{r}="")',"ISI ALASAN"),
             (f'AND(W{r}<>"",OR(NOT(ISNUMBER(W{r})),W{r}<0))',"CEK ONGKIR AKTUAL"),
             (f'AND(H{r}<>"",C{r}<>"JUAL")',"INVOICE HANYA JUAL"),
             (f'AND(H{r}<>"",COUNTIF(DaftarInvoice,H{r})<>1)',"CEK ID INVOICE"),
@@ -425,6 +429,7 @@ def build(dest: Path):
     s.write("A8","Info pembayaran",fmt["label"]);s.write_blank("B8",None,fmt["input"]);s.set_column("B:B",45)
     s.write("A10","Alamat pengirim",fmt["label"]);s.write_blank("B10",None,fmt["input"])
     s.write("A12","Peringatan exp (hari)",fmt["label"]);s.write("B12",30,fmt["input"])
+    s.write("A14","Ambang tinggi / area teratas",fmt["label"]);s.write("B14",0.5,fmt["input_pct"])
     s.write_comment("B12","30 hari adalah ambang pengingat operasional yang dapat diubah, bukan asumsi masa simpan produk.")
     s.write_url("A15",profile["source_sheet"],fmt["nav"],"MoM • 22 Oktober 2026")
     s.write_url("A17",profile["source_folder"],fmt["nav"],"Folder data Gian Fataya")
@@ -451,6 +456,14 @@ def build(dest: Path):
     sheets["MULAI"].activate()
     wb.close()
     return dest
+
+
+def build(dest: Path):
+    # Logical sections retain their tested accounting rules; only six physical
+    # sheets are delivered. Staging stays outside output and never enters ZIPs.
+    with tempfile.TemporaryDirectory(prefix="gian-engine-") as td:
+        source = build_engine(Path(td) / "engine.xlsx")
+        return compact(source, dest)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,12 @@
+{
+  "label": "SIMULASI — BUKAN PERFORMA NYATA",
+  "charts": 2,
+  "regions": 8,
+  "trend_months": 12,
+  "high": 2,
+  "medium": 5,
+  "flat": 1,
+  "source_operational_file_unchanged": true,
+  "validation": "Formulas and chart caches recalculated; actual workbook rendered by LibreOffice",
+  "excel_desktop_tested": false
+}

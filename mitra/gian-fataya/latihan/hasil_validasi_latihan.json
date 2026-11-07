@@ -1,0 +1,541 @@
+{
+  "label": "DUMMY - BUKAN DATA USAHA ATAU TAGIHAN NYATA",
+  "passed": 87,
+  "failed": 0,
+  "validation": "Seven checkpoints recalculated with LibreOffice; actual Excel charts and invoice rendered to PDF",
+  "source_operational_file_unchanged": true,
+  "vba_executed": false,
+  "excel_desktop_tested": false,
+  "checks": [
+    {
+      "check": "send: no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "sale: no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "draft: no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "issue: no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "final: no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "october: no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "november: no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "six visible sheets",
+      "result": "PASS",
+      "actual": [
+        [
+          "BERANDA",
+          "visible"
+        ],
+        [
+          "TRANSAKSI",
+          "visible"
+        ],
+        [
+          "STOK",
+          "visible"
+        ],
+        [
+          "TAGIHAN",
+          "visible"
+        ],
+        [
+          "CETAK INVOICE",
+          "visible"
+        ],
+        [
+          "DATA USAHA",
+          "visible"
+        ]
+      ]
+    },
+    {
+      "check": "final dashboard A8",
+      "result": "PASS",
+      "actual": 590000
+    },
+    {
+      "check": "final dashboard E8",
+      "result": "PASS",
+      "actual": 580000
+    },
+    {
+      "check": "final dashboard I8",
+      "result": "PASS",
+      "actual": 490000
+    },
+    {
+      "check": "final dashboard A13",
+      "result": "PASS",
+      "actual": 90000
+    },
+    {
+      "check": "final dashboard E13",
+      "result": "PASS",
+      "actual": 60
+    },
+    {
+      "check": "final dashboard I13",
+      "result": "PASS",
+      "actual": 81
+    },
+    {
+      "check": "final alert clear I57",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "final alert clear C60",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "final alert clear G60",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "final alert clear K60",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "final alert clear C62",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "final alert clear G62",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "final alert clear K62",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "final stock balances",
+      "result": "PASS",
+      "actual": {
+        "GDG": 60,
+        "D-JT01": 50,
+        "D-JT02": 6,
+        "D-JTG01": 10,
+        "D-MA01": 15
+      }
+    },
+    {
+      "check": "stock conservation: 200 - 59 sold",
+      "result": "PASS",
+      "actual": 141
+    },
+    {
+      "check": "regional quantity",
+      "result": "PASS",
+      "actual": [
+        44,
+        10,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "check": "regional gross",
+      "result": "PASS",
+      "actual": [
+        440000,
+        100000,
+        50000,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "check": "regional classification",
+      "result": "PASS",
+      "actual": [
+        "TINGGI",
+        "SEDANG",
+        "SEDANG",
+        "DATAR",
+        "DATAR",
+        "DATAR",
+        "DATAR",
+        "DATAR"
+      ]
+    },
+    {
+      "check": "trend October",
+      "result": "PASS",
+      "actual": 400000
+    },
+    {
+      "check": "trend November through 7th",
+      "result": "PASS",
+      "actual": 40000
+    },
+    {
+      "check": "both chart types",
+      "result": "PASS",
+      "actual": [
+        "BarChart",
+        "AreaChart"
+      ]
+    },
+    {
+      "check": "chart cached high region value",
+      "result": "PASS",
+      "actual": 440000.0
+    },
+    {
+      "check": "trend cache has twelve months",
+      "result": "PASS",
+      "actual": 12
+    },
+    {
+      "check": "final invoice totals",
+      "result": "PASS",
+      "actual": [
+        380000,
+        110000,
+        50000,
+        40000
+      ]
+    },
+    {
+      "check": "final payments by invoice",
+      "result": "PASS",
+      "actual": [
+        380000,
+        60000,
+        50000,
+        0
+      ]
+    },
+    {
+      "check": "final outstanding by invoice",
+      "result": "PASS",
+      "actual": [
+        0,
+        50000,
+        0,
+        40000
+      ]
+    },
+    {
+      "check": "invoice payment states",
+      "result": "PASS",
+      "actual": [
+        "LUNAS",
+        "SEBAGIAN",
+        "LUNAS",
+        "BELUM BAYAR"
+      ]
+    },
+    {
+      "check": "discount is ten percent",
+      "result": "PASS",
+      "actual": 40000
+    },
+    {
+      "check": "gross discount freight reconciliation",
+      "result": "PASS",
+      "actual": 580000
+    },
+    {
+      "check": "invoice less receipts equals receivables",
+      "result": "PASS",
+      "actual": 90000
+    },
+    {
+      "check": "movement 7 valid",
+      "result": "PASS",
+      "actual": "OK"
+    },
+    {
+      "check": "movement 8 valid",
+      "result": "PASS",
+      "actual": "OK"
+    },
+    {
+      "check": "movement 9 valid",
+      "result": "PASS",
+      "actual": "OK"
+    },
+    {
+      "check": "movement 10 valid",
+      "result": "PASS",
+      "actual": "OK"
+    },
+    {
+      "check": "movement 11 valid",
+      "result": "PASS",
+      "actual": "OK"
+    },
+    {
+      "check": "movement 12 valid",
+      "result": "PASS",
+      "actual": "OK"
+    },
+    {
+      "check": "movement 13 valid",
+      "result": "PASS",
+      "actual": "OK"
+    },
+    {
+      "check": "movement 14 valid",
+      "result": "PASS",
+      "actual": "OK"
+    },
+    {
+      "check": "movement 15 valid",
+      "result": "PASS",
+      "actual": "OK"
+    },
+    {
+      "check": "movement 16 valid",
+      "result": "PASS",
+      "actual": "OK"
+    },
+    {
+      "check": "movement 17 valid",
+      "result": "PASS",
+      "actual": "OK"
+    },
+    {
+      "check": "invoice 7 reconciles to source",
+      "result": "PASS",
+      "actual": "OK"
+    },
+    {
+      "check": "invoice 8 reconciles to source",
+      "result": "PASS",
+      "actual": "OK"
+    },
+    {
+      "check": "invoice 9 reconciles to source",
+      "result": "PASS",
+      "actual": "OK"
+    },
+    {
+      "check": "invoice 10 reconciles to source",
+      "result": "PASS",
+      "actual": "OK"
+    },
+    {
+      "check": "payment 437 valid",
+      "result": "PASS",
+      "actual": "OK"
+    },
+    {
+      "check": "payment 438 valid",
+      "result": "PASS",
+      "actual": "OK"
+    },
+    {
+      "check": "payment 439 valid",
+      "result": "PASS",
+      "actual": "OK"
+    },
+    {
+      "check": "payment 440 valid",
+      "result": "PASS",
+      "actual": "OK"
+    },
+    {
+      "check": "shipping-only warehouse stock",
+      "result": "PASS",
+      "actual": 100
+    },
+    {
+      "check": "shipping-only outlet stock",
+      "result": "PASS",
+      "actual": 100
+    },
+    {
+      "check": "shipping not revenue",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "October sale before invoice",
+      "result": "PASS",
+      "actual": 550000
+    },
+    {
+      "check": "unbilled sale remains visible",
+      "result": "PASS",
+      "actual": 550000
+    },
+    {
+      "check": "unbilled sale not an invoice",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "draft not counted as issued",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "draft cannot print",
+      "result": "PASS",
+      "actual": "BUKAN INVOICE TERBIT"
+    },
+    {
+      "check": "issued before payment receivable",
+      "result": "PASS",
+      "actual": 580000
+    },
+    {
+      "check": "issued before payment has no receipts",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "october view",
+      "result": "PASS",
+      "actual": [
+        550000,
+        540000,
+        100000,
+        440000,
+        100,
+        45
+      ]
+    },
+    {
+      "check": "november view",
+      "result": "PASS",
+      "actual": [
+        40000,
+        40000,
+        390000,
+        90000,
+        60,
+        81
+      ]
+    },
+    {
+      "check": "print ready",
+      "result": "PASS",
+      "actual": "SIAP CETAK"
+    },
+    {
+      "check": "two outlets on one area invoice",
+      "result": "PASS",
+      "actual": 40
+    },
+    {
+      "check": "printed total",
+      "result": "PASS",
+      "actual": 380000
+    },
+    {
+      "check": "printed paid",
+      "result": "PASS",
+      "actual": 380000
+    },
+    {
+      "check": "printed outstanding",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "populated stock row visible 7",
+      "result": "PASS",
+      "actual": false
+    },
+    {
+      "check": "populated stock row visible 87",
+      "result": "PASS",
+      "actual": false
+    },
+    {
+      "check": "populated stock row visible 167",
+      "result": "PASS",
+      "actual": false
+    },
+    {
+      "check": "populated stock row visible 247",
+      "result": "PASS",
+      "actual": false
+    },
+    {
+      "check": "populated stock row visible 327",
+      "result": "PASS",
+      "actual": false
+    },
+    {
+      "check": "one-page invoice PDF",
+      "result": "PASS",
+      "actual": 1
+    },
+    {
+      "check": "PDF has dummy label",
+      "result": "PASS",
+      "actual": true
+    },
+    {
+      "check": "invoice PDF contains 380,000",
+      "result": "PASS",
+      "actual": true
+    },
+    {
+      "check": "invoice PDF contains 400,000",
+      "result": "PASS",
+      "actual": true
+    },
+    {
+      "check": "invoice PDF contains 40,000",
+      "result": "PASS",
+      "actual": true
+    },
+    {
+      "check": "invoice PDF contains 20,000",
+      "result": "PASS",
+      "actual": true
+    },
+    {
+      "check": "operational template unchanged",
+      "result": "PASS",
+      "actual": "20e38ce570dddd2e515cfb97e15e4196718763f7fb8e564e34e4f307a1af0252"
+    },
+    {
+      "check": "PDF guide hyperlink points to sibling file",
+      "result": "PASS",
+      "actual": "PANDUAN_LATIHAN_GIAN_FATAYA.pdf"
+    }
+  ]
+}

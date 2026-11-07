@@ -1,5 +1,5 @@
 {
-  "passed": 76,
+  "passed": 137,
   "failed": 0,
   "engine": "LibreOffice headless 26.8 alpha; real formula recalculation",
   "vba_runtime_tested": false,
@@ -13,12 +13,12 @@
     {
       "check": "dashboard print area belongs to dashboard",
       "result": "PASS",
-      "actual": "'DASHBOARD'!$A$1:$Q$48"
+      "actual": "'BERANDA'!$A$1:$L$64"
     },
     {
       "check": "movement table includes PO and freight",
       "result": "PASS",
-      "actual": "A6:W2006"
+      "actual": "A6:X2006"
     },
     {
       "check": "VBA not falsely embedded in xlsx",
@@ -26,14 +26,95 @@
       "actual": null
     },
     {
-      "check": "expected worksheet count",
+      "check": "exactly six physical sheets",
       "result": "PASS",
-      "actual": 14
+      "actual": [
+        "BERANDA",
+        "TRANSAKSI",
+        "STOK",
+        "TAGIHAN",
+        "CETAK INVOICE",
+        "DATA USAHA"
+      ]
+    },
+    {
+      "check": "all six sheets are visible",
+      "result": "PASS",
+      "actual": true
+    },
+    {
+      "check": "invoice table retained",
+      "result": "PASS",
+      "actual": "A6:R406"
+    },
+    {
+      "check": "payments moved into same sheet",
+      "result": "PASS",
+      "actual": "A436:J1436"
+    },
+    {
+      "check": "outlet group dropdown in master section",
+      "result": "PASS",
+      "actual": true
+    },
+    {
+      "check": "payment selector moved with form",
+      "result": "PASS",
+      "actual": true
+    },
+    {
+      "check": "named invoice range points to new sheet",
+      "result": "PASS",
+      "actual": "'TAGIHAN'!$A$7:$A$406"
+    },
+    {
+      "check": "named lot range points to new section",
+      "result": "PASS",
+      "actual": "'DATA USAHA'!$A$161:$A$240"
+    },
+    {
+      "check": "master data remain actual source regions",
+      "result": "PASS",
+      "actual": [
+        "Jawa Timur",
+        "Jawa Tengah",
+        "Medan - Aceh",
+        "Sulawesi Selatan",
+        "Kalimantan",
+        "Sumatera Selatan",
+        "Batam",
+        "Jabodetabek"
+      ]
+    },
+    {
+      "check": "advanced transaction fields grouped",
+      "result": "PASS",
+      "actual": true
+    },
+    {
+      "check": "PO control has visible header",
+      "result": "PASS",
+      "actual": "Cek minimum PO"
+    },
+    {
+      "check": "input dates are formatted even while empty",
+      "result": "PASS",
+      "actual": "dd mmm yyyy"
+    },
+    {
+      "check": "invoice discount uses percent format",
+      "result": "PASS",
+      "actual": "0.0%"
+    },
+    {
+      "check": "all table headers are populated",
+      "result": "PASS",
+      "actual": true
     },
     {
       "check": "Recalculated expected files",
       "result": "PASS",
-      "actual": 10
+      "actual": 18
     },
     {
       "check": "normal / no formula errors",
@@ -81,9 +162,169 @@
       "actual": []
     },
     {
+      "check": "small_po / no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "split_po / no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "retur_without_reason / no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "custom_threshold / no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "chart_selected / no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "chart_period / no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "chart_cutoff / no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "chart_void / no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
       "check": "POS_Gian_Fataya / no formula errors",
       "result": "PASS",
       "actual": []
+    },
+    {
+      "check": "comparison and area trend charts retained",
+      "result": "PASS",
+      "actual": 2
+    },
+    {
+      "check": "comparison retains high category source",
+      "result": "PASS",
+      "actual": "BERANDA!$O$21:$O$28"
+    },
+    {
+      "check": "comparison contains all eight official areas",
+      "result": "PASS",
+      "actual": 8
+    },
+    {
+      "check": "comparison retains actual high sales",
+      "result": "PASS",
+      "actual": 300000.0
+    },
+    {
+      "check": "comparison retains actual medium sales",
+      "result": "PASS",
+      "actual": 50000.0
+    },
+    {
+      "check": "trend retains concrete monthly source",
+      "result": "PASS",
+      "actual": "BERANDA!$O$6:$O$17"
+    },
+    {
+      "check": "trend contains twelve months",
+      "result": "PASS",
+      "actual": 12
+    },
+    {
+      "check": "trend chart retains actual October sales",
+      "result": "PASS",
+      "actual": 300000.0
+    },
+    {
+      "check": "charts include hidden source columns",
+      "result": "PASS",
+      "actual": true
+    },
+    {
+      "check": "comparison appears above details",
+      "result": "PASS",
+      "actual": true
+    },
+    {
+      "check": "trend appears above details",
+      "result": "PASS",
+      "actual": true
+    },
+    {
+      "check": "comparison labels include region and category",
+      "result": "PASS",
+      "actual": "Jawa Timur · TINGGI"
+    },
+    {
+      "check": "zero sales category visible in chart label",
+      "result": "PASS",
+      "actual": "Medan - Aceh · DATAR (0)"
+    },
+    {
+      "check": "trend starts eleven months before cutoff",
+      "result": "PASS",
+      "actual": "2025-12-01T00:00:00"
+    },
+    {
+      "check": "month without sales displays zero",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "selector changes trend region",
+      "result": "PASS",
+      "actual": "W02"
+    },
+    {
+      "check": "selected region trend includes independent outlets",
+      "result": "PASS",
+      "actual": 50000
+    },
+    {
+      "check": "comparison respects period start",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "trend deliberately retains twelve-month history",
+      "result": "PASS",
+      "actual": 300000
+    },
+    {
+      "check": "trend respects day cutoff in last month",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "void sale excluded from comparison",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "void sale excluded from trend",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "threshold moves medium bar into high series",
+      "result": "PASS",
+      "actual": 50000
+    },
+    {
+      "check": "threshold removes old medium bar",
+      "result": "PASS",
+      "actual": 0
     },
     {
       "check": "movement 7 valid",
@@ -192,6 +433,26 @@
     },
     {
       "check": "unbilled other region",
+      "result": "PASS",
+      "actual": 50000
+    },
+    {
+      "check": "top area classified high",
+      "result": "PASS",
+      "actual": "TINGGI"
+    },
+    {
+      "check": "smaller positive area classified medium",
+      "result": "PASS",
+      "actual": "SEDANG"
+    },
+    {
+      "check": "area without sales classified flat",
+      "result": "PASS",
+      "actual": "DATAR"
+    },
+    {
+      "check": "independent outlets retained in area sales",
       "result": "PASS",
       "actual": 50000
     },
@@ -361,6 +622,56 @@
       "actual": 350000
     },
     {
+      "check": "PO below ten has explicit warning",
+      "result": "PASS",
+      "actual": "PO < 10 PCS"
+    },
+    {
+      "check": "small PO remains physical stock, not silently dropped",
+      "result": "PASS",
+      "actual": 6
+    },
+    {
+      "check": "dashboard surfaces incomplete PO",
+      "result": "PASS",
+      "actual": 1
+    },
+    {
+      "check": "same PO first lot accepted at six",
+      "result": "PASS",
+      "actual": "OK"
+    },
+    {
+      "check": "same PO second lot completes ten",
+      "result": "PASS",
+      "actual": "OK"
+    },
+    {
+      "check": "split PO leaves no incomplete warning",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "return needs damage explanation",
+      "result": "PASS",
+      "actual": "ISI ALASAN"
+    },
+    {
+      "check": "return without reason excluded",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "configurable performance threshold recalculates",
+      "result": "PASS",
+      "actual": "TINGGI"
+    },
+    {
+      "check": "performance legend follows active threshold",
+      "result": "PASS",
+      "actual": true
+    },
+    {
       "check": "production workbook has no invented sale price",
       "result": "PASS",
       "actual": null
@@ -384,6 +695,16 @@
       "check": "production workbook no transaction IDs",
       "result": "PASS",
       "actual": 0
+    },
+    {
+      "check": "blank workbook has no false high area",
+      "result": "PASS",
+      "actual": "DATAR"
+    },
+    {
+      "check": "production default active status is not a transaction",
+      "result": "PASS",
+      "actual": "AKTIF"
     }
   ]
 }

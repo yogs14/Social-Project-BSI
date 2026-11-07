@@ -1,0 +1,45 @@
+{
+  "label": "DUMMY - BUKAN DATA USAHA ATAU TAGIHAN NYATA",
+  "period_start": "2026-10-01",
+  "period_end": "2026-11-07",
+  "lot": "LOT-DUMMY",
+  "sku": "GF-PST-001",
+  "price": 10000,
+  "expiry": "2027-01-31",
+  "regions": [
+    [7, "W01", "Jawa Timur", "PJ DUMMY Jatim", "Alamat DUMMY Jawa Timur"],
+    [8, "W02", "Jawa Tengah", "PJ DUMMY Jateng", "Alamat DUMMY Jawa Tengah"],
+    [9, "W03", "Medan - Aceh", "PJ DUMMY Medan", "Alamat DUMMY Medan - Aceh"]
+  ],
+  "outlets": [
+    [36, "D-JT01", "Outlet DUMMY Jatim 1", "W01", "Amanda"],
+    [37, "D-JT02", "Outlet DUMMY Jatim 2", "W01", "Amanda"],
+    [38, "D-JTG01", "Toko DUMMY Semarang", "W02", "Independen"],
+    [39, "D-MA01", "Outlet DUMMY Medan", "W03", "Amanda"]
+  ],
+  "movements": [
+    {"row": 7, "id": "D-M01", "date": "2026-10-01", "kind": "AWAL", "location": "GDG", "qty": 200},
+    {"row": 8, "id": "D-M02", "date": "2026-10-02", "kind": "KIRIM", "location": "D-JT01", "qty": 40, "po": "PO-D-001", "freight": 15000},
+    {"row": 9, "id": "D-M03", "date": "2026-10-02", "kind": "KIRIM", "location": "D-JT02", "qty": 20, "po": "PO-D-002", "freight": 10000},
+    {"row": 10, "id": "D-M04", "date": "2026-10-02", "kind": "KIRIM", "location": "D-JTG01", "qty": 20, "po": "PO-D-003", "freight": 10000},
+    {"row": 11, "id": "D-M05", "date": "2026-10-02", "kind": "KIRIM", "location": "D-MA01", "qty": 20, "po": "PO-D-004", "freight": 20000},
+    {"row": 12, "id": "D-M06", "date": "2026-10-10", "kind": "JUAL", "location": "D-JT01", "qty": 30, "invoice": "INV-D-JT-1026"},
+    {"row": 13, "id": "D-M07", "date": "2026-10-12", "kind": "JUAL", "location": "D-JT02", "qty": 10, "invoice": "INV-D-JT-1026"},
+    {"row": 14, "id": "D-M08", "date": "2026-10-15", "kind": "JUAL", "location": "D-JTG01", "qty": 10, "invoice": "INV-D-JTG-1026"},
+    {"row": 15, "id": "D-M09", "date": "2026-10-20", "kind": "JUAL", "location": "D-MA01", "qty": 5, "invoice": "INV-D-MA-1026"},
+    {"row": 16, "id": "D-M10", "date": "2026-11-01", "kind": "KIRIM", "location": "D-JT01", "qty": 40, "po": "PO-D-005", "freight": 15000},
+    {"row": 17, "id": "D-M11", "date": "2026-11-05", "kind": "JUAL", "location": "D-JT02", "qty": 4, "invoice": "INV-D-JT-1126"}
+  ],
+  "invoices": [
+    {"row": 7, "id": "INV-D-JT-1026", "date": "2026-10-31", "region": "W01", "start": "2026-10-01", "end": "2026-10-31", "due": "2026-11-07", "discount": 0.1, "freight": 20000, "gross": 400000},
+    {"row": 8, "id": "INV-D-JTG-1026", "date": "2026-10-31", "region": "W02", "start": "2026-10-01", "end": "2026-10-31", "due": "2026-11-07", "discount": 0, "freight": 10000, "gross": 100000},
+    {"row": 9, "id": "INV-D-MA-1026", "date": "2026-10-31", "region": "W03", "start": "2026-10-01", "end": "2026-10-31", "due": "2026-11-07", "discount": 0, "freight": 0, "gross": 50000},
+    {"row": 10, "id": "INV-D-JT-1126", "date": "2026-11-06", "region": "W01", "start": "2026-11-01", "end": "2026-11-05", "due": "2026-11-14", "discount": 0, "freight": 0, "gross": 40000}
+  ],
+  "payments": [
+    {"row": 437, "id": "D-B01", "date": "2026-10-31", "invoice": "INV-D-JT-1026", "amount": 100000},
+    {"row": 438, "id": "D-B02", "date": "2026-11-03", "invoice": "INV-D-JT-1026", "amount": 280000},
+    {"row": 439, "id": "D-B03", "date": "2026-11-04", "invoice": "INV-D-JTG-1026", "amount": 60000},
+    {"row": 440, "id": "D-B04", "date": "2026-11-05", "invoice": "INV-D-MA-1026", "amount": 50000}
+  ]
+}

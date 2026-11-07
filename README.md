@@ -4,12 +4,18 @@ Workbook operasional setiap mitra mengikuti MoM dan data pendukung dashboard Ben
 
 | Mitra | Alur yang disiapkan | Workbook | Panduan |
 | --- | --- | --- | --- |
-| Gian Fataya — Bu Santi | Stok konsinyasi, distribusi outlet, invoice wilayah dan pembayaran bertahap | [Excel](mitra/gian-fataya/output/POS_Gian_Fataya.xlsx) · [Paket ZIP](mitra/gian-fataya/output/Paket_POS_Gian_Fataya.zip) | [Panduan](mitra/gian-fataya/docs/PANDUAN_GIAN_FATAYA.md) |
+| Gian Fataya — Bu Santi | Enam sheet: stok konsinyasi, distribusi PO, invoice wilayah dan cicilan | [Excel](mitra/gian-fataya/output/POS_Gian_Fataya.xlsx) · [Paket ZIP](mitra/gian-fataya/output/Paket_POS_Gian_Fataya.zip) | [Panduan](mitra/gian-fataya/docs/PANDUAN_GIAN_FATAYA.md) |
 | Murita Crepes — Pak Syarif | POS 34 menu, premiks tujuh bahan, adonan basah, kalibrasi topping, kas usaha/pribadi dan CRM/poin | [Excel](mitra/murita-crepes/output/POS_Murita_Crepes.xlsx) · [Paket ZIP](mitra/murita-crepes/output/Paket_POS_Murita_Crepes.zip) | [Panduan](mitra/murita-crepes/docs/PANDUAN_MURITA_CREPES.md) |
 | Pizza Fuzta — Bu Elok | Kasir 49 menu Medokan, rekap Majoo Karah, gudang dan transfer CSV offline dengan konfirmasi | [Medokan](mitra/pizza-fuzta/output/POS_Pizza_Fuzta_Medokan.xlsx) · [Karah](mitra/pizza-fuzta/output/Rekap_Pizza_Fuzta_Karah.xlsx) · [Gudang](mitra/pizza-fuzta/output/Gudang_Pizza_Fuzta.xlsx) · [Paket ZIP](mitra/pizza-fuzta/output/Paket_POS_Pizza_Fuzta.zip) | [Panduan](mitra/pizza-fuzta/docs/PANDUAN_PIZZA_FUZTA.md) |
 | Chicken Al-Haqi — Mba Gita | Kasir potongan + rasa, nasi, belanja kg/pcs aktual, stok dan pemisahan kas ayam/pribadi/usaha lain | [Excel](mitra/chicken-al-haqi/output/POS_Chicken_Al_Haqi.xlsx) · [Paket ZIP](mitra/chicken-al-haqi/output/Paket_POS_Chicken_Al_Haqi.zip) | [Panduan](mitra/chicken-al-haqi/docs/PANDUAN_CHICKEN_AL_HAQI.md) |
 
 File utama tidak memuat transaksi/pelanggan/saldo fiktif. Data yang belum tersedia ditandai untuk diisi mitra. Pada Murita, harga SKM dari rumus sumber tidak dipakai karena salah referensi; HPP tetap ditandai belum lengkap sampai harga sebenarnya diisi. Loyalty awalnya nonaktif karena kebijakan hadiah belum diberikan.
+
+Gian Fataya v2 mengikuti kolom **Updated** di MoM: 14 sheet digabung menjadi **6 sheet nyata** (BERANDA, TRANSAKSI, STOK, TAGIHAN, CETAK INVOICE, DATA USAHA). PO/ongkir kini berdekatan dengan qty; invoice dan pembayaran berada pada satu sheet dengan tautan bagian. Mitra dibedakan Amanda/Independen; PO minimal 10 pcs dapat mencakup beberapa lot. Beranda menampilkan grafik batang penjualan delapan wilayah dan grafik area tren 12 bulan dengan pilihan wilayah. Kategori tinggi/sedang/datar memiliki warna dan label teks; ambang relatif dapat diubah. Contoh terpisah berlabel SIMULASI disertakan dalam paket. [Riset UI/UX dan pemetaan kebutuhan](mitra/gian-fataya/docs/RISET_UI_UX_GIAN_FATAYA.md) menyertakan sumber NN/G dan Microsoft. Tombol v2 memerlukan modul VBA v2; jangan memakai modul lama pada tata letak baru.
+
+Untuk meninjau grafik Gian Fataya, buka [pratinjau dashboard](mitra/gian-fataya/demo/Pratinjau_Grafik_Wilayah.png) atau [Excel simulasi delapan wilayah](mitra/gian-fataya/demo/SIMULASI_Grafik_Wilayah.xlsx). Semua nilai pada contoh adalah data fiktif. Pilih wilayah di BERANDA!I18 untuk mengganti grafik area.
+
+Untuk mencoba seluruh alur Gian Fataya, tersedia [Excel berisi data DUMMY](mitra/gian-fataya/latihan/POS_Gian_Fataya_DUMMY.xlsx), [panduan praktik PDF](mitra/gian-fataya/latihan/PANDUAN_LATIHAN_GIAN_FATAYA.pdf), [versi Markdown](mitra/gian-fataya/latihan/PANDUAN_LATIHAN_GIAN_FATAYA.md), dan [paket latihan lengkap](mitra/gian-fataya/latihan/Paket_Latihan_Gian_Fataya_DUMMY.zip). Contoh mencakup empat outlet, stok dua bulan, empat invoice dan empat pembayaran. Panduan menunjukkan sel input, urutan kerja dan angka hasil; paket menyertakan template kosong untuk latihan ulang serta contoh invoice PDF. Gunakan file DUMMY untuk melihat hasil akhir; ketik ulang latihan pada salinan template kosong.
 
 ## Menghasilkan dan memvalidasi workbook
 
@@ -20,7 +26,9 @@ cd /workspace/Social-Project-BSI/mitra/gian-fataya
 python3 -m pip install -r requirements.txt
 python3 src/build_workbook.py
 python3 tests/validate_workbook.py
+python3 src/build_chart_demo.py
 python3 src/package_delivery.py
+python3 src/build_full_demo.py
 
 cd /workspace/Social-Project-BSI/mitra/pizza-fuzta
 python3 -m pip install -r requirements.txt

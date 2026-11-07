@@ -1,0 +1,17 @@
+GIAN FATAYA — PAKET LATIHAN DATA DUMMY
+
+1. Ekstrak seluruh ZIP ke satu folder.
+2. Buka PANDUAN_LATIHAN_GIAN_FATAYA.pdf, mulai halaman pertama.
+3. POS_Gian_Fataya_DUMMY.xlsx sudah terisi: gunakan untuk melihat contoh hasil akhir.
+4. Untuk latihan dari nol, buka template_kosong/POS_Gian_Fataya.xlsx,
+   Save As LATIHAN_SAYA.xlsx, lalu ikuti langkah dalam panduan.
+   Jangan mengetik ulang transaksi di file DUMMY yang sudah terisi.
+5. Latihan memakai input tabel dan ekspor PDF manual; tidak perlu VBA.
+6. Semua nama outlet, PIC, harga, tanggal kedaluwarsa, transaksi,
+   ongkir dan pembayaran DUMMY adalah contoh fiktif, bukan data mitra.
+   Delapan nama wilayah mengikuti MoM.
+
+Hasil: bruto Rp590.000; tagihan Rp580.000; pembayaran Rp490.000;
+piutang Rp90.000; stok gudang 60 dan stok outlet 81 pouch.
+Contoh invoice PDF DUMMY Jatim: tagihan Rp380.000, sudah lunas.
+Rumus dan render diuji di LibreOffice; Excel desktop/VBA belum dieksekusi.
