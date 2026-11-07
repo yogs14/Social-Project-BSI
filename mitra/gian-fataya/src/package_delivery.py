@@ -4,9 +4,12 @@ import hashlib
 import json
 import shutil
 from zipfile import ZipFile,ZIP_DEFLATED
+from workbook_links import validate_navigation
 
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'output'
+validate_navigation(OUT/'POS_Gian_Fataya.xlsx')
+validate_navigation(ROOT/'demo/SIMULASI_Grafik_Wilayah.xlsx')
 report=json.loads((OUT/'hasil_validasi.json').read_text())
 assert report['failed']==0 and report['passed']>=70
 assert (OUT/'hasil_validasi.json').stat().st_mtime >= (OUT/'POS_Gian_Fataya.xlsx').stat().st_mtime, 'Re-run validation after rebuilding the workbook.'
@@ -41,7 +44,7 @@ Format invoice sementara karena contoh invoice asli belum tersedia.
 Panduan lengkap: PANDUAN_GIAN_FATAYA.md.
 Riset UI/UX dan pemetaan kolom Updated: RISET_UI_UX_GIAN_FATAYA.md.
 ''',encoding='utf-8')
-names=['POS_Gian_Fataya.xlsx','Modul_GianFataya.bas','PANDUAN_GIAN_FATAYA.md','RISET_UI_UX_GIAN_FATAYA.md','BACA_DULU.txt','hasil_validasi.json']
+names=['POS_Gian_Fataya.xlsx','Modul_GianFataya.bas','PANDUAN_GIAN_FATAYA.md','RISET_UI_UX_GIAN_FATAYA.md','BACA_DULU.txt','hasil_validasi.json','hasil_validasi_navigasi.json']
 examples=['SIMULASI_Grafik_Wilayah.xlsx','Pratinjau_Grafik_Wilayah.png','hasil_validasi_grafik.json']
 manifest={n:hashlib.sha256((OUT/n).read_bytes()).hexdigest() for n in names}
 manifest.update({'contoh/'+n:hashlib.sha256((ROOT/'demo'/n).read_bytes()).hexdigest() for n in examples})

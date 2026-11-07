@@ -8,5 +8,21 @@
   "flat": 1,
   "source_operational_file_unchanged": true,
   "validation": "Formulas and chart caches recalculated; actual workbook rendered by LibreOffice",
-  "excel_desktop_tested": false
+  "excel_desktop_tested": false,
+  "navigation_repair": {
+    "validation": "Native workbook bookmarks; financial fingerprint unchanged",
+    "details": {
+      "file": "demo/SIMULASI_Grafik_Wilayah.xlsx",
+      "repaired": 62,
+      "internal_links": 62,
+      "external_links": 2,
+      "non_navigation_data_unchanged": true,
+      "financial_fingerprint": "f02bec10e73a5094d8a748bcf8f879fcc9ce30131f3400428b2a1b8de5698402"
+    },
+    "prior_financial_checks_remain_valid": true,
+    "regression_tests": {
+      "passed": 6,
+      "failed": 0
+    }
+  }
 }

@@ -9,6 +9,7 @@ import tempfile
 import fitz
 from openpyxl import load_workbook
 from openpyxl.workbook.properties import CalcProperties
+from workbook_links import repair_navigation, validate_navigation
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "output/POS_Gian_Fataya.xlsx"
@@ -73,6 +74,8 @@ def main():
         raw = temp / NAME
         w.save(raw)
         result = convert(raw, DEST, "xlsx")
+        repair_navigation(result)
+        validate_navigation(result)
         cached = load_workbook(result, data_only=True)
         h = cached["BERANDA"]
         assert [h[f"D{r}"].value for r in range(37, 45)] == [800000, 600000, 350000, 300000, 220000, 150000, 80000, 0]

@@ -18,6 +18,7 @@ from openpyxl.utils import get_column_letter, column_index_from_string, range_bo
 from openpyxl.worksheet.cell_range import MultiCellRange
 from openpyxl.worksheet.datavalidation import DataValidation
 from openpyxl.workbook.properties import CalcProperties
+from workbook_links import internal_link
 
 
 NAV = ["BERANDA", "TRANSAKSI", "STOK", "TAGIHAN", "CETAK INVOICE", "DATA USAHA"]
@@ -253,7 +254,7 @@ def compact(source: Path, dest: Path) -> Path:
             ws.merge_cells(f"{cell}:{span}")
         c = ws[cell]
         c.value = label
-        c.hyperlink = f"#'{sheet}'!{anchor}"
+        internal_link(c, sheet, anchor)
         c.font = Font(name="Calibri", size=11, bold=True, color=TEAL, underline="single")
         c.alignment = Alignment(vertical="center", wrap_text=True)
 

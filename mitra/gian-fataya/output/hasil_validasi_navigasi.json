@@ -1,0 +1,54 @@
+{
+  "issue": "Internal navigation incorrectly encoded as external workbook references",
+  "fix": "Native SpreadsheetML location-only bookmarks; canonical quoted sheet names",
+  "passed": true,
+  "internal_links_checked": 247,
+  "financial_cells_formulas_styles_and_chart_caches_preserved": true,
+  "excel_desktop_tested": false,
+  "files": [
+    {
+      "file": "output/POS_Gian_Fataya.xlsx",
+      "repaired": 62,
+      "internal_links": 62,
+      "external_links": 2,
+      "non_navigation_data_unchanged": true,
+      "financial_fingerprint": "ac774627db9c58f3b4751e99fd1eb6abf1d98d7c48ed721791c8203cf8a72cbe"
+    },
+    {
+      "file": "demo/SIMULASI_Grafik_Wilayah.xlsx",
+      "repaired": 62,
+      "internal_links": 62,
+      "external_links": 2,
+      "non_navigation_data_unchanged": true,
+      "financial_fingerprint": "f02bec10e73a5094d8a748bcf8f879fcc9ce30131f3400428b2a1b8de5698402"
+    },
+    {
+      "file": "latihan/POS_Gian_Fataya_DUMMY.xlsx",
+      "repaired": 61,
+      "internal_links": 61,
+      "external_links": 3,
+      "non_navigation_data_unchanged": true,
+      "financial_fingerprint": "14c7fd049f04c3cded4d986422818d89bfe78033d443bc18d774a7bfd69bb0d9"
+    },
+    {
+      "file": "latihan/template_kosong/POS_Gian_Fataya.xlsx",
+      "repaired": 62,
+      "internal_links": 62,
+      "external_links": 2,
+      "non_navigation_data_unchanged": true,
+      "financial_fingerprint": "ac774627db9c58f3b4751e99fd1eb6abf1d98d7c48ed721791c8203cf8a72cbe"
+    }
+  ],
+  "regression_tests": {
+    "passed": 6,
+    "failed": 0,
+    "coverage": [
+      "Fresh workbook generation",
+      "Every delivered navigation menu",
+      "Repair without changing non-navigation data",
+      "External web/PDF links preserved",
+      "Spaces/apostrophes, recalculation, renamed and moved files",
+      "All Excel copies inside delivery ZIPs"
+    ]
+  }
+}

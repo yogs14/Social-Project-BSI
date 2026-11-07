@@ -281,6 +281,7 @@ Gunakan daftar ini untuk memastikan seluruh alur sudah berjalan.
 
 | Gejala | Periksa dan perbaiki |
 | --- | --- |
+| Cannot open the specified file | Gunakan file versi perbaikan. Untuk satu tombol pada salinan lama: klik kanan → Edit Hyperlink → Place in This Document → sheet tujuan, misalnya STOK!A1. |
 | J bukan OK / angka tidak masuk | Cek kode outlet dan lot di master, tanggal valid, qty positif, status AKTIF; harga wajib hanya untuk JUAL, nomor PO wajib untuk KIRIM. |
 | PO < 10 PCS / saldo negatif | Lengkapi PO minimal 10 pcs per nomor PO + outlet; cek stok sebelum kirim/jual. Jangan menimpa rumus atau saldo STOK. |
 | CEK NOMINAL / SELISIH SUMBER | Cek diskon (10%, bukan 10), ongkir 0 bila nihil, tautan ID invoice di TRANSAKSI M, serta snapshot J sama dengan sumber Q. Jangan mengubah penjualan yang sudah ditagih. |

@@ -17,6 +17,8 @@ Untuk meninjau grafik Gian Fataya, buka [pratinjau dashboard](mitra/gian-fataya/
 
 Untuk mencoba seluruh alur Gian Fataya, tersedia [Excel berisi data DUMMY](mitra/gian-fataya/latihan/POS_Gian_Fataya_DUMMY.xlsx), [panduan praktik PDF](mitra/gian-fataya/latihan/PANDUAN_LATIHAN_GIAN_FATAYA.pdf), [versi Markdown](mitra/gian-fataya/latihan/PANDUAN_LATIHAN_GIAN_FATAYA.md), dan [paket latihan lengkap](mitra/gian-fataya/latihan/Paket_Latihan_Gian_Fataya_DUMMY.zip). Contoh mencakup empat outlet, stok dua bulan, empat invoice dan empat pembayaran. Panduan menunjukkan sel input, urutan kerja dan angka hasil; paket menyertakan template kosong untuk latihan ulang serta contoh invoice PDF. Gunakan file DUMMY untuk melihat hasil akhir; ketik ulang latihan pada salinan template kosong.
 
+Navigasi Gian Fataya sudah diperbaiki untuk error Excel **Cannot open the specified file**: tombol menuju sheet dalam workbook yang sama dan tetap dapat digunakan setelah file dipindah atau diganti namanya. Perbaikan mencakup file operasional, contoh grafik, file DUMMY, serta template kosong dalam paket latihan.
+
 ## Menghasilkan dan memvalidasi workbook
 
 Gunakan checkout yang ada; cloud task sudah terisolasi, tidak perlu worktree baru.
@@ -29,6 +31,7 @@ python3 tests/validate_workbook.py
 python3 src/build_chart_demo.py
 python3 src/package_delivery.py
 python3 src/build_full_demo.py
+python3 tests/validate_navigation.py
 
 cd /workspace/Social-Project-BSI/mitra/pizza-fuzta
 python3 -m pip install -r requirements.txt

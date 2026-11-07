@@ -200,6 +200,7 @@ def content(data):
     p(b, "**Pemeriksaan akhir:** J7:J17 di TRANSAKSI, P7:P10 di TAGIHAN, I437:I440 pada pembayaran semuanya OK. BERANDA!I57/C60/G60/K60/C62/G62/K62 semuanya 0. Sisa piutang Rp90.000 adalah saldo sah dari dua invoice, bukan kesalahan input.")
     h(b, "Jika hasil belum cocok")
     table(b, ["Gejala", "Periksa dan perbaiki"], [
+        ["Cannot open the specified file", "Gunakan file versi perbaikan. Untuk satu tombol pada salinan lama: klik kanan → Edit Hyperlink → Place in This Document → sheet tujuan, misalnya STOK!A1."],
         ["J bukan OK / angka tidak masuk", "Cek kode outlet dan lot di master, tanggal valid, qty positif, status AKTIF; harga wajib hanya untuk JUAL, nomor PO wajib untuk KIRIM."],
         ["PO < 10 PCS / saldo negatif", "Lengkapi PO minimal 10 pcs per nomor PO + outlet; cek stok sebelum kirim/jual. Jangan menimpa rumus atau saldo STOK."],
         ["CEK NOMINAL / SELISIH SUMBER", "Cek diskon (10%, bukan 10), ongkir 0 bila nihil, tautan ID invoice di TRANSAKSI M, serta snapshot J sama dengan sumber Q. Jangan mengubah penjualan yang sudah ditagih."],

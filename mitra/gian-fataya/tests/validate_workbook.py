@@ -12,8 +12,11 @@ from pathlib import Path
 from openpyxl import load_workbook
 from openpyxl.utils import column_index_from_string
 import re
+import sys
 
 ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT/'src'))
+from workbook_links import repair_navigation, validate_navigation
 SOURCE=ROOT/'output/POS_Gian_Fataya.xlsx'
 checks=[]
 
@@ -120,6 +123,7 @@ def no_errors(name,w):
 
 
 def main():
+    equal('native internal navigation before recalculation',validate_navigation(SOURCE)['internal'],62)
     original=BookView(load_workbook(SOURCE,data_only=False))
     equal('invoice print area belongs to invoice',str(original['CETAK INVOICE'].print_area),"'CETAK INVOICE'!$A$7:$F$79")
     equal('dashboard print area belongs to dashboard',str(original['DASHBOARD'].print_area),"'BERANDA'!$A$1:$L$64")
@@ -314,6 +318,8 @@ def main():
         equal('production default active status is not a transaction',w['MUTASI']['I7'].value,'AKTIF')
         # Keep a recalculated ready-to-open production artifact, without changing formulas via openpyxl.
         (ROOT/'output/POS_Gian_Fataya.xlsx').write_bytes((out/SOURCE.name).read_bytes())
+        repair_navigation(SOURCE)
+        equal('native internal navigation after recalculation',validate_navigation(SOURCE)['internal'],62)
     report={'passed':len(checks),'failed':0,'engine':'LibreOffice headless 26.8 alpha; real formula recalculation',
             'vba_runtime_tested':False,'excel_desktop_tested':False,'checks':checks}
     (ROOT/'output/hasil_validasi.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))

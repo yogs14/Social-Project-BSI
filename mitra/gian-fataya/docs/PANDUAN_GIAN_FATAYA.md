@@ -15,6 +15,8 @@ Dasar revisi: [MoM/Notulensi!G4:G6, kolom Updated](https://docs.google.com/sprea
 
 Tautan baris 4 tersedia pada semua sheet. Baris 5 DATA USAHA menuju setiap bagian. TAGIHAN memiliki tautan langsung ke pembayaran; tidak perlu menggulir ratusan baris. Ctrl+G → tblPembayaran juga menuju tabel tersebut.
 
+Navigasi antar-sheet bekerja di dalam file yang sama, termasuk setelah file dipindah atau namanya diganti. Jika memakai unduhan versi lama dan muncul **Cannot open the specified file**, unduh versi perbaikan. Untuk memperbaiki satu tombol pada salinan lama: klik kanan tombol → **Edit Hyperlink → Place in This Document** → pilih sheet tujuan (misalnya **STOK**, sel **A1**) → OK. Jika salinan lama sudah berisi data tambahan, simpan salinannya sebelum memindahkan data ke versi baru.
+
 Sel biru untuk input; kolom otomatis memakai header dan latar abu-abu. Peringatan memiliki teks selain warna. Jangan menimpa rumus.
 
 ## Persiapan sekali di DATA USAHA

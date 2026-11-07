@@ -14,6 +14,7 @@ from zipfile import ZipFile, ZIP_DEFLATED
 import fitz
 from openpyxl import load_workbook
 from openpyxl.workbook.properties import CalcProperties
+from workbook_links import repair_navigation, validate_navigation
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "output/POS_Gian_Fataya.xlsx"
@@ -281,6 +282,8 @@ def main():
         validate(books)
         shutil.copyfile(calculated / "final.xlsx", DEST / NAME)
         fix_guide_link(DEST / NAME)
+        repair_navigation(DEST / NAME)
+        validate_navigation(DEST / NAME)
         print(f"Workflow checks: {len(CHECKS)} passed. Rendering dashboard and invoice...", flush=True)
         render_review(DEST / NAME, temp)
     equal("operational template unchanged", hashlib.sha256(SOURCE.read_bytes()).hexdigest(), fingerprint)
@@ -315,6 +318,8 @@ def main():
 
 
 def package():
+    validate_navigation(DEST / NAME)
+    validate_navigation(DEST / 'template_kosong/POS_Gian_Fataya.xlsx')
     files = sorted(p for p in DEST.rglob("*") if p.is_file() and p.suffix != ".zip" and p.name != "SHA256.json")
     manifest = {str(p.relative_to(DEST)): hashlib.sha256(p.read_bytes()).hexdigest() for p in files}
     (DEST / "SHA256.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")

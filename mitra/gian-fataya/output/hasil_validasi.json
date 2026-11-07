@@ -706,5 +706,21 @@
       "result": "PASS",
       "actual": "AKTIF"
     }
-  ]
+  ],
+  "navigation_repair": {
+    "validation": "Native workbook bookmarks; financial fingerprint unchanged",
+    "details": {
+      "file": "output/POS_Gian_Fataya.xlsx",
+      "repaired": 62,
+      "internal_links": 62,
+      "external_links": 2,
+      "non_navigation_data_unchanged": true,
+      "financial_fingerprint": "ac774627db9c58f3b4751e99fd1eb6abf1d98d7c48ed721791c8203cf8a72cbe"
+    },
+    "prior_financial_checks_remain_valid": true,
+    "regression_tests": {
+      "passed": 6,
+      "failed": 0
+    }
+  }
 }
