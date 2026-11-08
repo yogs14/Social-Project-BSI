@@ -1,19 +1,19 @@
 {
-  "passed": 87,
+  "passed": 105,
   "failed": 0,
   "engine": "LibreOffice headless; actual workbook formula recalculation",
   "vba_runtime_tested": false,
   "excel_desktop_tested": false,
   "checks": [
     {
-      "check": "seven visible user tabs",
+      "check": "nine visible user tabs",
       "result": "PASS",
-      "actual": 7
+      "actual": 9
     },
     {
-      "check": "two backend audit tabs",
+      "check": "one hidden item journal",
       "result": "PASS",
-      "actual": 2
+      "actual": 1
     },
     {
       "check": "daily chart present",
@@ -38,7 +38,7 @@
     {
       "check": "all selected workbook files recalculated",
       "result": "PASS",
-      "actual": 11
+      "actual": 15
     },
     {
       "check": "normal no formula errors",
@@ -87,6 +87,26 @@
     },
     {
       "check": "duplicate_purchase no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "flavor_shortage no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "twelve_items no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "thirteen_items no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "invalid_channel no formula errors",
       "result": "PASS",
       "actual": []
     },
@@ -271,6 +291,76 @@
       "actual": 0
     },
     {
+      "check": "flattened menu has seventeen options",
+      "result": "PASS",
+      "actual": 17
+    },
+    {
+      "check": "cashier maps menu to the existing dada stock",
+      "result": "PASS",
+      "actual": "DADA"
+    },
+    {
+      "check": "cashier maps selected sauce",
+      "result": "PASS",
+      "actual": "Saus Keju"
+    },
+    {
+      "check": "live cashier revenue uses cashier date",
+      "result": "PASS",
+      "actual": 56000
+    },
+    {
+      "check": "closing cash matches existing business reconciliation",
+      "result": "PASS",
+      "actual": 75000
+    },
+    {
+      "check": "closing physical difference matches dashboard",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "closing QRIS is separate",
+      "result": "PASS",
+      "actual": 11000
+    },
+    {
+      "check": "different flavors share stock requirement",
+      "result": "PASS",
+      "actual": 16
+    },
+    {
+      "check": "shortage detected across flavors",
+      "result": "PASS",
+      "actual": "STOK KURANG"
+    },
+    {
+      "check": "second flavor cannot reuse same stock",
+      "result": "PASS",
+      "actual": "STOK KURANG"
+    },
+    {
+      "check": "twelve-line receipt accepted",
+      "result": "PASS",
+      "actual": "OK"
+    },
+    {
+      "check": "twelve-line receipt total",
+      "result": "PASS",
+      "actual": 96000
+    },
+    {
+      "check": "thirteenth line rejected",
+      "result": "PASS",
+      "actual": "MAKS 12 BARIS"
+    },
+    {
+      "check": "invalid channel rejected",
+      "result": "PASS",
+      "actual": "CEK CHANNEL"
+    },
+    {
       "check": "missing stock opening is labelled",
       "result": "PASS",
       "actual": "BELUM AWAL"
@@ -440,5 +530,12 @@
       "result": "PASS",
       "actual": true
     }
-  ]
+  ],
+  "post_format_validation": {
+    "tested_values_and_formulas_preserved": true,
+    "blank_operational_workbook_recalculated": true,
+    "formula_errors": 0,
+    "all_operational_journals_and_cart_empty": true
+  },
+  "workbook_sha256": "2e0a93ed1bbd809623f8b8275ae954dd89ec11b1399da00590a6b8c28dbbafdb"
 }

@@ -1,0 +1,20 @@
+{
+  "reference_file": "POS_Sate_Ayam_Ponorogo_Pak_Seger.xlsm",
+  "sha256": "ec6bf6be1b3f2aae7973ba8ec51fd007c46c3619fcaa834d6b06b8e8a3d832b3",
+  "source": "Lampiran pengguna pada chat; acuan tampilan dan alur, bukan sumber harga atau stok Chicken Al-Haqi.",
+  "mapping": {
+    "KASIR": "KASIR",
+    "DASHBOARD": "HARIAN",
+    "Transaksi": "NOTA + ITEM",
+    "Stok Realtime": "STOK",
+    "Tutup Kasir": "TUTUP KASIR",
+    "Data Input": "SETUP + BELANJA + KAS USAHA"
+  },
+  "retained_rules": [
+    "Stok dari pcs aktual, bukan estimasi kg.",
+    "Empat potongan berbagi stok lintas rasa.",
+    "HPP belum diketahui tetap belum dikonfirmasi.",
+    "Jurnal operasional keluaran kosong.",
+    "Tidak menyalin stok, pembelian, transaksi atau resep sate."
+  ]
+}

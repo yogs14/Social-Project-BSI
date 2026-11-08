@@ -43,7 +43,7 @@ class Layout:
         s.set_column(0,width-1,17);s.set_tab_color('#17634F' if name in ['MULAI','DASHBOARD','KASIR','PRODUKSI'] else '#756B60')
         s.merge_range(0,0,0,width-1,'CHICKEN AL-HAQI' if name=='MULAI' else name,self.f['title']);s.set_row(0,44)
         s.merge_range(1,0,1,width-1,subtitle,self.f['sub']);s.set_row(1,34)
-        for i,n in enumerate(['MULAI','KASIR','HARIAN','BELANJA','STOK','KAS USAHA']):s.write_url(3,i*2,f"internal:'{n}'!A1",self.f['nav'],n.title())
+        for i,n in enumerate(['MULAI','KASIR','HARIAN','NOTA','STOK','TUTUP KASIR']):s.write_url(3,i*2,f"internal:'{n}'!A1",self.f['nav'],n.title())
         s.freeze_panes(6,2);s.set_zoom(85);s.set_landscape();s.set_paper(9);s.fit_to_pages(1,0)
         s.set_margins(.25,.25,.4,.4);s.set_footer('&LChicken Al-Haqi • Internal&R&P / &N');s.repeat_rows(0,5)
         return s
