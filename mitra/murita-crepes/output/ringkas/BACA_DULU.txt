@@ -1,0 +1,17 @@
+MUFRITA CREPES - VERSI RINGKAS
+
+1. Buka POS_Mufrita_Crepes_Ringkas.xlsx. Terdapat 8 tab kerja + 1 rumus tersembunyi.
+2. Periksa menu/harga, isi harga SKM pada KATALOG!E240 dan stok fisik awal.
+3. Produksi: 7 bahan -> PREMIX -> WET; penjualan hanya memakai WET + pelengkap/topping.
+4. Untuk menyimpan melalui tombol, simpan salinan .xlsm lalu impor
+   Modul_Mufrita_Ringkas.bas. Debug > Compile VBAProject, jalankan PasangTombol.
+5. Ganti modul VBA versi sebelumnya; jangan impor dua modul dengan prosedur ganda.
+6. Tanpa VBA: isi jurnal nota, item dan pemakaian bahan bersama sesuai panduan.
+7. Tab STOK memakai tampilan Stok Realtime POS Pak Seger; master di KATALOG A225.
+8. TUTUP KASIR: tanggal C5, modal I8, fisik I11. Simpan melalui tombol untuk arsip revisi.
+9. Poin awalnya nonaktif; jangan mengarang harga, stok, pelanggan atau kebijakan reward.
+
+Rumus telah dihitung ulang dan diuji di LibreOffice. VBA tidak dijalankan atau
+dikompilasi di Microsoft Excel; uji tombol dan ekspor PDF sebelum operasional.
+Panduan: PANDUAN_MUFRITA_RINGKAS.md. Hasil uji: hasil_validasi.json.
+Nama sumber: Murita Crepes, Pak Syarif; nama tampilan mengikuti permintaan Mufrita.

@@ -19,6 +19,8 @@ Untuk mencoba seluruh alur Gian Fataya, tersedia [Excel berisi data DUMMY](mitra
 
 Navigasi Gian Fataya sudah diperbaiki untuk error Excel **Cannot open the specified file**: tombol menuju sheet dalam workbook yang sama dan tetap dapat digunakan setelah file dipindah atau diganti namanya. Perbaikan mencakup file operasional, contoh grafik, file DUMMY, serta template kosong dalam paket latihan.
 
+Versi **Mufrita/Murita Crepes ringkas** menyatukan 20 sheet menjadi 8 tab kerja dan 1 sheet rumus tersembunyi: [Excel ringkas](mitra/murita-crepes/output/ringkas/POS_Mufrita_Crepes_Ringkas.xlsx) · [Paket dengan VBA dan panduan](mitra/murita-crepes/output/ringkas/Paket_Mufrita_Crepes_Ringkas.zip) · [Panduan](mitra/murita-crepes/docs/PANDUAN_MUFRITA_RINGKAS.md). Jurnal tetap menyimpan tabel nota, item, gerak bahan, keuangan dan poin terpisah dengan pintasan. Gunakan modul VBA versi ringkas yang disertakan, karena alamat blok telah berubah. Model lama dipertahankan. STOK mengikuti layar Stok Realtime POS Pak Seger; TUTUP KASIR menjadi tab tersendiri dengan rekonsiliasi tunai dan arsip revisi. Master bahan berada di KATALOG A225.
+
 ## Menghasilkan dan memvalidasi workbook
 
 Gunakan checkout yang ada; cloud task sudah terisolasi, tidak perlu worktree baru.
@@ -52,6 +54,8 @@ python3 tests/validate_workbook.py
 python3 tests/validate_ux.py
 python3 src/package_delivery.py
 ```
+
+Untuk menghasilkan versi Crepes ringkas: dari `mitra/murita-crepes`, jalankan `python3 src/build_compact.py`, `python3 tests/validate_compact.py`, lalu `python3 src/package_compact.py`. Pengujian menjalankan kembali skenario bisnis model awal pada alamat fisik workbook ringkas dan menghitung ulang rumusnya.
 
 Python 3.11+; generator memakai XlsxWriter, pengujian memakai openpyxl dan `soffice` (LibreOffice headless). Tidak ada server atau database untuk dijalankan. Pengujian memakai file simulasi terpisah di `/tmp`, menghitung ulang rumus yang benar-benar digunakan workbook, lalu menyimpan hasil validasi JSON. File operasional tetap tanpa transaksi contoh.
 

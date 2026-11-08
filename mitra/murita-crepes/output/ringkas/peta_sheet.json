@@ -1,0 +1,86 @@
+{
+  "DASHBOARD": [
+    "RINGKASAN",
+    0
+  ],
+  "MULAI": [
+    "RINGKASAN",
+    80
+  ],
+  "KASIR": [
+    "KASIR",
+    0
+  ],
+  "STRUK": [
+    "KASIR",
+    46
+  ],
+  "PRODUKSI": [
+    "HARIAN",
+    0
+  ],
+  "FORM": [
+    "HARIAN",
+    38
+  ],
+  "TUTUP KASIR": [
+    "TUTUP KASIR",
+    0
+  ],
+  "BAHAN": [
+    "KATALOG",
+    224
+  ],
+  "MENU": [
+    "KATALOG",
+    0
+  ],
+  "KALIBRASI": [
+    "KATALOG",
+    62
+  ],
+  "PREMIKS": [
+    "KATALOG",
+    100
+  ],
+  "ADONAN": [
+    "KATALOG",
+    134
+  ],
+  "REFERENSI": [
+    "KATALOG",
+    166
+  ],
+  "PELANGGAN": [
+    "PELANGGAN",
+    0
+  ],
+  "NOTA": [
+    "JURNAL",
+    0
+  ],
+  "ITEM": [
+    "JURNAL",
+    1014
+  ],
+  "GERAK BAHAN": [
+    "JURNAL",
+    4028
+  ],
+  "KEUANGAN": [
+    "JURNAL",
+    10042
+  ],
+  "POIN": [
+    "JURNAL",
+    11056
+  ],
+  "ARSIP TUTUP": [
+    "JURNAL",
+    12070
+  ],
+  "RESEP": [
+    "_RESEP",
+    0
+  ]
+}

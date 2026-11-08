@@ -71,7 +71,7 @@ def fixture():
     w['STRUK']['B5']='NOTA-UJI-1';w['KASIR']['B13']='MC034';w['KASIR']['D13']=1
     return w
 
-def main():
+def main(report_path=None, fixture_hook=None, validation_hook=None, calculator=None):
     structure=load_workbook(SOURCE)
     check('20 sheets',len(structure.sheetnames),20)
     check('34 source menus',sum(bool(structure['MENU'].cell(r,1).value) for r in range(7,57)),34)
@@ -102,10 +102,11 @@ def main():
                     if w['GERAK BAHAN'].cell(r,9).value=='NOTA-UJI-1':w['GERAK BAHAN'].cell(r,10,'VOID')
             if name=='too_many_items':
                 for r in range(10,21):write(w['ITEM'],r,['EXTRA-'+str(r),'NOTA-UJI-1','MC001',1,5000,HPP1,'LENGKAP','SIMULASI'])
+            if fixture_hook:fixture_hook(name,w)
             dest=td/(name+'.xlsx');w.save(dest);files.append(dest)
         files.append(SOURCE)
         cmd=['soffice','--headless','--convert-to','xlsx','--outdir',str(out),*[str(p) for p in files]]
-        result=subprocess.run(cmd,capture_output=True,text=True,timeout=300)
+        result=(calculator or subprocess.run)(cmd,capture_output=True,text=True,timeout=900)
         assert result.returncode==0,result.stdout+'\n'+result.stderr
         check('all files recalculated',len(list(out.glob('*.xlsx'))),len(files))
         loaded={p.stem:load_workbook(out/p.name,data_only=True) for p in files}
@@ -157,7 +158,7 @@ def main():
         w=loaded['invalid'];check('discount above gross caught',w['NOTA']['O7'].value,'CEK DISKON');check('negative movement quantity caught',w['GERAK BAHAN']['N100'].value,'CEK QTY');check('negative stock caught',w['GERAK BAHAN']['O101'].value<0,True);check('duplicate stock IDs caught',w['GERAK BAHAN']['N102'].value,'ID GANDA');check('invalid price caught',w['ITEM']['M9'].value,'CEK HARGA');check('negative points caught',w['POIN']['J8'].value<0,True)
         w=loaded['missing_usage'];check('missing stock usage caught before receipt accepted',w['NOTA']['O7'].value,'ISI PEMAKAIAN');check('incomplete receipt excluded from net sales',w['NOTA']['P7'].value,0)
         w=loaded['too_many_items'];check('overlong manual note detected',w['NOTA']['O7'].value,'MAKS 12 ITEM');check('overlong receipt not silently truncated',w['STRUK']['A10'].value,'NOTA VOID / TIDAK VALID')
-        w=loaded['POS_Murita_Crepes']
+        w=loaded[SOURCE.stem]
         check('operational workbook has no fake notes',sum(bool(w['NOTA'].cell(r,1).value) for r in range(7,1007)),0)
         check('operational workbook has no customer data',sum(bool(w['PELANGGAN'].cell(r,1).value) for r in range(7,307)),0)
         check('SKM purchase price deliberately blank',w['BAHAN'].cell(MR['SKM'],5).value,None)
@@ -165,9 +166,10 @@ def main():
         check('no invented points threshold',w['REFERENSI']['B17'].value,None)
         check('default source HPP incomplete honestly',w['MENU']['I7'].value,'BELUM LENGKAP')
         check('default premix validates',w['PREMIKS']['B21'].value,'OK')
+        if validation_hook:validation_hook(loaded)
         SOURCE.write_bytes((out/SOURCE.name).read_bytes())
     report={'passed':len(CHECKS),'failed':0,'engine':'LibreOffice headless 26.8 alpha; real workbook formula recalculation','vba_runtime_tested':False,'excel_desktop_tested':False,'checks':CHECKS}
-    (ROOT/'output/hasil_validasi.json').write_text(json.dumps(report,ensure_ascii=False,indent=2,default=str))
+    (report_path or ROOT/'output/hasil_validasi.json').write_text(json.dumps(report,ensure_ascii=False,indent=2,default=str))
     print(json.dumps({'passed':len(CHECKS),'failed':0}))
 
 if __name__=='__main__':main()
