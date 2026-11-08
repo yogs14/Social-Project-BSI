@@ -11,8 +11,10 @@ source=(ROOT/'vba/Modul_ChickenAlHaqi.bas').read_text();assert source.isascii()
 shutil.copyfile(ROOT/'docs/PANDUAN_CHICKEN_AL_HAQI.md',OUT/'PANDUAN_CHICKEN_AL_HAQI.md')
 (OUT/'BACA_DULU.txt').write_text('''CHICKEN AL-HAQI - MBA GITA
 
-Buka POS_Chicken_Al_Haqi.xlsx. Mulai dari MULAI lalu KASIR/HARIAN.
-Empat potongan ayam + pilihan rasa, nasi terpisah, tujuh tab utama.
+Buka POS_Chicken_Al_Haqi.xlsx. File langsung membuka KASIR dengan tampilan POS sate. Buka HARIAN untuk dashboard dan TUTUP KASIR untuk rekap.
+Warna, ukuran baris/kolom, navigasi dan panel kasir memakai UX asli POS sate.
+Tersedia 17 pilihan menu, 12 baris keranjang dan enam tombol yang sudah terlihat.
+Buku NOTA terlihat; TUTUP KASIR untuk tanggal C5, modal I8 dan uang fisik I11.
 Belanja: isi jumlah pcs AKTUAL. Kg dan perkiraan 9/10 pcs bukan stok tambahan.
 Isi saldo awal/fisik nyata; stok yang belum diisi tetap BELUM AWAL, bukan nol.
 HPP Rp7.000/pcs dari sumber adalah acuan belum dikonfirmasi, bukan laba pasti.

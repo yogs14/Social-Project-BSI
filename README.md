@@ -49,6 +49,7 @@ cd /workspace/Social-Project-BSI/mitra/chicken-al-haqi
 python3 -m pip install -r requirements.txt
 python3 src/build_workbook.py
 python3 tests/validate_workbook.py
+python3 tests/validate_ux.py
 python3 src/package_delivery.py
 ```
 
@@ -66,6 +67,10 @@ Pertukaran CSV Pizza Fuzta memeriksa schema PF1, lokasi, kode bahan, satuan, tan
 
 Seluruh BOM Pizza Fuzta awalnya memerlukan persetujuan. Penjualan dengan resep belum lengkap tetap dicatat, tetapi belum memotong stok otomatis dan ditandai **BELUM LENGKAP**; lengkapi pemakaian satu kali sebelum memakai saldo untuk belanja. Harga/stok bahan yang belum diberikan tidak dibuat-buat. Alias resep, kuantitas desimal koma dan baris resep tanpa menu diaudit pada `mitra/pizza-fuzta/data/audit_sumber.json`.
 
-Chicken Al-Haqi mengikuti permintaan penyederhanaan pada MoM 23 Oktober 2026: tujuh tab utama, empat potongan ayam dengan pilihan rasa dan nasi terpisah. Perkiraan 9/10 pcs per kg hanya pembanding; stok bertambah dari **pcs aktual**, bukan kg dan perkiraan sekaligus. Saldo awal yang belum diketahui tetap kosong/ditandai BELUM AWAL. Kas ayam dipisahkan dari prive dan arus ke/dari usaha lain seperti obat, tanpa menambahkan penjualan obat ke kasir ayam.
+Chicken Al-Haqi mengikuti permintaan penyederhanaan pada MoM 23 Oktober 2026: sembilan tab utama. Kasir mengikuti referensi POS sate dengan dropdown 17 kombinasi potongan/rasa/nasi, 12 baris keranjang, panel omzet/stok dan tab TUTUP KASIR; buku NOTA terlihat untuk audit. Perkiraan 9/10 pcs per kg hanya pembanding; stok bertambah dari **pcs aktual**, bukan kg dan perkiraan sekaligus. Saldo awal yang belum diketahui tetap kosong/ditandai BELUM AWAL. Kas ayam dipisahkan dari prive dan arus ke/dari usaha lain seperti obat, tanpa menambahkan penjualan obat ke kasir ayam.
 
 HPP umum Chicken Al-Haqi Rp7.000/pcs adalah acuan sumber yang belum dikonfirmasi, bukan biaya lengkap setiap potongan. HPP saus/nasi tidak dikarang, dan biaya sumber kg tidak ditambahkan lagi ke biaya per pcs. Harga/HPP transaksi disimpan sebagai snapshot. Jam weekend 06.30 diterima; belanja di atas 3 kg tetap diperbolehkan karena batas tersebut untuk ukuran batch marinasi, bukan jumlah pembelian.
+
+Adaptasi Chicken Al-Haqi terhadap referensi POS sate mempertahankan jurnal pcs aktual dan snapshot harga/HPP. Tanggal, modal awal dan uang fisik kini diisi pada TUTUP KASIR C5/I8/I11; dashboard HARIAN mengikutinya. Petunjuk migrasi file yang sudah berisi transaksi tersedia pada panduan mitra.
+
+UX Chicken Al-Haqi memakai gaya dan ukuran sel asli POS Sate Ayam Ponorogo: merah bata/oranye, input putih, panel hijau, kontrol transaksi terlihat, dan KASIR terbuka langsung. Tampilan dihitung ulang pada skenario kasir/tutup kasir; XML tombol Excel dipertahankan ketika cache rumus diperbarui.

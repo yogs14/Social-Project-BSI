@@ -1,19 +1,22 @@
 {
-  "passed": 87,
+  "passed": 215,
   "failed": 0,
-  "engine": "LibreOffice headless; actual workbook formula recalculation",
+  "engine": "LibreOffice headless; UX input scenarios recalculated; unchanged journal model compared with validated baseline",
+  "retained_regression_checks": 105,
+  "ux_checks": 110,
   "vba_runtime_tested": false,
   "excel_desktop_tested": false,
+  "workbook_sha256": "c85bec997747e26fc19c48bbcfb81b6bc2eca29d10bdc9671d52c66e90ee083e",
   "checks": [
     {
-      "check": "seven visible user tabs",
+      "check": "nine visible user tabs",
       "result": "PASS",
-      "actual": 7
+      "actual": 9
     },
     {
-      "check": "two backend audit tabs",
+      "check": "one hidden item journal",
       "result": "PASS",
-      "actual": 2
+      "actual": 1
     },
     {
       "check": "daily chart present",
@@ -38,7 +41,7 @@
     {
       "check": "all selected workbook files recalculated",
       "result": "PASS",
-      "actual": 11
+      "actual": 15
     },
     {
       "check": "normal no formula errors",
@@ -87,6 +90,26 @@
     },
     {
       "check": "duplicate_purchase no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "flavor_shortage no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "twelve_items no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "thirteen_items no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "invalid_channel no formula errors",
       "result": "PASS",
       "actual": []
     },
@@ -271,6 +294,76 @@
       "actual": 0
     },
     {
+      "check": "flattened menu has seventeen options",
+      "result": "PASS",
+      "actual": 17
+    },
+    {
+      "check": "cashier maps menu to the existing dada stock",
+      "result": "PASS",
+      "actual": "DADA"
+    },
+    {
+      "check": "cashier maps selected sauce",
+      "result": "PASS",
+      "actual": "Saus Keju"
+    },
+    {
+      "check": "live cashier revenue uses cashier date",
+      "result": "PASS",
+      "actual": 56000
+    },
+    {
+      "check": "closing cash matches existing business reconciliation",
+      "result": "PASS",
+      "actual": 75000
+    },
+    {
+      "check": "closing physical difference matches dashboard",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "closing QRIS is separate",
+      "result": "PASS",
+      "actual": 11000
+    },
+    {
+      "check": "different flavors share stock requirement",
+      "result": "PASS",
+      "actual": 16
+    },
+    {
+      "check": "shortage detected across flavors",
+      "result": "PASS",
+      "actual": "STOK KURANG"
+    },
+    {
+      "check": "second flavor cannot reuse same stock",
+      "result": "PASS",
+      "actual": "STOK KURANG"
+    },
+    {
+      "check": "twelve-line receipt accepted",
+      "result": "PASS",
+      "actual": "OK"
+    },
+    {
+      "check": "twelve-line receipt total",
+      "result": "PASS",
+      "actual": 96000
+    },
+    {
+      "check": "thirteenth line rejected",
+      "result": "PASS",
+      "actual": "MAKS 12 BARIS"
+    },
+    {
+      "check": "invalid channel rejected",
+      "result": "PASS",
+      "actual": "CEK CHANNEL"
+    },
+    {
       "check": "missing stock opening is labelled",
       "result": "PASS",
       "actual": "BELUM AWAL"
@@ -439,6 +532,620 @@
       "check": "no invented opening cash",
       "result": "PASS",
       "actual": true
+    },
+    {
+      "check": "SETUP tested model values and formulas unchanged",
+      "result": "PASS",
+      "actual": true
+    },
+    {
+      "check": "BELANJA tested model values and formulas unchanged",
+      "result": "PASS",
+      "actual": true
+    },
+    {
+      "check": "KAS USAHA tested model values and formulas unchanged",
+      "result": "PASS",
+      "actual": true
+    },
+    {
+      "check": "NOTA tested model values and formulas unchanged",
+      "result": "PASS",
+      "actual": true
+    },
+    {
+      "check": "ITEM tested model values and formulas unchanged",
+      "result": "PASS",
+      "actual": true
+    },
+    {
+      "check": "STOK tested model values and formulas unchanged",
+      "result": "PASS",
+      "actual": true
+    },
+    {
+      "check": "HARIAN tested model values and formulas unchanged",
+      "result": "PASS",
+      "actual": true
+    },
+    {
+      "check": "KASIR reference merges",
+      "result": "PASS",
+      "actual": [
+        "B14:F14",
+        "B1:K1",
+        "B2:K2",
+        "B35:F35",
+        "B37:F37",
+        "B38:F39",
+        "B50:K50",
+        "B5:F5",
+        "C10:D10",
+        "C11:D11",
+        "C12:D12",
+        "C29:D29",
+        "C30:D30",
+        "C31:D31",
+        "C32:D32",
+        "C33:D33",
+        "C6:D6",
+        "C7:D7",
+        "C8:D8",
+        "C9:D9",
+        "H13:K13",
+        "H24:K24",
+        "H33:K33",
+        "H34:K34",
+        "H35:K35",
+        "H36:K36",
+        "H37:K37",
+        "H38:K39",
+        "H5:K5",
+        "I10:K10",
+        "I6:K6",
+        "I7:K7",
+        "I8:K8",
+        "I9:K9",
+        "J25:K25",
+        "J26:K26",
+        "J27:K27",
+        "J28:K28",
+        "J29:K29",
+        "J30:K30"
+      ]
+    },
+    {
+      "check": "KASIR row 1 reference height",
+      "result": "PASS",
+      "actual": 34.05
+    },
+    {
+      "check": "KASIR row 2 reference height",
+      "result": "PASS",
+      "actual": 28.05
+    },
+    {
+      "check": "KASIR row 3 reference height",
+      "result": "PASS",
+      "actual": 19.95
+    },
+    {
+      "check": "KASIR row 5 reference height",
+      "result": "PASS",
+      "actual": 22.05
+    },
+    {
+      "check": "KASIR row 6 reference height",
+      "result": "PASS",
+      "actual": 19.95
+    },
+    {
+      "check": "KASIR row 7 reference height",
+      "result": "PASS",
+      "actual": 19.95
+    },
+    {
+      "check": "KASIR row 8 reference height",
+      "result": "PASS",
+      "actual": 19.95
+    },
+    {
+      "check": "KASIR row 9 reference height",
+      "result": "PASS",
+      "actual": 19.95
+    },
+    {
+      "check": "KASIR row 10 reference height",
+      "result": "PASS",
+      "actual": 19.95
+    },
+    {
+      "check": "KASIR row 11 reference height",
+      "result": "PASS",
+      "actual": 19.95
+    },
+    {
+      "check": "KASIR row 12 reference height",
+      "result": "PASS",
+      "actual": 19.95
+    },
+    {
+      "check": "KASIR row 13 reference height",
+      "result": "PASS",
+      "actual": 22.05
+    },
+    {
+      "check": "KASIR row 14 reference height",
+      "result": "PASS",
+      "actual": 22.05
+    },
+    {
+      "check": "KASIR row 15 reference height",
+      "result": "PASS",
+      "actual": 30.0
+    },
+    {
+      "check": "KASIR row 16 reference height",
+      "result": "PASS",
+      "actual": 30.0
+    },
+    {
+      "check": "KASIR row 17 reference height",
+      "result": "PASS",
+      "actual": 30.0
+    },
+    {
+      "check": "KASIR row 18 reference height",
+      "result": "PASS",
+      "actual": 30.0
+    },
+    {
+      "check": "KASIR row 19 reference height",
+      "result": "PASS",
+      "actual": 30.0
+    },
+    {
+      "check": "KASIR row 20 reference height",
+      "result": "PASS",
+      "actual": 30.0
+    },
+    {
+      "check": "KASIR row 21 reference height",
+      "result": "PASS",
+      "actual": 30.0
+    },
+    {
+      "check": "KASIR row 22 reference height",
+      "result": "PASS",
+      "actual": 30.0
+    },
+    {
+      "check": "KASIR row 23 reference height",
+      "result": "PASS",
+      "actual": 30.0
+    },
+    {
+      "check": "KASIR row 24 reference height",
+      "result": "PASS",
+      "actual": 30.0
+    },
+    {
+      "check": "KASIR row 25 reference height",
+      "result": "PASS",
+      "actual": 30.0
+    },
+    {
+      "check": "KASIR row 26 reference height",
+      "result": "PASS",
+      "actual": 30.0
+    },
+    {
+      "check": "KASIR row 27 reference height",
+      "result": "PASS",
+      "actual": 30.0
+    },
+    {
+      "check": "KASIR row 28 reference height",
+      "result": "PASS",
+      "actual": 25.95
+    },
+    {
+      "check": "KASIR row 29 reference height",
+      "result": "PASS",
+      "actual": 25.95
+    },
+    {
+      "check": "KASIR row 30 reference height",
+      "result": "PASS",
+      "actual": 25.95
+    },
+    {
+      "check": "KASIR row 31 reference height",
+      "result": "PASS",
+      "actual": 24.0
+    },
+    {
+      "check": "KASIR row 32 reference height",
+      "result": "PASS",
+      "actual": 19.95
+    },
+    {
+      "check": "KASIR row 33 reference height",
+      "result": "PASS",
+      "actual": 19.95
+    },
+    {
+      "check": "KASIR row 34 reference height",
+      "result": "PASS",
+      "actual": 24.0
+    },
+    {
+      "check": "KASIR row 35 reference height",
+      "result": "PASS",
+      "actual": 24.0
+    },
+    {
+      "check": "KASIR row 36 reference height",
+      "result": "PASS",
+      "actual": 24.0
+    },
+    {
+      "check": "KASIR row 37 reference height",
+      "result": "PASS",
+      "actual": 24.0
+    },
+    {
+      "check": "KASIR row 38 reference height",
+      "result": "PASS",
+      "actual": 24.0
+    },
+    {
+      "check": "KASIR row 39 reference height",
+      "result": "PASS",
+      "actual": 24.0
+    },
+    {
+      "check": "KASIR row 40 reference height",
+      "result": "PASS",
+      "actual": 30.0
+    },
+    {
+      "check": "KASIR row 43 reference height",
+      "result": "PASS",
+      "actual": 15.0
+    },
+    {
+      "check": "KASIR row 44 reference height",
+      "result": "PASS",
+      "actual": 15.0
+    },
+    {
+      "check": "KASIR row 45 reference height",
+      "result": "PASS",
+      "actual": 15.0
+    },
+    {
+      "check": "KASIR row 46 reference height",
+      "result": "PASS",
+      "actual": 15.0
+    },
+    {
+      "check": "KASIR row 47 reference height",
+      "result": "PASS",
+      "actual": 15.0
+    },
+    {
+      "check": "KASIR row 48 reference height",
+      "result": "PASS",
+      "actual": 15.0
+    },
+    {
+      "check": "TUTUP KASIR reference merges",
+      "result": "PASS",
+      "actual": [
+        "B19:C19",
+        "B1:J1",
+        "B20:F23",
+        "B2:J2",
+        "B4:C4",
+        "B7:C7",
+        "E7:F7",
+        "H14:J15",
+        "H17:J17",
+        "H7:J7",
+        "I10:J10",
+        "I11:J11",
+        "I12:J12",
+        "I8:J8",
+        "I9:J9"
+      ]
+    },
+    {
+      "check": "TUTUP KASIR row 1 reference height",
+      "result": "PASS",
+      "actual": 31.95
+    },
+    {
+      "check": "TUTUP KASIR row 3 reference height",
+      "result": "PASS",
+      "actual": 28.05
+    },
+    {
+      "check": "TUTUP KASIR row 4 reference height",
+      "result": "PASS",
+      "actual": 22.05
+    },
+    {
+      "check": "TUTUP KASIR row 5 reference height",
+      "result": "PASS",
+      "actual": 24.0
+    },
+    {
+      "check": "TUTUP KASIR row 7 reference height",
+      "result": "PASS",
+      "actual": 22.05
+    },
+    {
+      "check": "TUTUP KASIR row 8 reference height",
+      "result": "PASS",
+      "actual": 22.05
+    },
+    {
+      "check": "TUTUP KASIR row 9 reference height",
+      "result": "PASS",
+      "actual": 22.05
+    },
+    {
+      "check": "TUTUP KASIR row 10 reference height",
+      "result": "PASS",
+      "actual": 22.05
+    },
+    {
+      "check": "TUTUP KASIR row 11 reference height",
+      "result": "PASS",
+      "actual": 22.05
+    },
+    {
+      "check": "TUTUP KASIR row 12 reference height",
+      "result": "PASS",
+      "actual": 22.05
+    },
+    {
+      "check": "TUTUP KASIR row 13 reference height",
+      "result": "PASS",
+      "actual": 21.0
+    },
+    {
+      "check": "TUTUP KASIR row 14 reference height",
+      "result": "PASS",
+      "actual": 21.0
+    },
+    {
+      "check": "TUTUP KASIR row 15 reference height",
+      "result": "PASS",
+      "actual": 21.0
+    },
+    {
+      "check": "TUTUP KASIR row 16 reference height",
+      "result": "PASS",
+      "actual": 21.0
+    },
+    {
+      "check": "TUTUP KASIR row 17 reference height",
+      "result": "PASS",
+      "actual": 21.0
+    },
+    {
+      "check": "Cashier B1 reference color",
+      "result": "PASS",
+      "actual": "FF902A20"
+    },
+    {
+      "check": "Cashier B1 reference font size",
+      "result": "PASS",
+      "actual": 19.0
+    },
+    {
+      "check": "Cashier B5 reference color",
+      "result": "PASS",
+      "actual": "FF902A20"
+    },
+    {
+      "check": "Cashier B5 reference font size",
+      "result": "PASS",
+      "actual": 11.0
+    },
+    {
+      "check": "Cashier H5 reference color",
+      "result": "PASS",
+      "actual": "FF2E7D32"
+    },
+    {
+      "check": "Cashier H5 reference font size",
+      "result": "PASS",
+      "actual": 11.0
+    },
+    {
+      "check": "Cashier C31 reference color",
+      "result": "PASS",
+      "actual": "FF902A20"
+    },
+    {
+      "check": "Cashier C31 reference font size",
+      "result": "PASS",
+      "actual": 13.0
+    },
+    {
+      "check": "Cashier opens first",
+      "result": "PASS",
+      "actual": "KASIR"
+    },
+    {
+      "check": "Cashier reference zoom",
+      "result": "PASS",
+      "actual": 75
+    },
+    {
+      "check": "Six visible native Excel buttons",
+      "result": "PASS",
+      "actual": 6
+    },
+    {
+      "check": "normal no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "shortage no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "missing no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "POS_Chicken_Al_Haqi no formula errors",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "check": "Menu price",
+      "result": "PASS",
+      "actual": 12000
+    },
+    {
+      "check": "Cart subtotal",
+      "result": "PASS",
+      "actual": 30000
+    },
+    {
+      "check": "Cash change",
+      "result": "PASS",
+      "actual": 20000
+    },
+    {
+      "check": "Daily sales",
+      "result": "PASS",
+      "actual": 56000
+    },
+    {
+      "check": "Customer count",
+      "result": "PASS",
+      "actual": 3
+    },
+    {
+      "check": "Bestseller name",
+      "result": "PASS",
+      "actual": "Sayap"
+    },
+    {
+      "check": "Bestseller quantity",
+      "result": "PASS",
+      "actual": 3
+    },
+    {
+      "check": "Bestseller revenue",
+      "result": "PASS",
+      "actual": 27000
+    },
+    {
+      "check": "Second bestseller",
+      "result": "PASS",
+      "actual": "Dada"
+    },
+    {
+      "check": "Rice ranked third",
+      "result": "PASS",
+      "actual": "Nasi"
+    },
+    {
+      "check": "Opening entered in reference field",
+      "result": "PASS",
+      "actual": 20000
+    },
+    {
+      "check": "Cash reconciliation",
+      "result": "PASS",
+      "actual": 75000
+    },
+    {
+      "check": "Cash difference",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "QRIS separate",
+      "result": "PASS",
+      "actual": 11000
+    },
+    {
+      "check": "Customer closing total",
+      "result": "PASS",
+      "actual": 3
+    },
+    {
+      "check": "Combined flavor shortage",
+      "result": "PASS",
+      "actual": "STOK KURANG"
+    },
+    {
+      "check": "Second flavor cannot reuse stock",
+      "result": "PASS",
+      "actual": "STOK KURANG"
+    },
+    {
+      "check": "Shortage guidance visible",
+      "result": "PASS",
+      "actual": true
+    },
+    {
+      "check": "Missing opening stays unknown",
+      "result": "PASS",
+      "actual": "BELUM AWAL"
+    },
+    {
+      "check": "Missing opening guidance visible",
+      "result": "PASS",
+      "actual": true
+    },
+    {
+      "check": "Missing cash does not become zero",
+      "result": "PASS",
+      "actual": true
+    },
+    {
+      "check": "Missing cash difference unavailable",
+      "result": "PASS",
+      "actual": true
+    },
+    {
+      "check": "No invented receipt",
+      "result": "PASS",
+      "actual": 0
+    },
+    {
+      "check": "Empty cart guidance",
+      "result": "PASS",
+      "actual": "Pilih menu dan isi jumlah untuk mulai melayani."
+    },
+    {
+      "check": "Empty bestseller stays empty",
+      "result": "PASS",
+      "actual": true
+    },
+    {
+      "check": "Native button XML preserved",
+      "result": "PASS",
+      "actual": true
     }
-  ]
+  ],
+  "final_visual_checks": {
+    "calculation_formulas_preserved": true,
+    "only_navigation_text_changed": true,
+    "six_native_buttons_preserved": true,
+    "blank_workbook_formula_errors": 0,
+    "reference_button_geometry_and_font_verified": true
+  }
 }

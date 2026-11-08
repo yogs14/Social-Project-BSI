@@ -2,8 +2,11 @@
 
 Workbook utama: `POS_Chicken_Al_Haqi.xlsx`. Tombol tambahan: `Modul_ChickenAlHaqi.bas`.
 
-MoM **23 Oktober 2026** meminta dashboard lebih sederhana karena menu sedikit, dengan pencatatan yang memisahkan uang ayam dari uang pribadi dan usaha obat. Karena itu, tampilan hanya mempunyai tujuh tab utama: **MULAI, KASIR, HARIAN, BELANJA, STOK, KAS USAHA, SETUP**. Jurnal NOTA dan ITEM disembunyikan untuk audit, bukan dihapus. Tidak ada modul gudang, CRM, loyalty atau peramalan.
+Tampilan kasir memakai ukuran baris/kolom, gabungan sel, warna, dan tipografi langsung dari **POS Sate Ayam Ponorogo Pak Seger** yang diberikan pengguna: info nota di atas, 12 baris dropdown menu, diskon dan pembayaran di kiri; omzet berjalan, stok dan penjualan potongan di kanan. Menu dan harga tetap mengikuti data Chicken Al-Haqi dan MoM **23 Oktober 2026**.
 
+Workbook langsung membuka **KASIR** pada zoom 75%. Tombol transaksi dan navigasi tampil sejak file dibuka. Sel putih adalah area isian; harga/subtotal abu-abu dihitung otomatis, dan total pembayaran ditonjolkan merah.
+
+Tab utama: **MULAI, KASIR, HARIAN, NOTA, STOK, TUTUP KASIR, BELANJA, KAS USAHA, SETUP**. HARIAN adalah dashboard penjualan; NOTA adalah buku transaksi yang kini langsung terlihat. Rincian ITEM tetap disembunyikan untuk audit/manual. Tidak ada gudang, CRM, loyalty atau peramalan tambahan.
 File utama tidak memuat transaksi, stok awal atau saldo kas fiktif. Data sintetis pada pengujian tidak masuk ke file operasional.
 
 ## Menu dan sumber harga
@@ -28,7 +31,7 @@ Harga dapat diperiksa pada SETUP. Nominal di nota lama disimpan sebagai snapshot
 2. Isi STOK: tanggal saldo awal dan jumlah potongan fisik untuk empat potongan ayam. Gunakan awal hari pada tanggal itu. Kedua isian dibiarkan kosong bila belum diketahui; sistem menampilkan **BELUM AWAL**, bukan nol yang dianggap pasti.
 3. Nasi awalnya **TIDAK DILACAK**, karena konversi beras menjadi porsi belum tersedia. Bila ingin melacak nasi, isi jumlah porsi fisik dan aktifkan Lacak Stok pada SETUP; jangan memasukkan kg beras sebagai porsi nasi.
 4. Masukkan nama kasir sekali pada KASIR. Default metode pembayaran adalah Tunai, dengan pilihan QRIS, Transfer dan Lainnya.
-5. Untuk tutup hari, isi tanggal, kas awal usaha ayam dan uang fisik usaha ayam pada HARIAN. Saat mengganti tanggal laporan, **isi ulang kas awal dan fisik sesuai tanggal tersebut**; dua nilai tersebut adalah kontrol laporan, bukan jurnal saldo tersimpan per hari.
+5. Untuk tutup hari, buka TUTUP KASIR: isi tanggal pada C5, modal awal pada I8 dan uang fisik pada I11. HARIAN mengikuti tiga kontrol tersebut. Saat mengganti tanggal laporan, **isi ulang kas awal dan fisik sesuai tanggal tersebut**; dua nilai tersebut adalah kontrol laporan, bukan jurnal saldo tersimpan per hari.
 
 Waktu sumber: hari biasa 09.00–21.00, weekend mulai 06.30/07.00. Jam pagi tersebut diterima. Tidak ada pembatas pukul 07.00 yang menghalangi penjualan weekend. Pengingat MoM: usahakan belanja/pesan ke pemasok sebelum lewat 07.00 agar pilihan potongan tidak habis. Modul tidak mengirim pesanan atau pesan otomatis.
 
@@ -37,29 +40,32 @@ Waktu sumber: hari biasa 09.00–21.00, weekend mulai 06.30/07.00. Jam pagi ters
 Workbook `.xlsx` memakai rumus dan jurnal manual; VBA disertakan terpisah dan **belum tertanam**.
 
 1. Simpan salinan sebagai **Excel Macro-Enabled Workbook (.xlsm)**.
-2. `Alt+F11` → pilih workbook yang benar → File → Import File → pilih `Modul_ChickenAlHaqi.bas`.
+2. `Alt+F11` → pilih workbook yang benar → File → Import File → pilih `Modul_ChickenAlHaqi.bas`. Bila modul versi lama sudah ada, arsipkan lalu ganti modul lama; jangan menyimpan dua versi dengan nama prosedur yang sama.
 3. Debug → Compile VBAProject untuk memeriksa kompilasi pada versi Excel Anda.
-4. Kembali ke Excel, `Alt+F8` → PasangTombol → Run, lalu simpan.
+4. Tombol sudah terlihat pada KASIR. Setelah modul diimpor, gunakan `Alt+F8` → PasangTombol → Run untuk memperbarui kaitan tombol, lalu simpan. Pemasangan ulang mengganti tombol bawaan agar tidak bertumpuk.
 5. Aktifkan macro hanya untuk file yang dipercaya. Tidak ada library tambahan, koneksi jaringan atau kredensial dalam modul.
 
-Lima tombol berada pada KASIR: SIMPAN NOTA, NOTA BARU, BATAL NOTA, SIMPAN BELANJA dan SIMPAN KAS. Pemasangan dapat diulang tanpa menggandakan tombol. Gunakan **Ctrl+S** untuk menyimpan file setelah pencatatan. Tombol menyimpan ke jurnal workbook, bukan mengirim data ke pihak lain.
+Enam tombol berada pada KASIR: SIMPAN TRANSAKSI, NOTA BARU, VOID NOTA, TUTUP KASIR, SIMPAN BELANJA dan SIMPAN KAS. Empat tombol utama ada pada baris 43–45; belanja dan kas usaha ada pada panel bawah, baris 51–71. Pemasangan dapat diulang tanpa menggandakan tombol. Gunakan **Ctrl+S** untuk menyimpan file setelah pencatatan. Tombol menyimpan ke jurnal workbook, bukan mengirim data ke pihak lain.
 
 Rumus diuji dengan LibreOffice. **Kompilasi dan eksekusi VBA belum diuji di Excel desktop** karena lingkungan pengerjaan Linux tidak memiliki Excel desktop; lakukan pemeriksaan tersebut sebelum operasional.
 
 ## Penjualan
 
-1. Isi tanggal, jam, kasir dan metode bayar pada KASIR.
-2. Pilih potongan dan rasa pada salah satu dari enam baris ayam, kemudian isi jumlah pcs. Harga dihitung dari potongan + rasa. Harga pada keranjang dapat disesuaikan jika ada harga transaksi yang benar-benar disepakati; nilai itu disimpan tetap.
-3. Isi nasi pada kotak **Nasi (porsi)** bila ada. Nasi tidak diberi pilihan saus, sehingga tidak menjadi menu nasi saus fiktif.
-4. Isi diskon rupiah (`0` bila tidak ada) sekali per nota.
-5. Untuk Tunai, isi uang diterima; kembalian dihitung dari netto. Untuk non-tunai, penerimaan tercatat sebesar netto, tidak sebagai isi laci.
-6. Klik SIMPAN NOTA. Sistem menyimpan header NOTA dan ITEM secara bersama, serta mengosongkan keranjang setelah validasi. Batas per nota enam baris ayam + satu baris nasi.
+1. Isi tanggal C7, jam C8, nama kasir C9, metode bayar C10, channel C11 dan jumlah pelanggan C12 pada KASIR. Jam memakai waktu Excel, misalnya `06:30` untuk weekend.
+2. Pilih **menu lengkap pada B16:B27**, lalu isi jumlah pada C16:C27. Harga D dan subtotal E otomatis. Dropdown berisi 17 pilihan: empat potongan × Original/Sambal Geprek/Saus Keju/Hot Spicy, ditambah Nasi. Tidak ada nasi bersaus.
+3. Nasi dipilih pada baris keranjang biasa. Batas per nota **12 baris total**, termasuk nasi. Rasa yang berbeda tetap memakai stok potongan yang sama; kebutuhan semua baris digabung saat memeriksa stok.
+4. Isi diskon rupiah C30 (`0` bila tidak ada) sekali per nota. Total bayar tampil pada C31.
+5. Untuk Tunai, isi uang diterima C32 dan lihat kembalian C33. Untuk QRIS/Transfer/Lainnya, modul mencatat penerimaan sebesar netto; pembayaran tetap dilakukan di luar Excel.
+6. Klik SIMPAN TRANSAKSI. Sistem menyimpan header NOTA dan ITEM sebagai satu pencatatan, menyimpan channel/jumlah pelanggan, dan mengosongkan menu/jumlah/diskon/uang diterima setelah validasi. Tekan Ctrl+S.
 
-Jika stok awal belum diisi, pencatatan uang tetap berjalan tetapi kecukupan stok belum dapat diverifikasi. Periksa peringatan BELUM AWAL. Setelah saldo awal nyata tersedia, stok dihitung dari pembukaan + belanja aktual − penjualan + koreksi; stok yang diketahui tidak boleh negatif. Tidak ada pemisahan stok ayam mentah, dimarinasi atau matang. Semua dinyatakan sebagai potongan yang perlu direkonsiliasi secara fisik.
+Panel kanan menampilkan penjualan hari itu, stok potongan dan lima menu terlaris. Daftar terlaris kosong bila belum ada penjualan. Panel ini mengikuti **tanggal transaksi C7**, sehingga laporan HARIAN yang sedang melihat tanggal lain tidak mengubah angka kasir. Status stok menggabungkan seluruh rasa potongan yang sama. Menu di SETUP baris 69–88 hanya daftar pilihan kasir; harga dihitung dari master harga dan tambahan rasa, bukan saldo stok kedua.
 
+Jika stok awal belum diisi, pencatatan uang tetap berjalan tetapi kecukupan stok belum dapat diverifikasi. Periksa peringatan BELUM AWAL. Setelah saldo awal nyata tersedia, stok dihitung dari pembukaan + belanja aktual − penjualan + koreksi; stok yang diketahui tidak boleh negatif. Tidak ada pemisahan stok ayam mentah, dimarinasi atau matang.
+
+TUTUP KASIR menghitung rekap dan pencocokan tunai seperti referensi. Form ini tidak mengunci periode atau menyimpan saldo pembukaan/fisik per hari. Isi ulang modal dan fisik saat tanggal diganti, kemudian simpan PDF/arsip untuk menyimpan hasil penutupan.
 ## Belanja kiloan dan pcs aktual
 
-Gunakan panel BELANJA AYAM di kanan KASIR atau jurnal BELANJA:
+Gunakan panel BELANJA AYAM / NASI di bawah KASIR (baris 51–62) atau jurnal BELANJA:
 
 - Tanggal, potongan/menu, kg jika diketahui, jumlah pcs/porsi **aktual**, nominal total dan metode.
 - Dada/paha atas memakai perkiraan 9 pcs/kg dari MoM; sayap/paha bawah 10 pcs/kg.
@@ -98,7 +104,7 @@ Panel KAS USAHA mencatat arus yang benar-benar masuk/keluar dari uang usaha ayam
 
 Nominal selalu positif; arah arus ditentukan jenis. Metode menentukan apakah uang masuk/keluar laci tunai atau non-tunai. Tidak ada produk maupun penjualan obat pada kasir ayam.
 
-HARIAN menghitung:
+TUTUP KASIR dan dashboard HARIAN menghitung:
 
 **Kas awal ayam + penjualan Tunai netto − BELANJA Tunai + KAS USAHA Tunai bertanda.**
 
@@ -110,14 +116,22 @@ STOK menampilkan saldo sampai tanggal HARIAN. Pada tabel bawahnya (mulai baris 3
 
 Saldo dihitung pada tingkat **tanggal**: belanja/koreksi satu tanggal dianggap tersedia pada hari itu, bukan urutan jam. Saldo awal adalah pembukaan sebelum gerakan pada tanggal pembukaan. Transaksi sebelum tanggal awal stok tetap muncul pada laporan uang, tetapi tidak dipotong lagi dari saldo cut-off. Jangan mengganti tanggal/jumlah saldo awal setelah digunakan tanpa rekonsiliasi fisik dan arsip.
 
-BATAL NOTA menampilkan nomor nota terakhir sebagai pilihan awal; periksa nomor yang benar dan isi alasan. Status VOID meniadakan penjualan dan pemakaian potongan terkait, sambil menyimpan riwayat. Pelaksanaan refund aktual harus dilakukan dan didokumentasikan; modul tidak mengirim refund ke bank/QRIS. Status VOID saat ini memengaruhi laporan historis; arsipkan sebelum koreksi periode lama.
+VOID NOTA menampilkan nomor nota terakhir sebagai pilihan awal; periksa nomor yang benar dan isi alasan. Status VOID meniadakan penjualan dan pemakaian potongan terkait, sambil menyimpan riwayat. Pelaksanaan refund aktual harus dilakukan dan didokumentasikan; modul tidak mengirim refund ke bank/QRIS. Status VOID saat ini memengaruhi laporan historis; arsipkan sebelum koreksi periode lama.
 
 ## Jurnal manual dan batas
 
-Tanpa macro, buka NOTA/ITEM melalui klik kanan tab → **Unhide**. Isi NOTA A:I, serta ITEM A:H dengan ID unik. Nilai harga/HPP harus ditempel sebagai nilai, bukan tautan ke master. Gunakan status HPP `DIKONFIRMASI` atau `BELUM DIKONFIRMASI`. ITEM untuk nasi harus memakai rasa `Original` (label internal tanpa saus). Kolom lain adalah rumus.
+Tanpa macro, buka tab NOTA yang sudah terlihat. Buka ITEM melalui klik kanan tab → **Unhide**. Isi NOTA A:I dan, bila diketahui, Q untuk channel serta R untuk jumlah pelanggan; isi ITEM A:H dengan ID unik. Nilai harga/HPP harus ditempel sebagai nilai, bukan tautan ke master. Gunakan status HPP `DIKONFIRMASI` atau `BELUM DIKONFIRMASI`. ITEM untuk nasi harus memakai rasa `Original` (label internal tanpa saus). Kolom lain adalah rumus.
 
 BELANJA dapat diisi langsung A:I. KAS USAHA A:G. Koreksi STOK A:G pada baris 36–235. ID tidak boleh ganda, dan jangan menghapus riwayat untuk menyembunyikan kesalahan. Gunakan status VOID bila relevan. `Alt+F8 > PeriksaData` memeriksa jurnal dan saldo historis yang diketahui.
 
-Kapasitas: 1.500 nota, 6.000 item, 1.500 belanja, 1.500 arus kas, 20 slot master/stok (kasir awal empat potongan + nasi), 200 koreksi. Jangan menambah baris di luar tabel; arsipkan dan bawa saldo cut-off sekali bila file sudah penuh. Kasir enam baris ayam + satu nasi; perlu pengembangan terpisah untuk menu baru di luar pola tersebut. Tidak ada sinkronisasi antar-laptop, audit trail perubahan sel atau penguncian periode.
+Kapasitas: 1.500 nota, 6.000 item, 1.500 belanja, 1.500 arus kas, 20 slot master/stok (kasir awal empat potongan + nasi), 200 koreksi. Jangan menambah baris di luar tabel; arsipkan dan bawa saldo cut-off sekali bila file sudah penuh. Kasir 12 baris menu termasuk nasi; daftar awal 17 kombinasi. Menu di luar pola empat potongan + rasa + nasi memerlukan penyesuaian generator. Tidak ada sinkronisasi antar-laptop, audit trail perubahan sel atau penguncian periode.
 
 Yang masih perlu diisi/dikonfirmasi: stok fisik awal, kas awal/fisik, harga terkini, HPP per potongan, HPP saus/nasi dan rincian takaran bahan bila kelak ingin mengelola stok bumbu. Data sumber tetap disimpan beserta URL dan SHA256 pada `data/profile.json`.
+
+## Mengganti versi workbook
+
+File keluaran repository adalah template operasional kosong. Simpan salinan file yang sudah berisi transaksi sebelum mengganti versi. Struktur historis NOTA A:I dan ITEM A:H dipertahankan, sehingga input lama dapat disalin sebagai nilai ke kolom yang sama tanpa menyalin rumus lama. Metadata channel/pelanggan pada NOTA Q:R boleh kosong untuk nota lama; jangan mengarangnya. Kolom rumus J:P pada NOTA serta I:O pada ITEM mengikuti file baru. Pindahkan kontrol tanggal/modal/fisik dari HARIAN lama ke TUTUP KASIR C5/I8/I11. PeriksaData dan rekonsiliasi saldo sebelum melanjutkan.
+
+## Tampilan mengikuti file acuan
+
+Gaya asli merah bata/oranye, panel hijau, bidang input putih, tinggi keranjang 30 pt, total pembayaran merah, navigasi tombol, dan form Tutup Kasir dipertahankan seperti file acuan. Menu, harga, label usaha, serta perhitungan pcs aktual mengikuti Chicken Al-Haqi. Tampilan baru tidak menyalin transaksi atau stok dari usaha sate.

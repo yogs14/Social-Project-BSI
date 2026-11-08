@@ -82,57 +82,59 @@ Failed:
     MsgBox Err.Description, vbExclamation, "Periksa data"
 End Sub
 
+Public Sub SimpanTransaksi()
+    SimpanNota
+End Sub
 Public Sub SimpanNota()
     Dim k As Worksheet, rows As Collection, a As Variant, day As Date, hour As Double
-    Dim r As Long, mr As Long, fr As Long, qty As Double, price As Double, hpp As Variant, state As String
-    Dim gross As Double, discount As Double, received As Double, rice As Double, method As String, cashier As String
+    Dim r As Long, mr As Long, fr As Long, selector As Long, qty As Double, price As Double, hpp As Variant, state As String
+    Dim gross As Double, discount As Double, received As Double, method As String, cashier As String
+    Dim channel As String, customers As Double, code As String, flavor As String
     Dim nr As Long, ir As Long, i As Long, noteID As String, written As Boolean, committed As Boolean, message As String
     On Error GoTo Failed
     Set k = S("KASIR"): Set rows = New Collection: Application.CalculateFull
-    day = DayValue(k.Range("B6").Value): Need IsDate(k.Range("E6").Value), "Isi jam transaksi."
-    hour = CDbl(TimeValue(CDate(k.Range("E6").Value)))
-    cashier = Trim$(CStr(k.Range("B8").Value)): Need Len(cashier) > 0, "Isi nama kasir."
-    method = CStr(k.Range("H6").Value)
+    day = DayValue(k.Range("C7").Value): Need IsDate(k.Range("C8").Value), "Isi jam transaksi."
+    hour = CDbl(TimeValue(CDate(k.Range("C8").Value)))
+    cashier = Trim$(CStr(k.Range("C9").Value)): Need Len(cashier) > 0, "Isi nama kasir."
+    method = CStr(k.Range("C10").Value)
     Need Application.CountIf(S("SETUP").Range("N2:N5"), method) = 1, "Pilih metode bayar."
-    For r = 13 To 18
-        If Len(CStr(k.Cells(r, 2).Value)) > 0 Or Len(CStr(k.Cells(r, 4).Value)) > 0 Then
-            mr = Find("SETUP", CStr(k.Cells(r, 2).Value), 7, 10)
-            fr = Find("SETUP", CStr(k.Cells(r, 3).Value), 31, 34)
+    channel = CStr(k.Range("C11").Value)
+    Need Application.CountIf(S("SETUP").Range("Q2:Q4"), channel) = 1, "Pilih channel penjualan."
+    customers = Num(k.Range("C12").Value, "Jumlah pelanggan")
+    Need customers > 0 And customers = Fix(customers), "Jumlah pelanggan harus bulat positif."
+    For r = 16 To 27
+        If Len(CStr(k.Cells(r, 2).Value)) > 0 Or Len(CStr(k.Cells(r, 3).Value)) > 0 Then
+            selector = Find("SETUP", CStr(k.Cells(r, 2).Value), 69, 88)
+            code = CStr(S("SETUP").Cells(selector, 2).Value)
+            flavor = CStr(S("SETUP").Cells(selector, 3).Value)
+            mr = Find("SETUP", code, 7, 26): fr = Find("SETUP", flavor, 31, 34)
+            Need code <> "NASI" Or flavor = "Original", "Nasi tanpa tambahan saus."
             Need S("SETUP").Cells(mr, 9).Value = "AKTIF" And S("SETUP").Cells(mr, 10).Value = "OK", "Menu belum valid/aktif."
-            qty = Num(k.Cells(r, 4).Value, "Qty"): price = Num(k.Cells(r, 5).Value, "Harga jual")
-            Need qty > 0 And qty = Fix(qty) And price > 0, "Qty harus bulat positif; harga positif."
+            qty = Num(k.Cells(r, 3).Value, "Jumlah"): price = Num(k.Cells(r, 4).Value, "Harga jual")
+            Need qty > 0 And qty = Fix(qty) And price > 0, "Jumlah harus bulat positif; harga positif."
             hpp = Empty: state = "BELUM DIKONFIRMASI"
             If S("SETUP").Cells(mr, 7).Value = "YA" And S("SETUP").Cells(fr, 4).Value = "YA" Then
                 hpp = Num(S("SETUP").Cells(mr, 6).Value, "HPP dasar") + Num(S("SETUP").Cells(fr, 3).Value, "HPP rasa")
                 Need hpp >= 0, "HPP tidak boleh negatif.": state = "DIKONFIRMASI"
             End If
-            rows.Add Array(CStr(k.Cells(r, 2).Value), CStr(k.Cells(r, 3).Value), qty, price, hpp, state)
+            rows.Add Array(code, flavor, qty, price, hpp, state)
             gross = gross + qty * price
         End If
     Next r
-    If Len(CStr(k.Range("E21").Value)) > 0 Then
-        rice = Num(k.Range("E21").Value, "Qty nasi")
-        Need rice >= 0 And rice = Fix(rice), "Qty nasi harus bulat, tidak negatif."
-        If rice > 0 Then
-            mr = Find("SETUP", "NASI", 7, 26)
-            Need S("SETUP").Cells(mr, 9).Value = "AKTIF", "Menu nasi tidak aktif."
-            price = Num(S("SETUP").Cells(mr, 3).Value, "Harga nasi")
-            hpp = Empty: state = "BELUM DIKONFIRMASI"
-            If S("SETUP").Cells(mr, 7).Value = "YA" Then hpp = Num(S("SETUP").Cells(mr, 6).Value, "HPP nasi"): state = "DIKONFIRMASI"
-            rows.Add Array("NASI", "Original", rice, price, hpp, state): gross = gross + rice * price
-        End If
-    End If
     Need rows.Count > 0, "Keranjang kosong."
-    discount = Num(k.Range("F25").Value, "Diskon (isi 0 bila tidak ada)")
+    discount = Num(k.Range("C30").Value, "Diskon (isi 0 bila tidak ada)")
     Need discount >= 0 And discount <= gross, "Diskon harus antara nol dan bruto."
     If method = "Tunai" Then
-        received = Num(k.Range("F27").Value, "Uang diterima"): Need received >= gross - discount, "Uang tunai kurang."
+        received = Num(k.Range("C32").Value, "Uang diterima"): Need received >= gross - discount, "Uang tunai kurang."
     Else
         received = gross - discount
     End If
     nr = FreeRows("NOTA", 1506, "I", 1): ir = FreeRows("ITEM", 6006, "H", rows.Count)
+    Need Application.CountA(S("NOTA").Range("Q" & nr & ":R" & nr)) = 0, "Ada metadata nota parsial."
     noteID = NewID("N", "NOTA", 1506): written = True
-    Put "NOTA", nr, Array(noteID, day, hour, cashier, method, discount, received, "AKTIF", "Kasir potongan + rasa")
+    Put "NOTA", nr, Array(noteID, day, hour, cashier, method, discount, received, "AKTIF", "Kasir menu + jumlah")
+    S("NOTA").Cells(nr, 17).NumberFormat = "@": S("NOTA").Cells(nr, 17).Value = channel
+    S("NOTA").Cells(nr, 18).Value = customers
     For Each a In rows
         Put "ITEM", ir + i, Array(noteID & "-I" & Format$(i + 1, "00"), noteID, a(0), a(1), a(2), a(3), a(4), a(5))
         i = i + 1
@@ -146,6 +148,7 @@ Failed:
     If committed Then MsgBox "Nota SUDAH tercatat. Jangan simpan ulang. Gagal membersihkan form: " & message, vbExclamation: Exit Sub
     If written Then
         S("NOTA").Range("A" & nr & ":I" & nr).ClearContents
+        S("NOTA").Range("Q" & nr & ":R" & nr).ClearContents
         S("ITEM").Range("A" & ir & ":H" & ir + rows.Count - 1).ClearContents
     End If
     Application.CalculateFull: MsgBox message, vbExclamation, "Nota belum disimpan"
@@ -153,26 +156,35 @@ End Sub
 Public Sub NotaBaru()
     Dim r As Long
     With S("KASIR")
-        .Range("B13:B18,D13:D18,E21,F27").ClearContents: .Range("F25").Value = 0
-        For r = 13 To 18
-            .Cells(r, 3).Value = "Original"
-            .Cells(r, 5).Formula = "=IF(B" & r & "="""","""",IFERROR(INDEX(SETUP!$C$7:$C$26,MATCH(B" & r & ",SETUP!$A$7:$A$26,0)),0)+IFERROR(INDEX(SETUP!$B$31:$B$34,MATCH(C" & r & ",SETUP!$A$31:$A$34,0)),0))"
+        .Range("B16:C27").ClearContents
+        .Range("C32").MergeArea.ClearContents
+        .Range("C30").Value = 0
+        For r = 16 To 27
+            .Cells(r, 4).Formula = "=IF(B" & r & "="""","""",IFERROR(INDEX(SETUP!$D$69:$D$88,MATCH(B" & r & ",SETUP!$A$69:$A$88,0)),0))"
         Next r
     End With
+End Sub
+Public Sub TutupKasir()
+    S("TUTUP KASIR").Activate
+    Application.CalculateFull
+    S("TUTUP KASIR").Range("I8").Select
+End Sub
+Public Sub VoidNotaTerakhir()
+    BatalNota
 End Sub
 Public Sub SimpanBelanja()
     Dim k As Worksheet, day As Date, code As String, mr As Long, kg As Variant, qty As Double, amount As Double
     Dim r As Long, written As Boolean, committed As Boolean, message As String
     On Error GoTo Failed
-    Set k = S("KASIR"): day = DayValue(k.Range("I13").Value)
-    code = CStr(k.Range("I14").Value): mr = Find("SETUP", code, 7, 26)
-    If Len(CStr(k.Range("I15").Value)) > 0 Then kg = Num(k.Range("I15").Value, "Kg")
-    qty = Num(k.Range("I16").Value, "Pcs/porsi aktual"): amount = Num(k.Range("I17").Value, "Nominal belanja")
+    Set k = S("KASIR"): day = DayValue(k.Range("I53").Value)
+    code = CStr(k.Range("I54").Value): mr = Find("SETUP", code, 7, 26)
+    If Len(CStr(k.Range("I55").Value)) > 0 Then kg = Num(k.Range("I55").Value, "Kg")
+    qty = Num(k.Range("I56").Value, "Pcs/porsi aktual"): amount = Num(k.Range("I57").Value, "Nominal belanja")
     Need qty > 0 And qty = Fix(qty) And amount >= 0, "Qty bulat positif; nominal tidak negatif."
     r = FreeRows("BELANJA", 1506, "I", 1): written = True
-    Put "BELANJA", r, Array(NewID("B", "BELANJA", 1506), day, code, kg, qty, amount, k.Range("I18").Value, "AKTIF", "Qty aktual; kg hanya pembanding")
+    Put "BELANJA", r, Array(NewID("B", "BELANJA", 1506), day, code, kg, qty, amount, k.Range("I58").Value, "AKTIF", "Qty aktual; kg hanya pembanding")
     ValidateAll: written = False: committed = True
-    k.Range("I15:I17").ClearContents
+    k.Range("I55:I57").ClearContents
     MsgBox "Belanja tercatat memakai pcs aktual saja. Tekan Ctrl+S.", vbInformation
     Exit Sub
 Failed:
@@ -184,12 +196,12 @@ End Sub
 Public Sub SimpanKas()
     Dim k As Worksheet, day As Date, amount As Double, r As Long, written As Boolean, committed As Boolean, message As String
     On Error GoTo Failed
-    Set k = S("KASIR"): day = DayValue(k.Range("I25").Value): amount = Num(k.Range("I27").Value, "Nominal kas")
+    Set k = S("KASIR"): day = DayValue(k.Range("I65").Value): amount = Num(k.Range("I67").Value, "Nominal kas")
     Need amount > 0, "Nominal harus positif."
     r = FreeRows("KAS USAHA", 1506, "G", 1): written = True
-    Put "KAS USAHA", r, Array(NewID("K", "KAS USAHA", 1506), day, k.Range("I26").Value, amount, k.Range("I28").Value, k.Range("I29").Value, "AKTIF")
+    Put "KAS USAHA", r, Array(NewID("K", "KAS USAHA", 1506), day, k.Range("I66").Value, amount, k.Range("I68").Value, k.Range("I69").Value, "AKTIF")
     ValidateAll: written = False: committed = True
-    k.Range("I27,I29").ClearContents
+    k.Range("I67,I69").ClearContents
     MsgBox "Arus uang ayam tercatat. Tekan Ctrl+S.", vbInformation: Exit Sub
 Failed:
     message = Err.Description
@@ -217,10 +229,18 @@ Failed:
     Application.CalculateFull: MsgBox message, vbExclamation, "Pembatalan gagal"
 End Sub
 Private Sub AddButton(ByVal anchor As String, ByVal title As String, ByVal action As String)
-    Dim b As Button
+    Dim b As Button, x As Double, y As Double, width As Double, height As Double
     With S("KASIR")
-        Set b = .Buttons.Add(.Range(anchor).Left, .Range(anchor).Top, 170, 27)
-        b.Name = "cah_" & action: b.Caption = title: b.Font.Name = "Calibri"
+        If Left$(anchor, 1) = "I" Then
+            x = .Range(anchor).Left: y = .Range(anchor).Top: width = 170: height = 27
+        Else
+            width = (.Range("B43:F43").Width - 8) / 2: height = 32
+            x = .Range("B43").Left: y = .Range("B43").Top + 3
+            If Left$(anchor, 1) = "D" Then x = x + width + 8
+            If Val(Mid$(anchor, 2)) = 45 Then y = y + 38
+        End If
+        Set b = .Buttons.Add(x, y, width, height)
+        b.Name = "cah_" & action: b.Caption = title: b.Font.Name = "Calibri": b.Font.Size = 11
         b.OnAction = "'" & Replace(ThisWorkbook.Name, "'", "''") & "'!" & action
     End With
 End Sub
@@ -228,16 +248,20 @@ Public Sub PasangTombol()
     Dim i As Long
     On Error GoTo Failed
     With S("KASIR")
-        For i = .Shapes.Count To 1 Step -1
-            If Left$(.Shapes(i).Name, 4) = "cah_" Then .Shapes(i).Delete
+        For i = .Buttons.Count To 1 Step -1
+            Select Case .Buttons(i).Caption
+                Case "SIMPAN TRANSAKSI", "NOTA BARU", "VOID NOTA", "VOID NOTA TERAKHIR", "TUTUP KASIR", "SIMPAN BELANJA", "SIMPAN KAS"
+                    .Buttons(i).Delete
+            End Select
         Next i
     End With
-    AddButton "A21", "SIMPAN NOTA", "SimpanNota"
-    AddButton "A24", "NOTA BARU", "NotaBaru"
-    AddButton "A27", "BATAL NOTA", "BatalNota"
-    AddButton "I22", "SIMPAN BELANJA", "SimpanBelanja"
-    AddButton "I31", "SIMPAN KAS", "SimpanKas"
-    MsgBox "Lima tombol terpasang. Simpan .xlsm. Untuk memeriksa jurnal gunakan Alt+F8 > PeriksaData.", vbInformation
+    AddButton "B43", "SIMPAN TRANSAKSI", "SimpanTransaksi"
+    AddButton "D43", "NOTA BARU", "NotaBaru"
+    AddButton "B45", "VOID NOTA TERAKHIR", "VoidNotaTerakhir"
+    AddButton "D45", "TUTUP KASIR", "TutupKasir"
+    AddButton "I62", "SIMPAN BELANJA", "SimpanBelanja"
+    AddButton "I71", "SIMPAN KAS", "SimpanKas"
+    MsgBox "Enam tombol terpasang. Simpan .xlsm. Untuk memeriksa jurnal gunakan Alt+F8 > PeriksaData.", vbInformation
     Exit Sub
 Failed:
     MsgBox Err.Description, vbExclamation, "Pemasangan tombol gagal"
