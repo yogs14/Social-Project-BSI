@@ -3,6 +3,7 @@ import argparse,datetime as dt,json
 from pathlib import Path
 from layout import Layout,CAP,rng,look,checks,col
 from pos_reference import add_menu_selector, add_cashier, add_closing
+from reference_ux import finish_native_buttons
 ROOT=Path(__file__).resolve().parents[1]
 CORR=lambda c:f"'STOK'!${c}$36:${c}$235"
 FLAV=lambda c:f"'SETUP'!${c}$31:${c}$34"
@@ -118,7 +119,7 @@ def build(path):
     expenses=f'-SUMIFS({rng("KAS USAHA","I")},{rng("KAS USAHA","B")},$B$5,{rng("KAS USAHA","C")},"BIAYA USAHA")'
     incomplete=f'COUNTIFS({valid},{rng("NOTA","N")},"<>DIKONFIRMASI")'
     cards=[('PENJUALAN NETTO',total),('NOTA VALID',f'COUNTIFS({valid})'),('PCS AYAM TERJUAL',f'SUMIFS({rng("ITEM","N")},{rng("ITEM","I")},$B$5,{rng("ITEM","C")},"<>NASI")'),('BELANJA AYAM / NASI',f'SUMIFS({rng("BELANJA","N")},{rng("BELANJA","B")},$B$5)'),('BIAYA USAHA LAIN',expenses),('SELISIH NETTO - HPP ACUAN',f'IF({incomplete}>0,"HPP BELUM DIKONFIRMASI",{total}-SUMIFS({rng("NOTA","M")},{valid}))')]
-    status_card=w.add_format({'font_name':'Calibri','font_size':16,'bold':True,'bg_color':'#302D29','font_color':'white','text_wrap':True,'valign':'vcenter','num_format':'#,##0;[Red](#,##0);"0"'})
+    status_card=w.add_format({'font_name':'Calibri','font_size':16,'bold':True,'bg_color':'#FBF3E7','font_color':'#902A20','text_wrap':True,'valign':'vcenter','num_format':'#,##0;[Red](#,##0);"0"'})
     for i,(label,formula) in enumerate(cards):
         rr=6+i//3*5;cc=i%3*4;style=status_card if i==5 else f['kpi']
         s.merge_range(rr,cc,rr,cc+2,label,f['kpi_label']);s.merge_range(rr+1,cc,rr+2,cc+2,'',style);s.write_formula(rr+1,cc,'='+formula,style,0)
@@ -131,7 +132,7 @@ def build(path):
         b.formula(s,'B'+str(r),f'SUMIFS({rng("ITEM","N")},{rng("ITEM","C")},{key},{rng("ITEM","I")},$B$5)','qty')
         b.formula(s,'C'+str(r),f'SUMIFS({rng("ITEM","K")},{rng("ITEM","C")},{key},{rng("ITEM","I")},$B$5,{rng("ITEM","N")},">0")','money')
         for c,source in [('D','H'),('E','I')]:b.formula(s,c+str(r),look(key,'STOK',source),'qty' if c=='D' else 'calc')
-    chart=w.add_chart({'type':'column'});chart.add_series({'name':'Pcs ayam terjual','categories':"='HARIAN'!$A$27:$A$30",'values':"='HARIAN'!$B$27:$B$30",'fill':{'color':'#17634F'},'border':{'none':True}});chart.set_title({'name':'Potongan terjual hari ini'});chart.set_legend({'none':True});s.insert_chart('G26',chart,{'x_scale':1.05,'y_scale':1.0})
+    chart=w.add_chart({'type':'column'});chart.add_series({'name':'Pcs ayam terjual','categories':"='HARIAN'!$A$27:$A$30",'values':"='HARIAN'!$B$27:$B$30",'fill':{'color':'#C96B1D'},'border':{'none':True}});chart.set_title({'name':'Potongan terjual hari ini'});chart.set_legend({'none':True});s.insert_chart('G26',chart,{'x_scale':1.05,'y_scale':1.0})
     s.merge_range('A34:F34','PERIKSA SEBELUM MENUTUP HARI',f['head'])
     alerts=[('Nota bermasalah',f'COUNTIFS({rng("NOTA","A")},"<>",{rng("NOTA","O")},"<>OK")'),('Stok belum awal',f'COUNTIF({rng("STOK","J")},"BELUM AWAL")'),('Saldo historis negatif',f'COUNTIF({rng("ITEM","O")},"<0")+COUNTIF({CORR("J")},"<0")'),('Belanja bermasalah',f'COUNTIFS({rng("BELANJA","A")},"<>",{rng("BELANJA","L")},"<>OK")')]
     for r,(label,formula) in enumerate(alerts,35):s.write('A'+str(r),label,f['label']);b.formula(s,'D'+str(r),formula,'qty');s.conditional_format('D'+str(r),{'type':'cell','criteria':'>','value':0,'format':f['warn']})
@@ -140,7 +141,9 @@ def build(path):
     for c,name,vals in [('N','MetodeBayar',METHODS),('O','JenisKas',CASHKINDS),('P','JenisKoreksi',['RUSAK','TAMBAH','KURANG']),('Q','ChannelPenjualan',['Dine-in','Take Away','Ojek Online'])]:
         b.s['SETUP'].write_column(c+'2',vals);w.define_name(name,f"='SETUP'!${c}$2:${c}${len(vals)+1}")
     b.s['SETUP'].set_column('N:Q',None,None,{'hidden':True})
-    b.close(['MULAI','KASIR','HARIAN','NOTA','STOK','TUTUP KASIR','BELANJA','KAS USAHA','SETUP','ITEM']);return path
+    b.close(['MULAI','KASIR','HARIAN','NOTA','STOK','TUTUP KASIR','BELANJA','KAS USAHA','SETUP','ITEM'])
+    finish_native_buttons(path)
+    return path
 
 if __name__=='__main__':
     a=argparse.ArgumentParser();a.add_argument('--output',type=Path,default=ROOT/'output/POS_Chicken_Al_Haqi.xlsx');print(build(a.parse_args().output))

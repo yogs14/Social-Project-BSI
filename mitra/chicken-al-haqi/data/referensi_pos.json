@@ -16,5 +16,6 @@
     "HPP belum diketahui tetap belum dikonfirmasi.",
     "Jurnal operasional keluaran kosong.",
     "Tidak menyalin stok, pembelian, transaksi atau resep sate."
-  ]
+  ],
+  "ux": "Gaya/ukuran asli KASIR dan Tutup Kasir diekstrak pada ux_pos_ponorogo.json; warna, input putih, total merah, panel hijau, navigasi dan tombol mengikuti acuan."
 }

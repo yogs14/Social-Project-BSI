@@ -156,7 +156,8 @@ End Sub
 Public Sub NotaBaru()
     Dim r As Long
     With S("KASIR")
-        .Range("B16:C27,C32").ClearContents
+        .Range("B16:C27").ClearContents
+        .Range("C32").MergeArea.ClearContents
         .Range("C30").Value = 0
         For r = 16 To 27
             .Cells(r, 4).Formula = "=IF(B" & r & "="""","""",IFERROR(INDEX(SETUP!$D$69:$D$88,MATCH(B" & r & ",SETUP!$A$69:$A$88,0)),0))"
@@ -166,7 +167,7 @@ End Sub
 Public Sub TutupKasir()
     S("TUTUP KASIR").Activate
     Application.CalculateFull
-    S("TUTUP KASIR").Range("K8").Select
+    S("TUTUP KASIR").Range("I8").Select
 End Sub
 Public Sub VoidNotaTerakhir()
     BatalNota
@@ -228,10 +229,18 @@ Failed:
     Application.CalculateFull: MsgBox message, vbExclamation, "Pembatalan gagal"
 End Sub
 Private Sub AddButton(ByVal anchor As String, ByVal title As String, ByVal action As String)
-    Dim b As Button
+    Dim b As Button, x As Double, y As Double, width As Double, height As Double
     With S("KASIR")
-        Set b = .Buttons.Add(.Range(anchor).Left, .Range(anchor).Top, 170, 27)
-        b.Name = "cah_" & action: b.Caption = title: b.Font.Name = "Calibri"
+        If Left$(anchor, 1) = "I" Then
+            x = .Range(anchor).Left: y = .Range(anchor).Top: width = 170: height = 27
+        Else
+            width = (.Range("B43:F43").Width - 8) / 2: height = 32
+            x = .Range("B43").Left: y = .Range("B43").Top + 3
+            If Left$(anchor, 1) = "D" Then x = x + width + 8
+            If Val(Mid$(anchor, 2)) = 45 Then y = y + 38
+        End If
+        Set b = .Buttons.Add(x, y, width, height)
+        b.Name = "cah_" & action: b.Caption = title: b.Font.Name = "Calibri": b.Font.Size = 11
         b.OnAction = "'" & Replace(ThisWorkbook.Name, "'", "''") & "'!" & action
     End With
 End Sub
@@ -239,14 +248,17 @@ Public Sub PasangTombol()
     Dim i As Long
     On Error GoTo Failed
     With S("KASIR")
-        For i = .Shapes.Count To 1 Step -1
-            If Left$(.Shapes(i).Name, 4) = "cah_" Then .Shapes(i).Delete
+        For i = .Buttons.Count To 1 Step -1
+            Select Case .Buttons(i).Caption
+                Case "SIMPAN TRANSAKSI", "NOTA BARU", "VOID NOTA", "VOID NOTA TERAKHIR", "TUTUP KASIR", "SIMPAN BELANJA", "SIMPAN KAS"
+                    .Buttons(i).Delete
+            End Select
         Next i
     End With
     AddButton "B43", "SIMPAN TRANSAKSI", "SimpanTransaksi"
-    AddButton "E43", "NOTA BARU", "NotaBaru"
-    AddButton "B45", "VOID NOTA", "VoidNotaTerakhir"
-    AddButton "E45", "TUTUP KASIR", "TutupKasir"
+    AddButton "D43", "NOTA BARU", "NotaBaru"
+    AddButton "B45", "VOID NOTA TERAKHIR", "VoidNotaTerakhir"
+    AddButton "D45", "TUTUP KASIR", "TutupKasir"
     AddButton "I62", "SIMPAN BELANJA", "SimpanBelanja"
     AddButton "I71", "SIMPAN KAS", "SimpanKas"
     MsgBox "Enam tombol terpasang. Simpan .xlsm. Untuk memeriksa jurnal gunakan Alt+F8 > PeriksaData.", vbInformation

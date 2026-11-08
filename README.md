@@ -49,6 +49,7 @@ cd /workspace/Social-Project-BSI/mitra/chicken-al-haqi
 python3 -m pip install -r requirements.txt
 python3 src/build_workbook.py
 python3 tests/validate_workbook.py
+python3 tests/validate_ux.py
 python3 src/package_delivery.py
 ```
 
@@ -70,4 +71,6 @@ Chicken Al-Haqi mengikuti permintaan penyederhanaan pada MoM 23 Oktober 2026: se
 
 HPP umum Chicken Al-Haqi Rp7.000/pcs adalah acuan sumber yang belum dikonfirmasi, bukan biaya lengkap setiap potongan. HPP saus/nasi tidak dikarang, dan biaya sumber kg tidak ditambahkan lagi ke biaya per pcs. Harga/HPP transaksi disimpan sebagai snapshot. Jam weekend 06.30 diterima; belanja di atas 3 kg tetap diperbolehkan karena batas tersebut untuk ukuran batch marinasi, bukan jumlah pembelian.
 
-Adaptasi Chicken Al-Haqi terhadap referensi POS sate mempertahankan jurnal pcs aktual dan snapshot harga/HPP. Tanggal, modal awal dan uang fisik kini diisi pada TUTUP KASIR C5/K8/K11; dashboard HARIAN mengikutinya. Petunjuk migrasi file yang sudah berisi transaksi tersedia pada panduan mitra.
+Adaptasi Chicken Al-Haqi terhadap referensi POS sate mempertahankan jurnal pcs aktual dan snapshot harga/HPP. Tanggal, modal awal dan uang fisik kini diisi pada TUTUP KASIR C5/I8/I11; dashboard HARIAN mengikutinya. Petunjuk migrasi file yang sudah berisi transaksi tersedia pada panduan mitra.
+
+UX Chicken Al-Haqi memakai gaya dan ukuran sel asli POS Sate Ayam Ponorogo: merah bata/oranye, input putih, panel hijau, kontrol transaksi terlihat, dan KASIR terbuka langsung. Tampilan dihitung ulang pada skenario kasir/tutup kasir; XML tombol Excel dipertahankan ketika cache rumus diperbarui.

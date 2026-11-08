@@ -4,6 +4,8 @@ from zipfile import ZipFile
 from pathlib import Path
 from openpyxl import load_workbook
 ROOT=Path(__file__).resolve().parents[1];SOURCE=ROOT/'output/POS_Chicken_Al_Haqi.xlsx';CHECKS=[]
+sys.path.insert(0,str(ROOT/'src'))
+from formula_cache import cache_only
 def date(s):return dt.datetime.fromisoformat(s)
 def check(label,actual,expected):
     if isinstance(expected,(int,float)) and not isinstance(expected,bool):assert isinstance(actual,(int,float)) and math.isclose(actual,expected,abs_tol=1e-6,rel_tol=1e-9),(label,actual,expected)
@@ -123,7 +125,7 @@ def main():
         w=loaded['negative_stock'];check('stock shortage visible in sale history',w['ITEM']['O7'].value<0,True);check('negative closing stock marked',w['STOK']['I7'].value,'STOK NEGATIF')
         w=loaded['duplicate_purchase'];check('duplicate purchase IDs rejected',w['BELANJA']['L7'].value,'ID GANDA');check('duplicate purchase not added twice',w['BELANJA']['M8'].value,0)
         w=loaded['POS_Chicken_Al_Haqi'];check('main workbook no fake receipts',sum(bool(w['NOTA'].cell(r,1).value) for r in range(7,1507)),0);check('main workbook no fake purchases',sum(bool(w['BELANJA'].cell(r,1).value) for r in range(7,1507)),0);check('main workbook initial stock unknown',w['STOK']['J7'].value,'BELUM AWAL');check('main HPP not confirmed by assumption',w['SETUP']['G7'].value,'TIDAK');check('no invented opening cash',w['HARIAN']['B22'].value in [None,''],True)
-        SOURCE.write_bytes((out/SOURCE.name).read_bytes())
+        cache_only(SOURCE,out/SOURCE.name)
     report={'passed':len(CHECKS),'failed':0,'engine':'LibreOffice headless; actual workbook formula recalculation','vba_runtime_tested':False,'excel_desktop_tested':False,'checks':CHECKS}
     (ROOT/'output/hasil_validasi.json').write_text(json.dumps(report,ensure_ascii=False,indent=2,default=str)+'\n')
     print(json.dumps({'passed':len(CHECKS),'failed':0}))
